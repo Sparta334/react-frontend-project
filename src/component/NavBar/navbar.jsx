@@ -14,12 +14,12 @@ export default function NavBar(){
         // navbar 需要display.flex
         <div className={` ${ style.navbar }  `} >
             <Row>
-                <Col span={2}>
+
+                <Link to="#"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
+
                 <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
                     最新
                 </NavLink>
-
-                </Col>
                 <NavLink to= "pages/popular" className= {({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
                     熱門
                 </NavLink>
