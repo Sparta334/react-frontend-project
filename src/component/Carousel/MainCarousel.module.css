@@ -1,0 +1,19 @@
+.CarouselBox{
+
+    margin-bottom: 3%;
+
+
+}
+
+.CarouselBoxImg{
+
+    position: relative;
+
+}
+
+.CarouselBoxImgText{
+
+    position: absolute;
+    z-index: 9999;
+
+}

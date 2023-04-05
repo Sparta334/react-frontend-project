@@ -3,6 +3,7 @@ import {Row , Col , Image} from 'antd';
 import { motion } from "framer-motion"; 
 import { useState} from 'react';
 import {LeftOutlined  , RightOutlined } from '@ant-design/icons'
+import { Button } from 'antd/es/radio';
 
 import Style from './ProductList.module.css';
 
@@ -32,7 +33,7 @@ export default function ProductList({Title , InputJson  }){
         
         <div className={Style.ItemsLayout}>
 
-            <h1>{Title}</h1>
+            <div>{Title}</div>
             <LeftOutlined className={Style.Btn} onClick={() =>Chan(-1) } />
 
 
@@ -63,7 +64,7 @@ export default function ProductList({Title , InputJson  }){
 
 
 
-                                <p className={Style.imgText}>{product.ProductName}</p>
+                                <div className={Style.imgText}>{product.ProductName}</div>
                                 
                             </Col>
                            
@@ -75,7 +76,9 @@ export default function ProductList({Title , InputJson  }){
 
             </Row>
             </motion.div>
-            
+            <Button type="primary" block>
+                顯示更多
+            </Button>
         </div>
 
     );

@@ -5,7 +5,9 @@ import Header from '../component/Header/Header';
 import Popalur from '../json/PopularGame.json';
 import ExculsiveToYou from '../json/ExculsiveToYou.json';
 import NewSet from '../json/Newset.json'
-import ProductList from "../component/Carousel/ProductList"
+import ProductList from "../component/ProuctList/ProductList"
+import MainCarousel from '../component/Carousel/MainCarousel';
+
 
 export default function Home(){
 
@@ -18,7 +20,7 @@ export default function Home(){
         <div className="container">
 
             <Header/>
-            
+            <MainCarousel/>
             <ProductList Title="熱門遊戲" InputJson={Popalur}  />
             <ProductList Title="最新遊戲" InputJson={NewSet} />
 
