@@ -24,7 +24,8 @@
     
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 55px 30px 70px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   
   .Btn {
@@ -60,29 +61,51 @@
 
  
   .imgText {
-    
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
     position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
+
   /* 進入商店頁面按鈕 */
-  
+  .shop{
+    background-color: #000000; 
+    color: #fff;
+  }
+
+  .imgText {
+    width: 100%;
+    display: flex;
+  }
+
+  .more{
+    max-width: 300px;
+    background-color: white; 
+    color: black;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-top: 83px;
+    align-self: center;
+    border: none; 
+    font-size: large;
+    left: 5%;
+}
+
+
   
  /* 小於 768px 的平板的排版 */
  @media screen and (max-width: 768px) {
     .ItemsLayout {
-      padding: 55px 20px 70px 25px;
+      padding: 45 px 20px 50px 25px;
     }
   
-    .Row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  
+    
     .ImageBox {
       width: 47%;
       padding-bottom: 100%;
@@ -111,4 +134,21 @@
       text-overflow: ellipsis;
       position: relative;
     }
+
+
+    .more{
+        max-width: 300px;
+        background-color: white; 
+        color: black;
+        bottom: 0;
+        transform: translateX(-50%);
+        display: inline-block;
+        margin-top: 83px;
+        align-self: center;
+        border: none; 
+        font-size: large;
+        left: 10%;
+    }
+
+    
   }

@@ -66,9 +66,9 @@ export default function ProductList({Title , InputJson  }){
 
 
                                     <div className={Style.imgText}>{product.ProductName}</div>
+                                   
+                                    <Link to={`/pages/Products/${product.ProductName}` }><Button type='primary'className={Style.shop} >商店頁面</Button></Link>
                                     
-                                    <Link to={`/pages/Products/${product.ProductName}` }><Button type='primary'>商店頁面</Button></Link>
-
 
 
                                 </Row>
@@ -83,8 +83,8 @@ export default function ProductList({Title , InputJson  }){
 
             </Row>
             </motion.div>
-            <Button type="primary" block>
-                顯示更多
+            <Button type="primary" block  className={Style.more}>
+                顯示更多👉
             </Button>
         </div>
 
