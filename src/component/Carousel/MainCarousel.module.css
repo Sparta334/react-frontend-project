@@ -41,9 +41,9 @@ button::after{
   }
   
 
+button::after{
+    display: none;
 
 
-
-
-
+}
 }
