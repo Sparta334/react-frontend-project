@@ -1,4 +1,4 @@
-.SearchFieldBox{
+/*.SearchFieldBox{
 
     
 
@@ -14,7 +14,7 @@
 .Logo{
 
     
-}
+}*/
 
 *{
   margin: 0;
@@ -30,9 +30,8 @@ html {
     
     display: flex;
     align-items:center; 
-    justify-content: space-between;
     background-color: #fff;
-   
+    height: 65px;
     padding: 10px 10px 10px 15px;
     /*For test color↓*/
     box-shadow: 0 2px 4px #071414e1;
@@ -42,13 +41,17 @@ html {
     transition: .5s linear;
     position:relative;
     /*background-color: transparent;*/
+    
+  }
+  .inner-width{
+    justify-content: space-between;
 
   }
-  
   /* Logo 樣式 */
   .Logo {
     height: 40px;
     width: 40px;
+    background-size: contain;
   }
   
   /* 導航列樣式 */
@@ -88,6 +91,12 @@ html {
   text-decoration: none;
   margin-left: 10px;
 }
+/*navbar 動畫*/
+.sticky{
+  background-color: #fff;
+  padding: 18px 0;
+}
+
 
 /* 小於 768px 的平板的排版 */
 @media only screen and (max-width: 768px) {

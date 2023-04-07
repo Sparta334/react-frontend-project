@@ -14,9 +14,14 @@ export default function NavBar(){
         // navbar 需要display.flex
         <div className={` ${ style.navbar }  `} >
             <Row>
-
+            
                 <Link to="/pages/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
 
+                <div className={style.navbarname}>
+                <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
+                    商店主頁
+                </NavLink>
+                
                 <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
                     最新
                 </NavLink>
@@ -33,9 +38,10 @@ export default function NavBar(){
                 <NavLink to = "pages/login"  > 
                     登入
                 </NavLink>
-
+                </div>
+            
             </Row>
-        
+            
         </div>
 
 
