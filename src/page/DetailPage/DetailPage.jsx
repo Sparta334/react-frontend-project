@@ -74,14 +74,14 @@ export default function DetailPage(){
         <div>
             <Header />
             <div className={style.title} > {ReveiceData.ProductName} </div>
-            <img src={ImageUrl}  />
+            <img src={ImageUrl} className={style.img} />
             <Row gutter={[2, 12]}>
             
                 {
 
                         imageURLsState.map((imageURL, index) => (
 
-                        <Col key={index}><Button className={style.BtnImgBox} type="primary" size="large" onClick={ () =>setUrl(imageURL)  } > <img src={imageURL} height="100%" width="100%" alt="" /> </Button>  </Col>
+                        <Col key={index}className={style.imgbox}><Button className={style.BtnImgBox} type="primary" size="large" onClick={ () =>setUrl(imageURL)  }  > <img src={imageURL} height="100%" width="100%" alt="" /> </Button>  </Col>
 
                     )) 
                     
