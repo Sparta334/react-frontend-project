@@ -15,3 +15,123 @@
 
     
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar 樣式 */
+.navbar {
+    
+    display: flex;
+    align-items:center; 
+    justify-content: space-between;
+    background-color: #fff;
+   
+    padding: 10px 10px 10px 15px;
+    /*For test color↓*/
+    box-shadow: 0 2px 4px #071414e1;
+    max-width: 2560px;
+    width: 100%;    
+    top:0;
+    transition: .5s linear;
+    position:relative;
+    /*background-color: transparent;*/
+
+  }
+  
+  /* Logo 樣式 */
+  .Logo {
+    height: 40px;
+    width: 40px;
+  }
+  
+  /* 導航列樣式 */
+  .navItem {
+    font-size: 22px;
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  
+  /*選中主題*/
+  .navItemActive {
+    font-size: 28px;
+    color: #00a1d6;
+    border-bottom: 2px solid #00a1d6;
+    margin-left: 10px;
+    margin-right: 5px;
+    
+  }
+  
+  /* 搜尋欄樣式 */
+  .SearchBar {
+    width: 200px;
+    height: 32px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  
+  /* 登入按鈕樣式 */
+.LoginBtn {
+  color: #333;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* 小於 768px 的平板的排版 */
+@media only screen and (max-width: 768px) {
+  /* Navbar 樣式 */
+  .navbar {
+    padding: 10px;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+  }
+
+  /* Logo 樣式 */
+  .Logo {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* 導航列樣式 */
+  .navItem {
+    font-size: 18px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  /*選中主題*/
+  .navItemActive {
+    font-size: 24px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  /* 搜尋欄樣式 */
+  .SearchBar {
+    width: 150px;
+    height: 28px;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  /* 登入按鈕樣式 */
+  .LoginBtn {
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+}

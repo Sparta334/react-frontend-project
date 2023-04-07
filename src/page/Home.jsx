@@ -7,6 +7,7 @@ import ExculsiveToYou from '../json/ExculsiveToYou.json';
 import NewSet from '../json/Newset.json'
 import ProductList from "../component/ProuctList/ProductList"
 import MainCarousel from '../component/Carousel/MainCarousel';
+import style from './home.module.css'
 
 
 export default function Home(){
@@ -15,7 +16,7 @@ export default function Home(){
 
     return(
 
-        <div className="container">
+        <div className={style.container}>
 
             <Header/>
             <MainCarousel/>
