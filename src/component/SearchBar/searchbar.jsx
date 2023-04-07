@@ -12,7 +12,7 @@ const api = axios.create({
     headers: {
         'Access-Control-Allow-Origin': '*'
      },
-    baseURL: 'http://localhost:8000',
+    baseURL: 'https://energetic-fox-pajamas.cyclic.app'
 });
 
 
