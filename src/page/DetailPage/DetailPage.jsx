@@ -43,7 +43,6 @@ export default function DetailPage(){
                  
                 console.log()
                                
-                SetDsiplay(Result);
             
         } ).catch(error => {
             console.error(error);
