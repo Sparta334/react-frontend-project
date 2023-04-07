@@ -12,8 +12,6 @@ import MainCarousel from '../component/Carousel/MainCarousel';
 export default function Home(){
 
 
-    const {pagesName} = useParams();
-
 
     return(
 
@@ -23,7 +21,7 @@ export default function Home(){
             <MainCarousel/>
             <ProductList Title="熱門遊戲" InputJson={Popalur}  />
             <ProductList Title="最新遊戲" InputJson={NewSet} />
-
+            
         </div>
 
     )

@@ -3,10 +3,12 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Store from './redux/UserProfile'
 import Home from './page/Home'
+import DetailPage from './page/DetailPage'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
 
   return (
     
@@ -15,7 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="pages">
-          <Route path=":pagesName" element={ <Home/>}/>
+          <Route path="Home" element={ <Home/>}/>
+          <Route path="Products/:ProductName " element={ <DetailPage/>}  />
         </Route>
       </Routes>
       </BrowserRouter>

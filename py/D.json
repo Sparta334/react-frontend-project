@@ -1,0 +1,99 @@
+[
+
+
+    {
+        "id" :"001",
+        "imageUrl" : "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg?t=1675151951",
+        "ProductName" : "Devil May Cry 5",
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/ss_e2be70565f94a7f6c392cccddce08c67f2f87612.1920x1080.jpg?t=1675151951",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/ss_4410bada2565843dae693b03ac3a50256ff5dd66.1920x1080.jpg?t=1675151951"
+            
+  
+        ],
+        "Description": "最強的惡魔獵人強勢回歸！動作遊戲迷翹首以待。傳說中的Stylish Action《Devil May Cry》終於復活！",
+        "Tag" :["動作" , "砍殺" , "單人" , "惡魔"]
+
+    },
+    {
+
+        "id" :"002",
+        "imageUrl" : "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg?t=1676995676",
+        "ProductName" : "Atomic Heart",
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/ss_1dc8661cde295efc2d1ff8612e079f5c74803748.1920x1080.jpg?t=1680683759",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/ss_0e4b3349f2124cdba1df885ac3cdabfba87b22fb.1920x1080.jpg?t=1680683759"
+            
+  
+        ],
+        "Description": "歡迎進入美妙瘋狂的烏托邦世界。生死之戰，一觸即發。針對獨特敵人制定最佳戰術，升級裝備，利用環境條件完成任務。想要揭開真相？那就做好流血的準備吧！",
+        "Tag" :["單人" , "FPS 第一人稱射擊" , "末日" , "機器人"]
+    },
+    {
+        "id" :"003",
+        "imageUrl" : "https://cdn.cloudflare.steamstatic.com/steam/apps/1659420/header_tchinese.jpg?t=1672777947",
+        "ProductName" : "UNCHARTED™: 盜賊傳奇合輯",
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1659420/ss_a1816dd536122dd740043c2b9440136503904215.1920x1080.jpg?t=1672777947",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1659420/ss_af9770abac008e4b94565082f4312c51488d3c90.1920x1080.jpg?t=1672777947"
+            
+  
+        ],
+        "Description": "化身為奈森．德瑞克和克洛伊．佛瑞茲，在他們各自的冒險旅程中面對過去、創造自己的未來。《UNCHARTED: 盜賊傳奇合輯》包含廣受歡迎，來自《UNCHARTED 4: A Thief’s End》與《UNCHARTED: The Lost Legacy》的單人故事劇情。",
+        "Tag" :["單人" ,"尋寶" , "劇情豐富" , "第三人稱" ,"射擊" ]
+    },
+    {
+      "id":"004",
+      "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1210320/header.jpg?t=1671467586",
+      "ProductName" : "Potion Craft: Alchemist Simulator",
+      "Detail":[ 
+          "https://cdn.cloudflare.steamstatic.com/steam/apps/1210320/ss_edaacdffd002753210063862b7af7096f8de098b.1920x1080.jpg?t=1671467586",
+          "https://cdn.cloudflare.steamstatic.com/steam/apps/1210320/ss_bc7f1f1182b80be859173cd5313c546ae1aede94.1920x1080.jpg?t=1671467586"
+          
+
+      ],
+      "Description": "Potion Craft is an alchemist simulator where you physically interact with your tools and ingredients to brew potions. You're in full control of the whole shop: invent new recipes, attract customers and experiment to your heart's content. Just remember: the whole town is counting on you.",
+      "Tag" :[ "單人", "2D" , "特色畫風" ]
+  },
+  {
+      "id":"005",
+      "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/976730/header.jpg?t=1670458602",
+      "ProductName" : "Halo: The Master Chief Collection",
+      "Detail":[ 
+          "https://cdn.cloudflare.steamstatic.com/steam/apps/976730/ss_50c0dbb2e720b13094417411dc72ec311e0ba254.1920x1080.jpg?t=1670458602",
+          "https://cdn.cloudflare.steamstatic.com/steam/apps/976730/ss_99af4fb4b95471b3b7df467b3b39705f46a97e8d.1920x1080.jpg?t=1670458602"
+          
+
+      ],
+      "Description":"士官長橫跨 6 款遊戲的經典英雄旅程，現在合而為一推出 PC 版。無論您是長期支持的鐵粉，或是第一次與超級戰士 117 打照面，《Halo: The Master Chief Collection》絕對能滿足您，提供最棒的 Halo 體驗。",
+      "Tag" :["FPS 第一人稱射擊" , "劇情豐富" , "單人" , "支援多人" , "英雄"]
+  },
+  {
+      "id":"006",
+      "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/header.jpg?t=1677858483",
+      "ProductName" : "STAR WARS 絕地：組織殞落™",
+      "Detail":[ 
+          "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/ss_763dcc7434f072d6fdbb9037b4d37f4474e29d9b.1920x1080.jpg?t=1677858483",
+          "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/ss_2dbe96ff08aed7bc02c82ba5256ce7d589cb34b7.1920x1080.jpg?t=1677858483"
+          
+
+      ],
+
+      "Description":"一段翻轉銀河系的冒險故事，就在 Respawn Entertainment 出品的第三人稱動作冒險遊戲《星球大戰 絕地：組織殞落™》等著你。一名孤立無援的小學徒必須完成自己的訓練，學會強大的新原力技能、掌握光劍之道，同時還得隨時小心帝國的魔爪。",
+      "Tag" :["動作" , "劇情豐富" , "單人" , "類魂" , "冒險" ,"開放世界 "]
+  },
+  {
+      "id":"007",
+      "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg?t=1680071511",
+      "ProductName" : "Resident Evil 4",
+      "Detail":[ 
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/ss_69810f4cd155912fdfdd21da70181df7d454c874.1920x1080.jpg?t=1680071511",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/ss_0596bac955340495562f3ff2538756ebd9a7f073.1920x1080.jpg?t=1680071511",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/ss_0554b945aafc847d55f780f7968de00aafa968a3.1920x1080.jpg?t=1680071511",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/ss_72888d13c9e3995f05a2886a51f0dc8791e28afa.1920x1080.jpg?t=1680071511",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/ss_98d9687b6acf5feff600b483d9f30e52079091e9.1920x1080.jpg?t=1680071511"
+      ],
+      "Description":"生還僅是惡夢的開端。 前所未見的生物災害「拉昆市事件」已過去六年。 成為特務的里昂·S·甘迺迪接獲命令，前往營救被綁架的總統千金。 為此里昂踏進被「瘋狂」支配之地，他的結局會是…… 一場生與死、恐懼與釋懷互相交織的嚴酷營救劇即將揭開帷幕。",
+      "Tag" :["射擊" , "恐怖" , "驚悚" , "單人" , "喪屍"]
+  }
+]

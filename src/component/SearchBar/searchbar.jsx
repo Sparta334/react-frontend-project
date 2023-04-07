@@ -1,84 +1,119 @@
 import SearchField from "react-search-field";
-import {Drawer} from 'antd'
+import { Drawer } from 'antd'
 import { Link } from 'react-router-dom';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Data from "../../json/Data.json"
 import Style from './searchbar.module.css'
-import {Space} from "antd"
+import { Space } from "antd"
+import axios from "axios";
+import fs from 'fs'
 
-export default function SearchBar(){
+const api = axios.create({
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+     },
+    baseURL: 'http://localhost:8000',
+});
+
+
+export default function SearchBar() {
+
 
 
     const [open, setOpen] = useState(false);
     const showDrawer = () => {
         setOpen(true);
     };
-      const onClose = () => {
+    const onClose = () => {
         setOpen(false);
     };
 
-    const [ReveiceData , setData] = useState("");
+    const [ReveiceData, setData] = useState("");
+    const [Value , setValue] = useState("")
 
+
+    const [DataRe , setDalue] = useState([]);
+
+    useEffect(() =>{
+        console.log(DataRe)
+        setData(DataRe);
+        console.log(ReveiceData)
+
+        
+    })
 
     // 搜尋時展開
-        
 
-    const onChange = (value, event) =>{
-        
-        const _Producit = 
-        Data.filter(post => {
-            if (value === "" ) {
-              onClose()
-              return value;
-            } else if (post.ProductName.toLowerCase().includes(value.toLowerCase() )) {
-                showDrawer();
-                return post;
+    const onChange = (value, event) => {
+
+        if(value === ''){
+            value+='222222222222222222222'
+        }
+        api.get('/BackEnd/SearchContent/' +  value ).then( res => {
+
+
+            if(value ==='222222222222222222222' || res === ''){
+                onClose();
             }
-          }).map((post, index) => (
+            else{
+                showDrawer();
+                console.log(res.data);
+                const pp = res.data.map((post , i) =>(  
+                    <div className={Style.box} key={i}>
 
-                <div className={Style.box} key={index}>
-                    <Link to={`/pages/Products/${post.ProductName}`}><p className={Style.SearchItemText}>{post.ProductName}</p></Link>
-                </div>
+                        <Link to={`/pages/Products/${post.product.ProductName}`}><p className={Style.SearchItemText}>{post.product.ProductName}</p></Link>
+                    </div>
+                ) )
 
-          ))
+                console.log(pp);
+
+                setDalue(  pp )
+        
+            
+            }
+
+        
+            
 
 
+       })
 
-          setData(_Producit);
+         
+
     }
 
     return (
 
-        <Space direction={"vertical"}  size={"small"} >
+        <Space direction={"vertical"} size={"small"} >
             <SearchField className={Style.SearchFieldBox}
-            
-            placeholder="Search..."
-            onChange={onChange}
-            
-            
+
+                placeholder="Search..."
+                onChange={onChange}
+
+
             />
 
-            <div id= {Style.SearchFieldDrawerBox}> 
+            <div id={Style.SearchFieldDrawerBox}>
 
 
-                <Drawer 
-                    autoFocus = {false}
+                <Drawer
+                    autoFocus={false}
                     placement="top"
                     closable={false}
                     onClose={onClose}
                     open={open}
                     getContainer={false}
-                    id ={Style.SearchFieldDrawer}
-                    height={`${ReveiceData.length*5}vh`}               
+                    id={Style.SearchFieldDrawer}
+                    height={`${ReveiceData.length * 5.5}vh`}
                 >
-                    
+
                     <div className={Style.SearchItemBox}>
                         {ReveiceData}
                     </div>
                 </Drawer>
 
             </div>
-          
+
 
         </Space>
 

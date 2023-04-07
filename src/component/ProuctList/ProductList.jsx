@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState} from 'react';
 import {LeftOutlined  , RightOutlined } from '@ant-design/icons'
 import { Button } from 'antd/es/radio';
-
+import { Link } from 'react-router-dom';
 import Style from './ProductList.module.css';
 
 export default function ProductList({Title , InputJson  }){
@@ -62,9 +62,16 @@ export default function ProductList({Title , InputJson  }){
                                 </div>
                                 </Image.PreviewGroup>
 
+                                <Row>
 
 
-                                <div className={Style.imgText}>{product.ProductName}</div>
+                                    <div className={Style.imgText}>{product.ProductName}</div>
+                                    
+                                    <Link to={`/pages/Products/${product.ProductName}` }><Button type='primary'>商店頁面</Button></Link>
+
+
+
+                                </Row>
                                 
                             </Col>
                            

@@ -15,7 +15,7 @@ export default function NavBar(){
         <div className={` ${ style.navbar }  `} >
             <Row>
 
-                <Link to="#"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
+                <Link to="/pages/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
 
                 <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
                     最新
