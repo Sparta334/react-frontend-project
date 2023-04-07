@@ -68,6 +68,8 @@
     text-overflow: ellipsis; 
     position: relative;
   }
+  /* 進入商店頁面按鈕 */
+  
   
  /* 小於 768px 的平板的排版 */
  @media screen and (max-width: 768px) {

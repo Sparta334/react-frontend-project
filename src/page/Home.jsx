@@ -20,7 +20,7 @@ export default function Home(){
 
             <Header/>
             <MainCarousel/>
-            <ProductList Title="熱門遊戲" InputJson={Popalur}  />
+            <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             
         </div>

@@ -38,7 +38,7 @@ html {
     max-width: 2560px;
     width: 100%;    
     top:0;
-    transition: .5s linear;
+    transition: .3s linear;
     position:relative;
     /*background-color: transparent;*/
     

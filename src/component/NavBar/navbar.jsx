@@ -18,10 +18,9 @@ export default function NavBar(){
                 <Link to="/pages/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
 
                 <div className={style.navbarname}>
-                <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
+                <NavLink to = "/pages/Home" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
                     商店主頁
                 </NavLink>
-                
                 <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
                     最新
                 </NavLink>
