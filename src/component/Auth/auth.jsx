@@ -1,19 +1,19 @@
-import { useSession, signIn, signOut } from "next-auth/react"
+import axios from 'axios'
+import { selectUserProfile } from '../../redux/UserSlice';
+import { useDispatch } from 'react-redux';
+import addUserProfile from '../../redux/UserSlice'
+import { useState } from 'react';
 
-export default function AuthComponent( { ProviderSite } ) {
-    const { data: session } = useSession()
-    if (session) {
-      return (
-        <>
-          Signed in as {session.user.email} <br />
-          <button onClick={() => signOut(ProviderSite)}>Sign out</button>
-        </>
-      )
-    }
-    return (
-      <>
-        Not signed in <br />
-        <button onClick={() => signIn(ProviderSite)}>Sign in</button>
-      </>
-    )
-  }
+
+
+
+export default function auth(Provider){
+
+ 
+  return (
+
+
+
+  )
+
+}
