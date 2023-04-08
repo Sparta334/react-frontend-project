@@ -11,10 +11,7 @@ const api = axios.create({
     headers: {
         'Access-Control-Allow-Origin': '*'
      },
-     method: "GET",
-     mode: "no-cors",
-     credentials: "include",
-    baseURL: 'https://energetic-fox-pajamas.cyclic.app/'
+      baseURL: 'https://energetic-fox-pajamas.cyclic.app/'
        
     }
     
@@ -40,8 +37,6 @@ export default function LogIn(){
     const egt = (e) =>{
         e.preventDefault();
         api.get('/auth/github').then( res => {
-            
-            window.location = res.data.url;
     
         })
     }
