@@ -12,7 +12,7 @@ const api = axios.create({
         'Access-Control-Allow-Origin': '*'
      },
      method: "GET",
-     mode: "cors",
+     mode: "no-cors",
      credentials: "include",
     baseURL: 'https://energetic-fox-pajamas.cyclic.app/'
        
