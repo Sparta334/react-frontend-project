@@ -33,8 +33,9 @@ export default function NavBar(){
                 </NavLink>
 
                 <SearchBar />
-
-                <NavLink to = "/pages/login"  > 
+                </div>
+                
+                <div className={style.loginitem}><NavLink to = "/pages/login"  > 
                     登入
                 </NavLink>
                 </div>

@@ -101,14 +101,24 @@ html {
   padding: 18px 0;
 }
 
+.loginitem {
+  position: absolute;
+  right: 0;
+  padding:1% 4% 0 40px;
+}
+
+
+
+
 
 /* 小於 768px 的平板的排版 */
 @media only screen and (max-width: 768px) {
   /* Navbar 樣式 */
   .navbar {
-    padding: 10px;
+    padding: 9px 10px 0 5px;
     justify-content:space-between ;
     flex-wrap: wrap;
+    
   }
 
   /* Logo 樣式 */
@@ -146,5 +156,11 @@ html {
     margin: 5px;
     margin-left: 10px;
     font-size: 12px;
+  }
+
+  /* 登錄按鈕位置 */
+  .loginitem {
+    padding:1% 6% 0 40px;
+    
   }
 }
