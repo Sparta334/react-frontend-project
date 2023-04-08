@@ -19,3 +19,12 @@
   width: 100%;
 
 }
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    font-size: 35px;
+    
+  }
+
+}

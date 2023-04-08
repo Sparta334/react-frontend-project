@@ -97,7 +97,7 @@ export default function DetailPage() {
             { !IsLoad ? (
                 <Spin size="large" />
             ) : (
-                <div>
+                <div >
                     <div className={style.title} > {ReveiceData.ProductName} </div>
                     <Slider {...settings}>
 
@@ -105,7 +105,7 @@ export default function DetailPage() {
 
                             imageURLsState.map((imageURL, index) => (
 
-                               <img key={index} src={imageURL} height="100%" width="100%" alt="" />
+                               <img key={index} src={imageURL} className={style.img}   alt="" />
 
                             ))
 
