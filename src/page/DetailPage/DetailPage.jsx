@@ -6,6 +6,10 @@ import style from './detailPage.module.css'
 import { Image } from "antd";
 import { Row, Col, Button } from 'antd'
 import { Spin } from 'antd';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './detail.css'
 
 const api = axios.create({
     headers: {
@@ -37,6 +41,7 @@ export default function DetailPage() {
 
             const detailArray = res.data.Detail;
             const Temo = []
+            Temo.push(ImageUrl);
             for (let i = 0; i < detailArray.length; i += 1) {
                 Temo.push(detailArray[i])
             }
@@ -68,6 +73,21 @@ export default function DetailPage() {
     }, []); // 空数组告诉 React 仅执行一次
 
 
+    const settings = {
+        customPaging: function(i) {
+          return (
+            <a class="abtn">
+              <img class="abtnImg" src={imageURLsState[i]} />
+            </a>
+          );
+        },
+        dots: true,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
 
 
     return (
@@ -79,21 +99,20 @@ export default function DetailPage() {
             ) : (
                 <div>
                     <div className={style.title} > {ReveiceData.ProductName} </div>
-                    <img src={ImageUrl} className={style.img}/>
-                    <Row gutter={[2, 12]}>
+                    <Slider {...settings}>
 
                         {
 
                             imageURLsState.map((imageURL, index) => (
 
-                                <Col key={index}><Button className={style.BtnImgBox} type="primary" size="large" onClick={() => setUrl(imageURL)} > <img src={imageURL} height="100%" width="100%" alt="" /> </Button>  </Col>
+                               <img src={imageURL} height="100%" width="100%" alt="" />
 
                             ))
 
                         }
 
 
-                    </Row>
+                    </Slider>
 
                     <div className={style.Description}>
 
