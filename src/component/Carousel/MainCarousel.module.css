@@ -28,6 +28,8 @@ button::after{
 .CarouselBoxImgText{
     position: absolute;
     padding: 0 0 10px;
+    font-size: x-large;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {

@@ -12,6 +12,7 @@ import style from './home.module.css'
 
 export default function Home(){
 
+    
 
 
     return(
@@ -19,7 +20,7 @@ export default function Home(){
         <div className={style.container}>
 
             <Header/>
-            <MainCarousel/>
+            <MainCarousel className={style.MainCarousel} />
             <ProductList Title="🔥熱門遊戲🔥" InputJson={Popalur}/>
             <ProductList Title="⭐最新遊戲⭐" InputJson={NewSet} />
             

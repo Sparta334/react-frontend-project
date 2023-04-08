@@ -1,12 +1,25 @@
 import {Carousel} from 'antd';
+import Slider from "react-slick";
 import {Image} from 'antd'
 import MainCarouselData from '../../json/MainCarousel.json'
 import Style from './MainCarousel.module.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function MainCarousel(){
 
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 5000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        autoplay:true,
+        centerMode:true,
+    }
 
     return(
-        <Carousel autoplay>
+        <Slider  {...settings} >
 
             {
                 MainCarouselData.map((products , index) => (
@@ -27,7 +40,7 @@ export default function MainCarousel(){
 
 
 
-        </Carousel>
+        </Slider>
     )
 
 

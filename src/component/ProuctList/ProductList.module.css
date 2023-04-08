@@ -26,6 +26,8 @@
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
+    z-index: -3;
+
   }
   
   .Btn {
@@ -76,6 +78,8 @@
   .shop{
     background-color: #000000; 
     color: #fff;
+    position: relative;
+    z-index: 9999;
   }
 
   .imgText {
@@ -152,3 +156,4 @@
 
     
   }
+

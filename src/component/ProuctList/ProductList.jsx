@@ -1,11 +1,13 @@
 
 import {Row , Col , Image} from 'antd';
-import { motion } from "framer-motion"; 
 import { useState} from 'react';
-import {LeftOutlined  , RightOutlined } from '@ant-design/icons'
+import { Space } from 'antd';
 import { Button } from 'antd/es/radio';
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
 import Style from './ProductList.module.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function ProductList({Title , InputJson  }){
 
@@ -29,30 +31,60 @@ export default function ProductList({Title , InputJson  }){
 
     }
 
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        initialSlide: 0,
+        draggable:true,
+        swipeToSlide: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                initialSlide: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+              }
+            }
+          ]
+        };
+
     return(
         
         <div className={Style.ItemsLayout}>
 
             <div>{Title}</div>
-            <LeftOutlined className={Style.Btn} onClick={() =>Chan(-1) } />
-
-
-            <RightOutlined className={Style.Btn} onClick={() =>Chan(1) } />
-            <motion.div animate={{ x:- width*inPos }}>
-            <Row  gutter={[30, 32 ]} wrap={false}>
+            <Slider {...settings}  >
+            {/* <motion.div animate={{ x:- width*inPos }}> */}
                 {       
 
 
                         InputJson.map((product)=> (
-
-                            <Col className="ImageBox" xs={8} sm={8} md={8} lg={6} xl={6} key={product.id} >
+                            <Space size={32}>
+                            <div className="ImageBox" key={product.id} >
 
                                 <Image.PreviewGroup>
                                 <Image 
                                      preview={{ visible: false }}
                                     src={product.imageUrl} 
-                                    height="100%" 
-                                    width="100%" 
+                                    height="90%" 
+                                    width="90%" 
                                     alt="Sample" 
 
                                     />
@@ -73,16 +105,16 @@ export default function ProductList({Title , InputJson  }){
 
                                 </Row>
                                 
-                            </Col>
+                            </div>
+                            </Space>
                            
                         )     
                     )
 
                 }
 
-
-            </Row>
-            </motion.div>
+            {/* </motion.div> */}
+            </Slider>
             <Button type="primary" block  className={Style.more}>
                 顯示更多👉
             </Button>
