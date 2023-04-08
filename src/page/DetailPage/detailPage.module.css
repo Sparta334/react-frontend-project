@@ -1,7 +1,6 @@
 *{
     padding:0;
     margin: 0;
-    transition: .10s linear;
 }
 
 
@@ -18,7 +17,6 @@
     
     font-size: 23px;
     line-height: 1.6;
-    font-weight:6666;/* 6666 */
     position: absolute;
     margin: 0;
     padding: 10px 34% 0 9%;
@@ -90,7 +88,7 @@
     .Description {
         font-size: 16px;
         margin: 0;
-        padding: 20px 34% 0 21%;
+        padding: 40px 34% 0 21%;
         line-height: 1.7;
     }
     

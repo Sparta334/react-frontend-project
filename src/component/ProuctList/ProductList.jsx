@@ -8,7 +8,7 @@ import Slider from "react-slick";
 import Style from './ProductList.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import './ProductList.css'
 export default function ProductList({Title , InputJson  }){
 
     const [inPos ,setInPos ] = useState(0);

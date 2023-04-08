@@ -12,6 +12,7 @@
     padding:0 33.3%;
     padding-bottom: 6%;
 }
+
 button::after{
   background-color: gray;
   padding:0 33.3%;
@@ -42,9 +43,9 @@ button::after{
 @media screen and (max-width: 768px) {
 
   .CarouselBox {
-    margin: 0 30px;
+    margin: 0 15px;
     margin-bottom: 6%;
-    padding: 0 15%;
+    padding: 0 14%;
     display: flex;
     justify-content: center;
     padding-bottom: 8%;
@@ -53,6 +54,12 @@ button::after{
 
 button::after{
     display: none;
+
 }
+
+.slick-next:before {
+  display: none !important;
+}
+
 
 }

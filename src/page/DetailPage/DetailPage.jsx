@@ -92,12 +92,12 @@ export default function DetailPage() {
 
     return (
 
-        <div>
+        <div className={style.header}>
             <Header />
             { !IsLoad ? (
                 <Spin size="large" />
             ) : (
-                <div >
+                <div>
                     <div className={style.title} > {ReveiceData.ProductName} </div>
                     <Slider {...settings}>
 

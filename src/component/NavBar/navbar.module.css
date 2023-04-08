@@ -123,8 +123,10 @@ html {
 
   /* Logo 樣式 */
   .Logo {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
+    margin-left: 40px;
+    
   }
 
   /* 導航列樣式 */
@@ -160,7 +162,7 @@ html {
 
   /* 登錄按鈕位置 */
   .loginitem {
-    padding:1% 6% 0 40px;
+    padding:1% 10% 0 40px;
     
   }
 }
