@@ -24,17 +24,17 @@ export default function NavBar(){
                 <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
                     最新
                 </NavLink>
-                <NavLink to= "pages/popular" className= {({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
+                <NavLink to= "/pages/popular" className= {({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
                     熱門
                 </NavLink>
 
-                <NavLink to = "pages/discount" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
+                <NavLink to = "/pages/discount" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
                     優惠
                 </NavLink>
 
                 <SearchBar />
 
-                <NavLink to = "pages/login"  > 
+                <NavLink to = "/pages/login"  > 
                     登入
                 </NavLink>
                 </div>

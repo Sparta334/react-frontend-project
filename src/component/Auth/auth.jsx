@@ -6,14 +6,14 @@ export default function AuthComponent( { ProviderSite } ) {
       return (
         <>
           Signed in as {session.user.email} <br />
-          <button onClick={() => signOut()}>Sign out</button>
+          <button onClick={() => signOut(ProviderSite)}>Sign out</button>
         </>
       )
     }
     return (
       <>
         Not signed in <br />
-        <button onClick={() => signIn()}>Sign in</button>
+        <button onClick={() => signIn(ProviderSite)}>Sign in</button>
       </>
     )
   }
