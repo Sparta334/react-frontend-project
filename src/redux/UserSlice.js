@@ -3,13 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // 初始化全域變數
 
-const initialState = { UserProfile:[]};
+const initialState = { UserProfile:"User"};
 const UserSlice = createSlice({
 
     name : 'user',
     initialState,
     reducers:{
-        addUserProfile: () => {},
+        addUserProfile: (state , action) => {
+            const TargetUser = action.payload;
+            state.UserProfile = TargetUser;
+
+        },
     },
 
 

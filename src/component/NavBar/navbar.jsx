@@ -4,10 +4,38 @@ import {Col ,Row} from 'antd'
 import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/searchbar'
 import style from './navbar.module.css';
+import { selectUserProfile } from '../../redux/UserSlice';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
+const api = axios.create({
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+     },
+       baseURL: 'http://localhost:8000/'
+    });
+  
 
+  
 
 export default function NavBar(){
+
+
+    const dispatch =useDispatch();
+    const AddUser = (user) =>{
+        dispatch(addUserProfile({
+            user: user,
+          })
+          
+        )
+    
+    };
+    console.log(useSelector(selectUserProfile))
+
+
 
     return (
 
@@ -35,10 +63,25 @@ export default function NavBar(){
                 <SearchBar />
                 </div>
                 
-                <div className={style.loginitem}><NavLink to = "/pages/login"  > 
-                    登入
-                </NavLink>
-                </div>
+                {
+                    
+                    useSelector(selectUserProfile) === 'User' ? (
+                        <div className={style.loginitem}><NavLink to = "/pages/login"  > 
+                            登入
+                        </NavLink>
+                        </div>
+                    ) :(
+
+                        <div>
+                            {useSelector(selectUserProfile) }
+                            <button onClick={ ()  =>{                            
+                                api.get('/logout').then( AddUser('User') )
+
+                            } }  > 登出</button>
+                        </div>
+                        
+                    )
+                }
             
             </Row>
             
