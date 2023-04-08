@@ -41,16 +41,16 @@ export default function DetailPage() {
 
             const detailArray = res.data.Detail;
             const Temo = []
-            Temo.push(ImageUrl);
+            Temo.push(res.data.imageUrl);
+
             for (let i = 0; i < detailArray.length; i += 1) {
                 Temo.push(detailArray[i])
             }
             setImageURLsState(Temo);
 
-            setLoad(true)
 
 
-        }).catch(error => {
+        }).then( setLoad(true) ).catch(error => {
             console.error(error);
 
             const NoEntry = `
@@ -105,7 +105,7 @@ export default function DetailPage() {
 
                             imageURLsState.map((imageURL, index) => (
 
-                               <img src={imageURL} height="100%" width="100%" alt="" />
+                               <img key={index} src={imageURL} height="100%" width="100%" alt="" />
 
                             ))
 
