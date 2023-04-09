@@ -121,7 +121,7 @@
  /* 小於 768px 的平板的排版 */
  @media screen and (max-width: 768px) {
     .ItemsLayout {
-      padding: 0 80px 0px 80px;
+      padding: 30px 80px 30px 80px;
     }
   
     

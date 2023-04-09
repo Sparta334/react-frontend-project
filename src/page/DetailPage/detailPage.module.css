@@ -70,13 +70,14 @@
   }
   
 
-/**/
-
-
+/* footer跑版問題 */
 .problemfixed{
   width: 100vh;
   height: 100vh;
+  
+
 }
+
 
 
 
@@ -99,13 +100,20 @@
     .Description {
         font-size: 16px;
         margin: 0;
-        padding: 40px 34% 0 21%;
+        padding: 40px 34% 80px 21%;
         line-height: 1.7;
     }
     
     .img {
         width: 80%;
         position:relative;
+    
+    }
+
+    .problemfixed{
+    
+      height: 500vh;
+      
     
     }
   }
