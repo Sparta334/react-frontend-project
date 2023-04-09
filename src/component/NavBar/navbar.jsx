@@ -55,20 +55,20 @@ export default function NavBar(){
         <div className={` ${ style.navbar }  `} >
             <Row>
             
-                <a href="/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </a>
+                <a href="/#/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </a>
 
                 <div className={style.navbarname}>
-                <a href = "/Home" className={style.navItem } >
+                <a href = "/#/Home" className={style.navItem } >
                     商店主頁
                 </a>
-                <a href = "/newset" className={style.navItem } >
+                <a href = "/#/newset" className={style.navItem } >
                     最新
                 </a>
-                <a href= "/popular" className= {style.navItem }>
+                <a href= "/#/popular" className= {style.navItem }>
                     熱門
                 </a>
 
-                <a href = "/discount" className={style.navItem }>
+                <a href = "/#/discount" className={style.navItem }>
                     優惠
                 </a>
 
@@ -85,7 +85,7 @@ export default function NavBar(){
                     ) :(
 
                         <div className={style.loginitem}>
-                            <a to = "//login" > 
+                            <a href = "/#/login" > 
                                 {session.user.email}  登出
                             </a>
                         </div>
