@@ -6,7 +6,7 @@
 
 
 .slick-thumb{
-
+position: relative;
     bottom: -4px;
    padding-right: 23%;
 }
@@ -44,6 +44,16 @@
     .slick-dots li {
         left:-25%;
     }
+
+
+
+   
+  
+  
+  
+  
+  
+  
 
 @media screen and (max-width: 768px) {
 

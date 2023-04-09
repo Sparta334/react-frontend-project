@@ -38,6 +38,8 @@
     box-sizing: border-box;
     padding-left: 80px;
     padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 40px;
     z-index: -3;
 
   }
