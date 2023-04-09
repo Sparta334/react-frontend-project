@@ -87,8 +87,8 @@ export default function NavBar(){
                         </div>
                     ) :(
 
-                        <div>
-                            <NavLink className={style.loginitem} to = "/pages/login"  > 
+                        <div className={style.loginitem}>
+                            <NavLink to = "/pages/login" > 
                                 {session.user.email}  登出
                             </NavLink>
                         </div>
