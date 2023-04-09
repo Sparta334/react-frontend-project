@@ -78,7 +78,7 @@ export default function NavBar(){
                 {
                      
                      !session  ? (
-                        <div className={style.loginitem}><Link to = "/login"  > 
+                        <div className={style.loginitem}><Link to = "login"  > 
                             登入
                         </Link>
                         </div>
