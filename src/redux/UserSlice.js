@@ -2,16 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 // 初始化全域變數
-
-const initialState = { UserProfile:"User"};
 const UserSlice = createSlice({
 
     name : 'user',
-    initialState,
+    initialState:{ UserProfile : 'User'},
     reducers:{
         addUserProfile: (state , action) => {
-            const TargetUser = action.payload;
-            state.UserProfile = TargetUser;
+            console.log(typeof action.payload)
+            state.UserProfile = action.payload.UserProfile;
 
         },
     },
@@ -23,6 +21,6 @@ const UserSlice = createSlice({
 
 export const selectUserProfile = (state) => state.user.UserProfile;
 
-export const addUserProfile = UserSlice.actions;
+export const {addUserProfile }= UserSlice.actions;
 
 export default UserSlice.reducer;

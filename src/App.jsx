@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Provider } from 'react-redux'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Store from './redux/UserProfile'
+import { Provider } from 'react-redux'
+import Store from './redux/Store'
 import Home from './page/Home/Home'
 import DetailPage from './page/DetailPage/DetailPage'
 import LogIn from './page/Login/Login'

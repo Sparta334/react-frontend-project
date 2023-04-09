@@ -8,8 +8,12 @@ import { selectUserProfile } from '../../redux/UserSlice';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { addUserProfile } from '../../redux/UserSlice'
+import { Provider } from 'react-redux'
+import Store from '../../redux/Store'
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
+import { createClient } from '@supabase/supabase-js';
 
 const api = axios.create({
     headers: {
@@ -19,27 +23,38 @@ const api = axios.create({
     });
   
 
-  
+const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
+
 
 export default function NavBar(){
 
 
     const dispatch =useDispatch();
-    const AddUser = (user) =>{
-        dispatch(addUserProfile({
-            user: user,
-          })
+    // const AddUser = (user) =>{
+    //     dispatch(addUserProfile({
+    //         user: user,
+    //       })
           
-        )
+    //     )
     
-    };
+    // };
     console.log(useSelector(selectUserProfile))
-
+    const [session, setSession] = useState(null)
+    useEffect(() => {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+          setSession(session)
+        })
+    
+        supabase.auth.onAuthStateChange((_event, session) => {
+          setSession(session)
+        })
+      }, [])
 
 
     return (
 
         // navbar 需要display.flex
+        <Provider store = {Store}>
         <div className={` ${ style.navbar }  `} >
             <Row>
             
@@ -64,8 +79,8 @@ export default function NavBar(){
                 </div>
                 
                 {
-                    
-                    useSelector(selectUserProfile) === 'User' ? (
+                     
+                     !session  ? (
                         <div className={style.loginitem}><NavLink to = "/pages/login"  > 
                             登入
                         </NavLink>
@@ -73,11 +88,9 @@ export default function NavBar(){
                     ) :(
 
                         <div>
-                            {useSelector(selectUserProfile) }
-                            <button onClick={ ()  =>{                            
-                                api.get('/logout').then( AddUser('User') )
-
-                            } }  > 登出</button>
+                            <NavLink className={style.loginitem} to = "/pages/login"  > 
+                                {session.user.email}  登出
+                            </NavLink>
                         </div>
                         
                     )
@@ -87,7 +100,7 @@ export default function NavBar(){
             
         </div>
 
-
+    </Provider>
 
 
     );
