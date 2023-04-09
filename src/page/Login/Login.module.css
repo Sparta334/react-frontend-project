@@ -1,0 +1,21 @@
+
+/* 注意jsx中已經把padding固定css無法修改 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .container a {
+    order: 2;
+  }
+
+anticon anticon-close{
+    padding-left: 100px;
+  }
+  
+  
+
+  
+  

@@ -48,10 +48,15 @@ export default function LogIn(){
   
     return (
 
+      
+      <div className="container" style={{ padding: '50px 50px 50px 50px' }}>
 
-      <div className="container" style={{ padding: '50px 0 100px 0' }}>
+        
+        <div className="Cross"> 
+          <a href="/"><CloseOutlined/></a>
+        </div> 
+       
 
-        <a href="/" ><CloseOutlined/></a>
         {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
       </div>
     )
