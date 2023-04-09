@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "../../component/Footer/Footer";
 import './detail.css'
+import NavBar from "../../component/NavBar/navbar";
 
 const api = axios.create({
     headers: {
@@ -71,7 +72,7 @@ export default function DetailPage() {
 
 
 
-    }, []); // 空数组告诉 React 仅执行一次
+    }, [ProductName]); // 空数组告诉 React 仅执行一次
 
 
     const settings = {
@@ -94,7 +95,7 @@ export default function DetailPage() {
     return (
 
         <div className={style.header}>
-            <Header />
+            <NavBar />
             { !IsLoad ? (
                 <div className={style.problemfixed}> <Spin size="large" /></div>
             ) : (

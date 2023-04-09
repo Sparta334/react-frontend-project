@@ -55,22 +55,22 @@ export default function NavBar(){
         <div className={` ${ style.navbar }  `} >
             <Row>
             
-                <a href="/#/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </a>
+                <Link to="/"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
 
                 <div className={style.navbarname}>
-                <a href = "/#/Home" className={style.navItem } >
+                <Link to = "/" className={style.navItem } >
                     商店主頁
-                </a>
-                <a href = "/#/newset" className={style.navItem } >
+                </Link>
+                <Link to = "/newset" className={style.navItem } >
                     最新
-                </a>
-                <a href= "/#/popular" className= {style.navItem }>
+                </Link>
+                <Link to= "/popular" className= {style.navItem }>
                     熱門
-                </a>
+                </Link>
 
-                <a href = "/#/discount" className={style.navItem }>
+                <Link to = "/discount" className={style.navItem }>
                     優惠
-                </a>
+                </Link>
 
                 <SearchBar />
                 </div>
@@ -78,16 +78,16 @@ export default function NavBar(){
                 {
                      
                      !session  ? (
-                        <div className={style.loginitem}><a to = "//login"  > 
+                        <div className={style.loginitem}><Link to = "/login"  > 
                             登入
-                        </a>
+                        </Link>
                         </div>
                     ) :(
 
                         <div className={style.loginitem}>
-                            <a href = "/#/login" > 
+                            <Link to = "login" > 
                                 {session.user.email}  登出
-                            </a>
+                            </Link>
                         </div>
                         
                     )

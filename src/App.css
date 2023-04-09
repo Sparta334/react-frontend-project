@@ -65,3 +65,7 @@
   z-index: 4;
 
 }
+
+.react-search-field-button{
+  margin-top: 0;
+}
