@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Style from './searchbar.module.css'
 import { Space } from "antd"
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const api = axios.create({
@@ -61,7 +62,7 @@ export default function SearchBar() {
 
                 const pp = res.data.map((post , i) =>(  
                     <div className={Style.box} key={i}>
-                        <a href={`/pages/Products/${post.product.ProductName}`}><p className={Style.SearchItemText}>{post.product.ProductName}</p></a>
+                        <NavLink to={`/pages/Products/${post.product.ProductName}`}><div className={Style.SearchItemText}>{post.product.ProductName}</div></NavLink>
                     </div>
                 ) )
 
