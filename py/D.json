@@ -95,5 +95,95 @@
       ],
       "Description":"生還僅是惡夢的開端。 前所未見的生物災害「拉昆市事件」已過去六年。 成為特務的里昂·S·甘迺迪接獲命令，前往營救被綁架的總統千金。 為此里昂踏進被「瘋狂」支配之地，他的結局會是…… 一場生與死、恐懼與釋懷互相交織的嚴酷營救劇即將揭開帷幕。",
       "Tag" :["射擊" , "恐怖" , "驚悚" , "單人" , "喪屍"]
-  }
+  },
+  {
+    "id":"008",
+    "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/header.jpg?t=1680512424",
+    "ProductName" : "Sifu",
+
+    "Detail":[ 
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/ss_c917c981f912e8331b40a2638a32b3021458d4b8.1920x1080.jpg?t=1680512424",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/ss_6541bc550e7b1133d123ebce8b0e098dccbe66eb.1920x1080.jpg?t=1680512424",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/ss_c400edce5e28150a5d9859aaace1c76fb2b44d78.1920x1080.jpg?t=1680512424",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/ss_8bdc441c064f7ac1f75a33bb9f50e38110f38d28.1920x1080.jpg?t=1680512424",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/ss_e13cb718cba01b51788627b43226fedd52caa217.1920x1080.jpg?t=1680512424"
+
+    ],
+    "Description":"《Sifu》是一款寫實風格的第三人稱格鬥遊戲，緊湊的功夫戰鬥系統與電影式的武打動作體驗，將帶領你踏上復仇的征途。",
+    "Tag" :["動作" , "類魂" , "第三人稱" , "武術"]
+
+    },
+    {
+        "id":"009",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg?t=1680282721",
+        "ProductName" : "The Last of Us™ Part I",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/ss_abc373417afe2172ddf7b6d91442a14366a46975.1920x1080.jpg?t=1680282721",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/ss_877f930b9b7fe4a57af1707cdaef64ed37213b4e.1920x1080.jpg?t=1680282721",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/ss_ea8b45bb65d05fafa911387df16399ead11e6878.1920x1080.jpg?t=1680282721",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/ss_5d7cf9e0857d10924def80a1bb0ce8f5f8da1b02.1920x1080.jpg?t=1680282721",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/ss_e67d2ca76b0c8985a3615afb38c21e893df73272.1920x1080.jpg?t=1680282721"
+
+        ],
+        "Description":"榮獲200多項年度最佳遊戲獎的《The Last of Us™》，帶領玩家體驗深刻的劇情和難忘的角色。",
+        "Tag" :["動作" , "劇情豐富" , "單人" , "喪屍"]
+
+    },
+    {
+        "id":"010",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg?t=1650554420",
+        "ProductName" : "God of War",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/ss_6eccc970b5de2943546d93d319be1b5c0618f21b.1920x1080.jpg?t=1650554420",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/ss_f1bff24d3967a21d303d95e11ed892e3d9113057.1920x1080.jpg?t=1650554420",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/ss_3670ba72c7e3e9c3c3225547ef2c1053504e62b8.1920x1080.jpg?t=1650554420",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/ss_1bd99270dcbd4ff9fe9c94b0d9c8ffc50ebb42c7.1920x1080.jpg?t=1650554420",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/ss_8db3de5b5d611e50945268848de2889e1ed4ba84.1920x1080.jpg?t=1650554420"
+
+        ],
+        "Description":"榮獲200多項年度最佳遊戲獎的《The Last of Us™》，帶領玩家體驗深刻的劇情和難忘的角色。",
+        "Tag" :["動作" , "劇情豐富" , "單人" , "神話","戰鬥" ,"砍殺"]
+        
+
+    },
+    {
+        "id":"011",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/header.jpg?t=1676056424",
+        "ProductName" : "Control Ultimate Edition",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/ss_949cf39deee737fec3aadff903ec5311dd22bdab.1920x1080.jpg?t=1676056424",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.1920x1080.jpg?t=1676056424",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/ss_06b7e4baac0ac7f2ecfcc8d3198f707339c6296f.1920x1080.jpg?t=1676056424",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/ss_5a16ce565951479e142c56a23f19d88333d84945.1920x1080.jpg?t=1676056424"
+           
+
+        ],
+        "Description":"《Control》贏得超過 80 項大獎，遊戲畫面就是場精彩的視覺饗宴，踏上節奏緊張刺激的第三人稱動作探險旅程，讓你一秒都無法鬆懈。",
+        "Tag" :["動作" , "劇情豐富" , "女主人翁" , "靈異","恐怖"]
+        
+
+     },
+     {
+        "id":"012",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/header.jpg?t=1649438096",
+        "ProductName" : "DEATH STRANDING",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/ss_f64a1140651ff5af30eb63bb6e5b41753d00a98e.1920x1080.jpg?t=1649438096",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/ss_4b6d7d010d1701b2b57bf8ef1b4975a04b3d632f.1920x1080.jpg?t=1649438096",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/ss_8f0a2b1f6ea6da05c53f802034e08cbe92aaccab.1920x1080.jpg?t=1649438096",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/ss_87653eb3d360766a994adccd82767b34961b37a5.1920x1080.jpg?t=1649438096",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/ss_0d8ccac035eb175f8f19571c45c89be6ff46c2c6.1920x1080.jpg?t=1649438096"
+           
+
+        ],
+        "Description":"傳奇遊戲製作人小島秀夫帶來顛覆傳統的遊戲體驗，在這無可比擬的《死亡擱淺導演剪輯版》中加以擴展。玩家扮演山姆·布橋斯，一肩扛起責任，在面目全非的美國聯繫僅餘的倖存者，為人類社會帶來希望。你能一步步重新聯繫這個分崩離析的世界嗎？",
+        "Tag" :["開放世界 " , "劇情豐富" , "動作" , "步行模擬"]
+
+    }
+
+
 ]
