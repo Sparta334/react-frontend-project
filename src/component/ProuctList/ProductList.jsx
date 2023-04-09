@@ -99,7 +99,7 @@ export default function ProductList({Title , InputJson  }){
 
                                     <div className={Style.imgText}>{product.ProductName}</div>
                                    
-                                    <Link to={product.ProductName}><Button type='primary' className={Style.shop} > 商店頁面 </Button></Link>
+                                    <Link to={`pages/${product.ProductName}`}><Button type='primary' className={Style.shop} > 商店頁面 </Button></Link>
                                     
 
 
