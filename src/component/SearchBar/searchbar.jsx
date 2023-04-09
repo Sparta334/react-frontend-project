@@ -61,7 +61,7 @@ export default function SearchBar() {
 
                 const pp = res.data.map((post , i) =>(  
                     <div className={Style.box} key={i}>
-                        <Link to={`/pages/Products/${post.product.ProductName}`}><p className={Style.SearchItemText}>{post.product.ProductName}</p></Link>
+                        <a href={`/pages/Products/${post.product.ProductName}`}><p className={Style.SearchItemText}>{post.product.ProductName}</p></a>
                     </div>
                 ) )
 
