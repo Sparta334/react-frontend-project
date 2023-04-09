@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { theme } from 'antd';
 import { Spin } from 'antd';
-import {GithubOutlined} from '@ant-design/icons'
+import {GithubOutlined, CloseOutlined} from '@ant-design/icons'
 import './auth.css'
 
 
@@ -43,9 +43,15 @@ export default function Suth() {
 
   return (
     <div className="row flex flex-center">
+      
       <div className="col-6 form-widget">
+      <div class="Cross"> 
+          <a href="/"><CloseOutlined/></a>
+        </div> 
+       
         <h1 className="header">Let's Go</h1>
-          
+                  
+  
           <button onClick={handleLogin} >
             {
                 (loading ) ? ( <div> <Spin size='large' /> </div> ) :  ( <div><GithubOutlined /></div>)

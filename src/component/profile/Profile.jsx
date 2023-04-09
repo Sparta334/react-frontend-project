@@ -8,6 +8,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { theme } from 'antd';
+import {GithubOutlined, CloseOutlined} from '@ant-design/icons'
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
@@ -49,6 +50,9 @@ export default function Account({ session }) {
 
         /*  */  
         <div>
+          <div class="Cross"> 
+            <a href="/"><CloseOutlined/></a>
+          </div> 
             {session.user.email}
           <button className="button block" type="button" onClick={() => supabase.auth.signOut()}>
             Sign Out
