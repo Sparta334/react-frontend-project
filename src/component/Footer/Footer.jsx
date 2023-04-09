@@ -10,7 +10,7 @@ export default function Footer(){
         <footer>
             <div className={style.inner_width}>
             <div className={style.copyright}>
-                &copy; 2022 | Created & Designed By <a  href="#">Summer_dreams Team</a>
+                &copy; 2023 | Created & Designed By <a  href="#">Summer_dreams Team</a>
             </div>
             <div class="sm">
                 <a href="#" className={style.btnlogo}><InstagramOutlined /></a>

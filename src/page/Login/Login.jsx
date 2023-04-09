@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import {CloseOutlined ,GithubOutlined } from '@ant-design/icons'
 import {Row ,Col} from 'antd' 
 import { selectUserProfile } from '../../redux/UserSlice';
@@ -51,7 +51,11 @@ export default function LogIn(){
 
       <div className="container" style={{ padding: '50px 0 100px 0' }}>
 
+<<<<<<< HEAD
         <Link href="/pages/Home" ><CloseOutlined/></Link>
+=======
+        <a href="/" ><CloseOutlined/></a>
+>>>>>>> 4cd2a5711fb52e3b0bb31f5ccc351c99a9073da0
         {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
       </div>
     )

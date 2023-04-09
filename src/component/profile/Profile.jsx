@@ -47,7 +47,7 @@ export default function Account({ session }) {
   
     return (
 
-        
+        /*  */  
         <div>
             {session.user.email}
           <button className="button block" type="button" onClick={() => supabase.auth.signOut()}>

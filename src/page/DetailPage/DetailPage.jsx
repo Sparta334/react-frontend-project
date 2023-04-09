@@ -96,10 +96,10 @@ export default function DetailPage() {
         <div className={style.header}>
             <Header />
             { !IsLoad ? (
-                <Spin size="large" />
+                <div className={style.problemfixed}> <Spin size="large" /></div>
             ) : (
                 <div>
-                    <div className={style.title} > {ReveiceData.ProductName} </div>
+                    <div className={style.title} >《 {ReveiceData.ProductName} 》</div>
                     <Slider {...settings}>
 
                         {
@@ -122,11 +122,12 @@ export default function DetailPage() {
                     </div>
                 </div>
             )}
+            
+            <Footer className={style.footer} />
 
-            <Footer/>
 
 
-
+            
         </div>
     );
 

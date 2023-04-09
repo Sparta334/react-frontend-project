@@ -1,17 +1,72 @@
-footer{
-    background : url(../img/bg.jpg) no-repeat center;
-    color: #fff;
-    padding: 80px 0;
+footer {
+  background-color: #f2f2f2;
+  padding: 45px 0;
+  text-align: center;
+} 
+
+.copyright a{
+    font-size: 24px;
+    color: #48dbfb;
+    font-weight: 400;
+  }
+
+footer .inner_width {
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .copyright {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+footer .sm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .btnlogo {
+  display: inline-block;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #333;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+footer .btnlogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* RWD */
+@media screen and (max-width: 768px) {
+  footer .copyright {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
     text-align: center;
   }
-  
-  .copyright{
-    margin-bottom: 20px;
-    font-size: 15px;
-  }
-  
+
   .copyright a{
-    font-size: 16px;
+    font-size: 18px;
     color: #48dbfb;
-    font-weight: 500;
+    font-weight: 400;
   }
+
+
+}
+
+
