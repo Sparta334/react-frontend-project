@@ -78,14 +78,14 @@ export default function NavBar(){
                 {
                      
                      !session  ? (
-                        <div className={style.loginitem}><Link to = "login"  > 
+                        <div className={style.loginitem}><Link to = "/login"  > 
                             登入
                         </Link>
                         </div>
                     ) :(
 
                         <div className={style.loginitem}>
-                            <Link to = "login" > 
+                            <Link to = "/login" > 
                                 {session.user.email}  登出
                             </Link>
                         </div>
