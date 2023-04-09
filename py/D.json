@@ -80,7 +80,7 @@
       ],
 
       "Description":"一段翻轉銀河系的冒險故事，就在 Respawn Entertainment 出品的第三人稱動作冒險遊戲《星球大戰 絕地：組織殞落™》等著你。一名孤立無援的小學徒必須完成自己的訓練，學會強大的新原力技能、掌握光劍之道，同時還得隨時小心帝國的魔爪。",
-      "Tag" :["動作" , "劇情豐富" , "單人" , "類魂" , "冒險" ,"開放世界 "]
+      "Tag" :["動作" , "劇情豐富" , "單人" , "類魂" , "冒險" ,"開放世界"]
   },
   {
       "id":"007",
@@ -181,9 +181,65 @@
 
         ],
         "Description":"傳奇遊戲製作人小島秀夫帶來顛覆傳統的遊戲體驗，在這無可比擬的《死亡擱淺導演剪輯版》中加以擴展。玩家扮演山姆·布橋斯，一肩扛起責任，在面目全非的美國聯繫僅餘的倖存者，為人類社會帶來希望。你能一步步重新聯繫這個分崩離析的世界嗎？",
-        "Tag" :["開放世界 " , "劇情豐富" , "動作" , "步行模擬"]
+        "Tag" :["開放世界" , "劇情豐富" , "動作" , "步行模擬"]
+
+    },{
+
+        "id":"013",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg?t=1680877683",
+        "ProductName" : "Dying Light 2 Stay Human",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/ss_6f01caca9af07032a22f16712f180c7e7ab0a1a3.1920x1080.jpg?t=1680877683",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/ss_e9697c38d50259df25495750dfff3899572beeed.1920x1080.jpg?t=1680877683",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/ss_6f01caca9af07032a22f16712f180c7e7ab0a1a3.1920x1080.jpg?t=1680877683",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/ss_37a0e9b611c3a3515e84e35f22796257d4601b2e.1920x1080.jpg?t=1680877683",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/ss_ff38bf9182b04020a92211be2ef2e59f14e59159.1920x1080.jpg?t=1680877683"
+           
+
+        ],
+        "Description":"病毒贏了，文明衰退至了黑暗年代。這個被稱之為都市的地方，也是人類最後的聚落之一，即將崩塌。用你的敏捷與戰鬥技術來生存，並重新塑造這個世界。你的選擇非常重要。",
+        "Tag" :["支援多人" , "探索" , "喪屍" , "開放世界" , "跑酷", "合作"]
+
+
+
+    },
+    {
+
+        "id":"014",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/header.jpg?t=1680779649",
+        "ProductName" : "WILD HEARTS™",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/ss_4233515fd9b5df6ae550989f134b09f813ad4f7e.1920x1080.jpg?t=1680779649",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/ss_db0f422e239826988c562ea7b2f03896e164a30d.1920x1080.jpg?t=1680779649",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/ss_aa243a5f3a9622fdfb1c57ff7dcb66810ee58077.1920x1080.jpg?t=1680779649",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/ss_ccb28e904440ccd78677cc9d9799f1c7d72fe7f5.1920x1080.jpg?t=1680779649",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/ss_06b924ca6c47c7c10b6397447dcbe1de64e1896e.1920x1080.jpg?t=1680779649",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1938010/ss_7ec36c7ca779fd8b3918e402ffd5cf554bb2d1e6.1920x1080.jpg?t=1680779649"
+
+        ],
+        "Description":"掌握機巧奇術，狩獵巨型野獸。",
+        "Tag" :["動作" , "角色扮演" , "狩獵" , "冒險" , "多人", "合作"]
+
+    },
+    {
+
+        "id":"015",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/header_alt_assets_17.jpg?t=1680700860",
+        "ProductName" : "No Man's Sky",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/ss_55ee867206f7f8cb004f52af51096df5cdcec975.1920x1080.jpg?t=1680700860",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/ss_2bb54a578f253824b9c8c55b756ab1f9a9ccc0c7.1920x1080.jpg?t=1680700860",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/ss_ed786cb1c859ea26a2bc6af9c6617e569b9a41b6.1920x1080.jpg?t=1680700860",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/ss_3ee86068e7700f615455e799fe7ba1fb3b42f063.1920x1080.jpg?t=1680700860",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/ss_828e4bd900a32d6169e8262f601c5131b47fd9c1.1920x1080.jpg?t=1680700860"
+
+        ],
+        "Description":"「無人之境」是一個科幻題材的遊戲，需要玩家在一個按程式生成的無限宇宙中探索和生存。",
+        "Tag" :["開放世界" , "太空" , "探索" , "開放世界生存工義" , "多人", "合作" ,"生存"]
 
     }
-
 
 ]
