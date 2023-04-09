@@ -51,7 +51,7 @@ export default function LogIn(){
 
       <div className="container" style={{ padding: '50px 0 100px 0' }}>
 
-        <a href="/pages/Home" ><CloseOutlined/></a>
+        <Link href="/pages/Home" ><CloseOutlined/></Link>
         {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
       </div>
     )
