@@ -68,7 +68,7 @@ export default function LogIn(){
     //     })
     // .catch(err => console.log(err)).finally( () =>{
 
-    //     window.location = "/pages/Home"
+    //     window.location = "//Home"
 
     //  }
     // )

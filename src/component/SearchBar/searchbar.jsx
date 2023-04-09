@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Style from './searchbar.module.css'
 import { Space } from "antd"
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink,useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const api = axios.create({
@@ -18,6 +18,7 @@ const api = axios.create({
 export default function SearchBar() {
 
 
+    const Navigate = useNavigate();
 
     const [open, setOpen] = useState(false);
     const showDrawer = () => {
@@ -62,7 +63,9 @@ export default function SearchBar() {
 
                 const pp = res.data.map((post , i) =>(  
                     <div className={Style.box} key={i}>
-                        <NavLink to={`/pages/Products/${post.product.ProductName}`}><div className={Style.SearchItemText}>{post.product.ProductName}</div></NavLink>
+                        {console.log(post.product.ProductName)}
+                        <a href={post.product.ProductName}><div className={Style.SearchItemText}>{post.product.ProductName}</div></a>
+                        
                     </div>
                 ) )
 

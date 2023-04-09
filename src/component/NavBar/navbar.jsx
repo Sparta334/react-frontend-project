@@ -1,5 +1,3 @@
-
-import { NavLink } from 'react-router-dom';
 import {Col ,Row} from 'antd'
 import { Link } from 'react-router-dom';
 import SearchBar from '../SearchBar/searchbar'
@@ -54,26 +52,25 @@ export default function NavBar(){
     return (
 
         // navbar 需要display.flex
-        <Provider store = {Store}>
         <div className={` ${ style.navbar }  `} >
             <Row>
             
-                <Link to="/pages/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
+                <a href="/Home"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </a>
 
                 <div className={style.navbarname}>
-                <NavLink to = "/pages/Home" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
+                <a href = "/Home" className={style.navItem } >
                     商店主頁
-                </NavLink>
-                <NavLink to = "/pages/newset" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) } >
+                </a>
+                <a href = "/newset" className={style.navItem } >
                     最新
-                </NavLink>
-                <NavLink to= "/pages/popular" className= {({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
+                </a>
+                <a href= "/popular" className= {style.navItem }>
                     熱門
-                </NavLink>
+                </a>
 
-                <NavLink to = "/pages/discount" className={({isActive}) => (isActive ?  style.navItemActive : style.navItem  ) }>
+                <a href = "/discount" className={style.navItem }>
                     優惠
-                </NavLink>
+                </a>
 
                 <SearchBar />
                 </div>
@@ -81,16 +78,16 @@ export default function NavBar(){
                 {
                      
                      !session  ? (
-                        <div className={style.loginitem}><NavLink to = "/pages/login"  > 
+                        <div className={style.loginitem}><a to = "//login"  > 
                             登入
-                        </NavLink>
+                        </a>
                         </div>
                     ) :(
 
                         <div className={style.loginitem}>
-                            <NavLink to = "/pages/login" > 
+                            <a to = "//login" > 
                                 {session.user.email}  登出
-                            </NavLink>
+                            </a>
                         </div>
                         
                     )
@@ -99,8 +96,6 @@ export default function NavBar(){
             </Row>
             
         </div>
-
-    </Provider>
 
 
     );

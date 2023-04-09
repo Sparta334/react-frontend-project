@@ -19,11 +19,9 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="pages">
-          <Route path="Home" element={ <Home/>}/>
-          <Route path="Products/:ProductName" element={ <DetailPage/>}  />
-          <Route path="login" element={<LogIn/>} />
-        </Route>
+        <Route path="Home" element={ <Home/>}/>
+        <Route path=":ProductName" element={ <DetailPage/>}  />
+        <Route path="login" element={<LogIn/>} />
       </Routes>
       </BrowserRouter>
     </Provider>
