@@ -82,10 +82,10 @@ export default function ProductList({Title , InputJson  }){
                                 <Image.PreviewGroup>
                                 <Image 
                                      preview={{ visible: false }}
-                                    src={product.imageUrl} 
-                                    height="90%" 
-                                    width="90%" 
-                                    alt="Sample" 
+                                        src={product.imageUrl} 
+                                        height="90%" 
+                                        width="90%" 
+                                        alt="Sample" 
 
                                     />
 

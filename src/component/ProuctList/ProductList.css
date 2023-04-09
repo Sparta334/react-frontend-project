@@ -26,3 +26,11 @@
     
     
 }
+
+
+.slick-dots li button:before {
+
+
+    position: static;
+
+}
