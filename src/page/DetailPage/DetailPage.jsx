@@ -9,6 +9,7 @@ import { Spin } from 'antd';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "../../component/Footer/Footer";
 import './detail.css'
 
 const api = axios.create({
@@ -47,10 +48,10 @@ export default function DetailPage() {
                 Temo.push(detailArray[i])
             }
             setImageURLsState(Temo);
+            setLoad(true);
 
 
-
-        }).then( setLoad(true) ).catch(error => {
+        }).catch(error => {
             console.error(error);
 
             const NoEntry = `
@@ -121,6 +122,8 @@ export default function DetailPage() {
                     </div>
                 </div>
             )}
+
+            <Footer/>
 
 
 
