@@ -8,6 +8,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { theme } from 'antd';
+import {GithubOutlined} from '@ant-design/icons'
 
 
 
@@ -44,7 +45,7 @@ export default function Suth() {
       <div className="col-6 form-widget">
         <h1 className="header">Let's Go</h1>
           
-          <button onClick={handleLogin} >Sign in</button>
+          <button onClick={handleLogin} ><GithubOutlined /></button>
            
         </div>
 
