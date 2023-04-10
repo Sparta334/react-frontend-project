@@ -45,7 +45,7 @@ export default function Home(){
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             {
-              ( Data ?  <ProductList Title="專屬於你" InputJson={Data} /> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />)
+              ( Data ?  <ProductList Title="專屬於你" InputJson={Data.data.recomms.values} /> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />)
             }
             
             <Footer/>
