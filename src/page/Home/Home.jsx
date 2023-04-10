@@ -10,7 +10,6 @@ import MainCarousel from '../../component/Carousel/MainCarousel';
 import Footer from '../../component/Footer/Footer';
 import style from './home.module.css'
 import { theme } from 'antd';
-import DetailOnyou from '../DetailPage/DetailOnyou';
 import { useEffect, useState } from 'react';
 import Prolist from "../../component/ProuctList/ProductList"
 
