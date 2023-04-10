@@ -34,6 +34,16 @@ export default function DetailPage() {
     
       const [session, setSession] = useState(null)
 
+      
+      const handleSaveClick = (response) => {
+
+        
+        localStorage.setItem('myData',  response);
+
+        
+      }
+    
+
       useEffect(() => {
         
 
@@ -72,11 +82,6 @@ export default function DetailPage() {
 
       }, [])
   
-
-      function handleSaveClick(response) {
-        localStorage.setItem('myData', response.data);
-
-      };
 
     const { ProductName } = useParams();
 
@@ -130,7 +135,7 @@ export default function DetailPage() {
                     UserData: session.user.email, 
                     UserViewData: ProductName
                 }
-            }).then(function (response) {
+            }).then((response) => {
                     handleSaveClick(response)
                     console.log(response)
               })

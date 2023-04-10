@@ -28,6 +28,14 @@ export default function Home(){
       const [session, setSession] = useState(null)
 
 
+      const handleSaveClick = (response) => {
+
+        
+        localStorage.setItem('myData',  response);
+      };
+    
+    
+
       useEffect(() => {
         
 
@@ -64,12 +72,6 @@ export default function Home(){
 
   }, [])
 
-
-  function handleSaveClick(response) {
-
-        
-    localStorage.setItem('myData', response);
-  };
 
 
     return(
