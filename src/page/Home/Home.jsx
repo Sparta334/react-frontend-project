@@ -10,7 +10,9 @@ import MainCarousel from '../../component/Carousel/MainCarousel';
 import Footer from '../../component/Footer/Footer';
 import style from './home.module.css'
 import { theme } from 'antd';
+import DetailOnyou from '../DetailPage/DetailOnyou';
 import { useEffect, useState } from 'react';
+import Prolist from "../../component/ProuctList/ProductList"
 
 
 export default function Home(){
@@ -45,8 +47,7 @@ export default function Home(){
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             {
-              console.log(Data)
-              ( Data ?  <ProductList Title="專屬於你" InputJson={Data.data.recomms.values} /> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />)
+              ( Data ?  <Prolist Title="專屬於你" InputJson={Data.data.recomms} /> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />)
             }
             
             <Footer/>
