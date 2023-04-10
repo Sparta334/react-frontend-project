@@ -54,6 +54,8 @@ export default function DetailPage() {
                     },
                 })
                   .then(function (response) {
+
+                        console.log(response)
                         handleSaveClick(response)
                         console.log("UUUU")
                   })
