@@ -17,6 +17,12 @@ import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
+const api = axios.create({
+  headers: {
+      'Access-Control-Allow-Origin': '*'
+  },
+  baseURL: 'https://energetic-fox-pajamas.cyclic.app',
+});
 
 export default function Home(){
 
