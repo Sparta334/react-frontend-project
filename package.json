@@ -19,7 +19,6 @@
     "react": "^18.2.0",
     "react-color-scheme-switch": "^1.0.3",
     "react-dom": "^18.2.0",
-    "react-frontend-midtern-project": "c:\\\\Ian\\\\Web\\\\Midterm\\\\react-frontend-midtern-project\\\\",
     "react-redux": "^8.0.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.10.0",
@@ -28,7 +27,6 @@
     "react-toggle-dark-mode": "^1.1.1",
     "react-transition-group": "^4.4.5",
     "redux-thunk": "^2.4.2",
-    "require": "^2.4.20",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
