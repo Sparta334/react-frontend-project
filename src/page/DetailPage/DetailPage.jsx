@@ -35,13 +35,33 @@ export default function DetailPage() {
       const [session, setSession] = useState(null)
 
       useEffect(() => {
-        supabase.auth.getSession().then(({ data: { session } }) => {
-          setSession(session)
-        })
+     
+        
+        if(session)  {
+
+            supabase.auth.getSession().then(({ data: { session } }) => {
+                setSession(session)
+              })
+          
+              supabase.auth.onAuthStateChange((_event, session) => {
+                setSession(session)
+              })
+      
+
+            api.post('/BackEnd/Detail',{
+                UserData: session.user.email, UserViewData: ProductName
+            }
+            )
+              .then(function (response) {
+                    handleSaveClick(response)
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
     
-        supabase.auth.onAuthStateChange((_event, session) => {
-          setSession(session)
-        })
+        }
+       
+
       }, [])
   
 
@@ -93,24 +113,6 @@ export default function DetailPage() {
         });
 
 
-        const DataSet = {
-            UserData: session.user.email,
-            UserViewData: ProductName
-        }
-
-        if(session)  {
-            api.post('/BackEnd/Detail', {
-                DataSet
-              })
-              .then(function (response) {
-                    handleSaveClick(response)
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-    
-        }
-       
 
     }, [ProductName]); // 空数组告诉 React 仅执行一次
 
