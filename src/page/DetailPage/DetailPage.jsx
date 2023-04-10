@@ -97,6 +97,8 @@ export default function DetailPage() {
             SetDsiplay(NoEntry);
         });
 
+        console.log(session)
+
         if(session)  {
             
             api.post('/BackEnd/Detail',{
