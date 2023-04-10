@@ -42,9 +42,9 @@ export default function Home(){
           if(session)  {
         
             api.post('/BackEnd/DetailHome',{
-                data: JSON.stringify({
+                data:{
                     UserData: session.user.email, 
-                }),
+                },
             })
               .then(function (response) {
                     handleSaveClick(response)
