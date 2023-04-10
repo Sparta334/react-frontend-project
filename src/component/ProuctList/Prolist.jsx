@@ -15,7 +15,7 @@ export default function Prolist({Title , InputJson  }){
     const [inPos ,setInPos ] = useState(0);
     const [width, setWidth] = useState(0);
 
-    
+
     const Chan = (offest)  =>{
 
         let re =inPos+offest ;
@@ -79,7 +79,7 @@ export default function Prolist({Title , InputJson  }){
                 {       
 
                         
-                        InputJson.data.recomms.map((product ,index)=> (
+                        InputJson.recomms.map((product ,index)=> (
                             <Space size={32}>
                                 
                             <div className="ImageBox" key={index} >
