@@ -7,6 +7,7 @@ import style from './Footer.module.css'
 export default function Footer(){
 
     return(
+        <div>
         <footer>
             <div className={style.inner_width}>
             <div className={style.copyright}>
@@ -19,7 +20,10 @@ export default function Footer(){
                 <a href="#" className={style.btnlogo}><YoutubeOutlined /></a>
             </div>
             </div>
+
         </footer>
+
+        </div>
     )
 
 }

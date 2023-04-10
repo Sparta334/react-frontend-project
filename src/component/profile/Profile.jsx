@@ -43,7 +43,7 @@ export default function Account({ session }) {
   
       getProfile()
       
-    }, [session])
+    }, [] )
   
   
     return (

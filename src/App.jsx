@@ -6,6 +6,7 @@ import Store from './redux/Store'
 import Home from './page/Home/Home'
 import DetailPage from './page/DetailPage/DetailPage'
 import LogIn from './page/Login/Login'
+import ScrollToTop from './component/ScrollTo/ScrollTo'
 import './App.css'
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
 
 
   return (
-    
-    
+
     <Provider store= {Store}>
+              
+
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,7 +26,10 @@ function App() {
         </Route>
         <Route path="login" element={<LogIn/>} />
       </Routes>
+      <ScrollToTop/>
       </BrowserRouter>
+
+
     </Provider>
   )
 }

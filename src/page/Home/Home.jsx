@@ -11,6 +11,7 @@ import Footer from '../../component/Footer/Footer';
 import style from './home.module.css'
 
 
+
 export default function Home(){
 
     

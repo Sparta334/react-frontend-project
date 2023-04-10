@@ -11,6 +11,7 @@ import { Provider } from 'react-redux'
 import Store from '../../redux/Store'
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { createClient } from '@supabase/supabase-js';
 
 const api = axios.create({
@@ -92,9 +93,12 @@ export default function NavBar(){
                         
                     )
                 }
-            
+
+
+
             </Row>
-            
+
+
         </div>
 
 
