@@ -114,8 +114,10 @@ export default function DetailPage() {
 
         if(session)  {
             
-            api.post('/BackEnd/Detail',{
-                UserData: session.user.email, UserViewData: ProductName
+            api.post('/BackEnd/Detail',
+            {
+                UserData: session.user.email,
+                UserViewData: ProductName
             }
             )
               .then(function (response) {
