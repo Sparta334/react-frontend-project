@@ -60,7 +60,7 @@ export default function DetailPage() {
                 api.post('/BackEnd/Detail',{
                     data:{
                         UserData: session.user.email, 
-                        UserViewData: ProductName
+                        UserViewData: ProductID
                     },
                 }).then((response) => {
 
@@ -91,13 +91,16 @@ export default function DetailPage() {
     const [ImageUrl, setUrl] = useState("");
     const [Des, setDes] = useState("");
     const [imageURLsState, setImageURLsState] = useState([]);
-    const [IsLoad, setLoad] = useState(false);
+    const [IsLoad, setLoad] = useState (false);
+    const [ProductID , setID] =  useState("001")
     useEffect(() => {
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             setData(res.data)
             setDes(res.data.Description)
             setUrl(res.data.imageUrl)
+            setID(res.data.id)
 
+            console.log(res.data);
             const detailArray = res.data.Detail;
             const Temo = []
             Temo.push(res.data.imageUrl);
@@ -133,7 +136,7 @@ export default function DetailPage() {
             api.post('/BackEnd/Detail',{
                 data: {
                     UserData: session.user.email, 
-                    UserViewData: ProductName
+                    UserViewData: ProductID
                 }
             }).then((response) => {
                     handleSaveClick(response)
