@@ -12,6 +12,10 @@ import style from './home.module.css'
 import { theme } from 'antd';
 import { useEffect, useState } from 'react';
 import Prolist from "../../component/ProuctList/ProductList"
+import { createClient } from "@supabase/supabase-js";
+
+
+const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
 
 export default function Home(){
@@ -21,13 +25,51 @@ export default function Home(){
       } = theme.useToken();
     
       const [Data, setData] = useState(null)
+      const [session, setSession] = useState(null)
 
-      useEffect(() =>{
+
+      useEffect(() => {
+        
+
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session)
+          })
+      
+          supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session)
+          })
+
+          if(session)  {
+        
+            api.post('/BackEnd/DetailHome',{
+                data: JSON.stringify({
+                    UserData: session.user.email, 
+                }),
+            })
+              .then(function (response) {
+                    handleSaveClick(response)
+                    console.log("UUUU")
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+    
+    
+        }
+       
 
 
-        setData(localStorage.getItem('myData'));
-      } ,[])
 
+   
+
+  }, [])
+
+
+  function handleSaveClick(response) {
+
+        
+    localStorage.setItem('myData', JSON.stringify(response));
+  };
 
 
     return(
