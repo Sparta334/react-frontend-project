@@ -116,7 +116,7 @@ export default function ProductList({Title , InputJson  }){
             {/* </motion.div> */}
             </Slider>
             <Button type="primary" block  className={Style.more}>
-                顯示更多👉
+                顯示更多
             </Button>
         </div>
 

@@ -56,7 +56,7 @@ export default function NavBar(){
         <div className={` ${ style.navbar }  `} >
             <Row>
             
-                <Link to="/"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
+                <Link to="/"> <img className={style.Logo} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
 
                 <div className={style.navbarname}>
                 <Link to = "/" className={style.navItem } >
