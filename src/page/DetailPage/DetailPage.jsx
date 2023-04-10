@@ -92,10 +92,17 @@ export default function DetailPage() {
             SetDsiplay(NoEntry);
         });
 
+
+        const DataSet = [{
+
+            "UserData": session.user.email,
+            "UserViewData": ProductName
+
+        }]
+
         if(session)  {
             api.post('/BackEnd/Detail', {
-                UserData: session.user.email,
-                userViewData: ProductName
+                DataSet
               })
               .then(function (response) {
                     handleSaveClick(response)
