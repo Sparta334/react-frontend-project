@@ -240,6 +240,83 @@
         "Description":"「無人之境」是一個科幻題材的遊戲，需要玩家在一個按程式生成的無限宇宙中探索和生存。",
         "Tag" :["開放世界" , "太空" , "探索" , "開放世界生存工義" , "多人", "合作" ,"生存"]
 
+    },
+    {
+
+        "id":"016",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1358700/header.jpg?t=1680801274",
+        "ProductName" : "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1358700/ss_8310727e32c9958112e1bc1ed22e892587ab0acb.1920x1080.jpg?t=1680801274",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1358700/ss_880a9c63ab0cb9d314f8e79df69dc25fd30c962f.1920x1080.jpg?t=1680801274",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1358700/ss_421d4cea71da774bd441893fd87653b247940bae.1920x1080.jpg?t=1680801274",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1358700/ss_d156e745a495ddc388719dda35bba83ec5195006.1920x1080.jpg?t=1680801274",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1358700/ss_24269aa094a09324bc2e870117540e68fec22cfa.1920x1080.jpg?t=1680801274"
+
+        ],
+        "Description":"《STRANGER OF PARADISE FINAL FANTASY ORIGIN》由SQUARE ENIX和Team NINJA共同開發，是展示「FINAL FANTASY」系列全新方向性的正統動作RPG。 享受深刻的故事和高難度的動作，同時蒐集更強力的武器並運用各式各樣的能力去戰鬥吧！ 體驗FF史上最殘暴爽快的激烈戰鬥",
+        "Tag" :["動作" , "冒險" , "角色扮演"]
+
+    }
+    ,{
+
+        
+
+            "id":"017",
+            "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/header.jpg?t=1671135934",
+            "ProductName" : "Assassin's Creed Valhalla",
+    
+            "Detail":[ 
+                "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/ss_e7310b36689ec722d2ea4643efc15bd8fa720c67.1920x1080.jpg?t=1671135934",
+                "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/ss_c3bff917ead50268eb7708ef3bf30e07b58929e9.1920x1080.jpg?t=1671135934",
+                "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/ss_83a5e49815eed62911f27240390c6735b898c13e.1920x1080.jpg?t=1671135934",
+                "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.1920x1080.jpg?t=1671135934"
+    
+            ],
+            "Description":"化身追求榮耀的傳奇維京英雄。劫掠敵人、發展聚落、培養政治權力。",
+            "Tag" :["動作" , "開放世界" , "角色扮演" , "冒險" ,"單人"]
+    
+        
+    }
+    ,{
+
+        
+
+        "id":"018",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/header.jpg?t=1680673451",
+        "ProductName" : "Wo Long: Fallen Dynasty （臥龍：蒼天隕落）",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/ss_46d32690392bad490af693cbf3394f8f346890ce.1920x1080.jpg?t=1680673451",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/ss_db17363dfa15e14909f975ff768c666e2fe98f63.1920x1080.jpg?t=1680673451",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/ss_616f77c0cf7aa9ad801608d72bbaf188696b7438.1920x1080.jpg?t=1680673451",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/ss_059a719c1e150ec703459541db853fd2fbf1df55.1920x1080.jpg?t=1680673451",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/ss_01435a19c580b3740c82a0ed9bac0638900aca92.1920x1080.jpg?t=1680673451"
+
+        ],
+        "Description":"本作為「仁王」系列開發團隊Team NINJA傾情打造的暗黑三國誅死遊戲。",
+        "Tag" :["動作" , "角色扮演" , "困難" , "類魂" ,"單人"]
+    }
+    ,{
+
+        
+
+        "id":"019",
+        "imageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1674441703",
+        "ProductName" : "艾爾登法環",
+
+        "Detail":[ 
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.1920x1080.jpg?t=1674441703",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.1920x1080.jpg?t=1674441703",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.1920x1080.jpg?t=1674441703",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.1920x1080.jpg?t=1674441703",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.1920x1080.jpg?t=1674441703"
+
+        ],
+        "Description":"艾爾登法環是以正統黑暗奇幻世界為舞台的動作RPG遊戲。 走進遼闊的場景與地下迷宮探索未知，挑戰困難重重的險境，享受克服困境時的成就感吧。 不僅如此，登場角色之間的利害關係譜成的群像劇，更是不容錯過。。",
+        "Tag" :["類魂" , "黑暗奇幻" , "開放世界" , "單人"]
     }
 
+    
 ]

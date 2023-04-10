@@ -44,7 +44,6 @@ export default function LogIn(){
       })
     }, [])
 
-    con
   
     return (
 
@@ -53,7 +52,7 @@ export default function LogIn(){
 
 
         {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
-        
+
       </div>
     )
   }
