@@ -38,7 +38,7 @@ export default function DetailPage() {
       const handleSaveClick = (response) => {
 
         
-        localStorage.setItem('myData',  response);
+        localStorage.setItem('myData',   JSON.stringify(response.data));
 
         
       }

@@ -31,7 +31,7 @@ export default function Home(){
       const handleSaveClick = (response) => {
 
         
-        localStorage.setItem('myData',  response);
+        localStorage.setItem('myData',  JSON.stringify(response.data));
       };
     
     
