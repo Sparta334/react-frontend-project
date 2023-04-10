@@ -28,7 +28,6 @@
     "react-slick": "^0.29.0",
     "react-toggle-dark-mode": "^1.1.1",
     "react-transition-group": "^4.4.5",
-    "recombee-api-client": "^3.0.0",
     "redux-thunk": "^2.4.2",
     "require": "^2.4.20",
     "slick-carousel": "^1.8.1"
