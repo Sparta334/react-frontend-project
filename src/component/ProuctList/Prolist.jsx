@@ -67,7 +67,6 @@ export default function Prolist({Title , InputJson  }){
           ]
         };
 
-        console.log(InputJson.data.recomms)
 
     return(
         
