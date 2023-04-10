@@ -36,8 +36,8 @@ export default function Home(){
     
             <Header/>
             <MainCarousel className={style.MainCarousel} />
-            <ProductList Title="🔥熱門遊戲🔥" InputJson={Popalur}/>
-            <ProductList Title="⭐最新遊戲⭐" InputJson={NewSet} />
+            <ProductList Title="熱門遊戲" InputJson={Popalur}/>
+            <ProductList Title="最新遊戲" InputJson={NewSet} />
             <Footer/>
 
             

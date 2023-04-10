@@ -20,9 +20,10 @@ footer .inner_width {
 
 footer .copyright {
   font-size: 20px;
-  color: #666;
+  color: #000000;
   margin-bottom: 10px;
   text-align: center;
+  font-weight: bold;
 }
 
 footer .sm {
