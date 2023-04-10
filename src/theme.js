@@ -3,24 +3,22 @@ import { theme } from "antd";
 const darkTheme = {
   algorithm: theme.darkAlgorithm,
   token: {
-    colorPrimary: "#ffffff",  //商店頁面hover後的顔色
+    colorPrimary: "#ffffff",  
     colorBgBase	: "#222222",  
     colorTextBase: "#ffffff",     
     colorTextFooter: "#ffffff",   //textcolor
     colorBgFooter: "#000000",   //backGround
-    colorNavText: "#ffffff",  //navbar文字
-    colorImgText:"#ffffff",   //imgText文字顔色要白色
-    colorCarouselBoxImgText:"#ffffff" //CarouselBoxImgText文字顔色要白色
+    colorNavText: "#ffffff",  //navbar文字 
+    /* 需要修改↓ */
+    colorImgText:"#ffffff",   //imgText文字顔色要白色 Style.imgText   需要修改
+    colorBigText:"ffffff", //熱門，最新和專屬於你 的顔色轉白色 ProductList Title
   },
 
   components: {
     Button: {
       colorPrimary: "#6366f2;",  
       colorPrimaryHover: "#85C1E9 ",
-      colorbtnbg:"ffffff" ,  // 商店頁面button變成白色
-      colorbtnText:"000000", //商店頁面button裏面的文字變成黑色
-      colormorebtbg:"ffffff", //顯示更多button變成白色
-      colormorebtText:"000000", //顯示更多button裏面的文字變成黑色
+  
     }
   },
 };
@@ -31,7 +29,10 @@ const lightTheme = {
     colorBgFooter: "#3e3f97",
     colorTextFooter: '#ffffff',
     colorNavText: "#333",
-    colorImgText:"#000000", //
+    colorBgBase:"#A6ACAF ", //我已添加的bg 顔色
+    /* 需要修改↓ */
+    colorImgText:"#ffffff",   //imgText文字顔色要黑色 Style.imgText 應該預設就是黑色
+    colorBigText:"ffffff", //熱門，最新和專屬於你 的顔色轉黑色 ProductList Title 應該預設就是黑色
   },
   components: {
     Button: {

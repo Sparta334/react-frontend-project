@@ -9,7 +9,7 @@
 .CarouselBox{
     
    margin-top: 20px;
-    padding:0 33.3%;
+    padding:0 25%;
     padding-bottom: 6%;
 }
 
@@ -30,6 +30,8 @@ button::after{
     position: relative;
     /*padding: 0px 350px;*/
     margin-top: 30px;
+    width: 80%;
+    height: 80%;
     
 }
 
