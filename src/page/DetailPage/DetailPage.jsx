@@ -58,7 +58,6 @@ export default function DetailPage() {
     const [Des, setDes] = useState("");
     const [imageURLsState, setImageURLsState] = useState([]);
     const [IsLoad, setLoad] = useState(false);
-
     useEffect(() => {
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             setData(res.data)
@@ -93,18 +92,20 @@ export default function DetailPage() {
             SetDsiplay(NoEntry);
         });
 
+        if(session)  {
+            api.post('/BackEnd/Detail', {
+                UserData: session.user.email,
+                userViewData: ProductName
+              })
+              .then(function (response) {
+                    handleSaveClick(response)
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
     
-        api.post('/BackEnd/Detail', {
-            UserData: session.user.email,
-            userViewData: ProductName
-          })
-          .then(function (response) {
-                handleSaveClick(response)
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-
+        }
+       
 
     }, [ProductName]); // 空数组告诉 React 仅执行一次
 
