@@ -45,6 +45,28 @@ export default function DetailPage() {
                 setSession(session)
               })
 
+              if(session)  {
+            
+                api.post('/BackEnd/Detail',{
+                    body: JSON.stringify({
+                        UserData: session.user.email, 
+                        UserViewData: ProductName
+                    }),
+                })
+                  .then(function (response) {
+                        handleSaveClick(response)
+                        console.log("UUUU")
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
+        
+        
+            }
+           
+    
+    
+
        
 
       }, [])
