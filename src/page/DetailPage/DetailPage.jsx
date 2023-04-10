@@ -74,8 +74,8 @@ export default function DetailPage() {
 
       function handleSaveClick(response) {
 
-        
-        localStorage.setItem('myData', JSON.stringify(response));
+
+        localStorage.setItem('myData', response);
       };
 
     const { ProductName } = useParams();
