@@ -98,7 +98,7 @@ export default function DetailPage() {
             setData(res.data)
             setDes(res.data.Description)
             setUrl(res.data.imageUrl)
-            setID(res.data.id)
+            setID(res.data.itemId)
 
             console.log(res.data);
             const detailArray = res.data.Detail;
