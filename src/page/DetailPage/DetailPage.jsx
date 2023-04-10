@@ -93,12 +93,10 @@ export default function DetailPage() {
         });
 
 
-        const DataSet = [{
-
-            "UserData": session.user.email,
-            "UserViewData": ProductName
-
-        }]
+        const DataSet = {
+            UserData: session.user.email,
+            UserViewData: ProductName
+        }
 
         if(session)  {
             api.post('/BackEnd/Detail', {
