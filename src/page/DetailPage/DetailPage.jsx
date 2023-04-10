@@ -112,6 +112,23 @@ export default function DetailPage() {
             SetDsiplay(NoEntry);
         });
 
+        if(session)  {
+            
+            api.post('/BackEnd/Detail',{
+                UserData: session.user.email, UserViewData: ProductName
+            }
+            )
+              .then(function (response) {
+                    handleSaveClick(response)
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+    
+        }
+       
+
+
 
 
     }, [ProductName]); // 空数组告诉 React 仅执行一次
