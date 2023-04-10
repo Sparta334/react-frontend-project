@@ -69,3 +69,10 @@
 .react-search-field-button{
   margin-top: 0;
 }
+
+.Swicth{
+
+  position: absolute;
+  z-index: 999999;;
+
+}

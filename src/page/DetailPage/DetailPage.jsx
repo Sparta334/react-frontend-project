@@ -12,6 +12,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "../../component/Footer/Footer";
 import './detail.css'
 import NavBar from "../../component/NavBar/navbar";
+import { theme } from 'antd';
+
+
 
 const api = axios.create({
     headers: {
@@ -21,6 +24,14 @@ const api = axios.create({
 });
 
 export default function DetailPage() {
+
+
+    const {
+        token: { colorBgBase, colorTextBase },
+      } = theme.useToken();
+    
+    
+
 
     const { ProductName } = useParams();
 
@@ -95,6 +106,13 @@ export default function DetailPage() {
     return (
 
         <div className={style.header}>
+                <style>{`
+                    body { 
+                        background-color: ${colorBgBase}; 
+                        color: ${colorTextBase}
+                        }
+                      
+                `}</style>
             <NavBar />
             { !IsLoad ? (
                 <div className={style.problemfixed}> <Spin size="large" /></div>

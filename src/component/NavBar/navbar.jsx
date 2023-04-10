@@ -11,8 +11,8 @@ import { Provider } from 'react-redux'
 import Store from '../../redux/Store'
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { createClient } from '@supabase/supabase-js';
+
 
 const api = axios.create({
     headers: {
@@ -28,15 +28,7 @@ const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhb
 export default function NavBar(){
 
 
-    const dispatch =useDispatch();
-    // const AddUser = (user) =>{
-    //     dispatch(addUserProfile({
-    //         user: user,
-    //       })
-          
-    //     )
-    
-    // };
+
     console.log(useSelector(selectUserProfile))
     const [session, setSession] = useState(null)
     useEffect(() => {
@@ -54,6 +46,7 @@ export default function NavBar(){
 
         // navbar 需要display.flex
         <div className={` ${ style.navbar }  `} >
+
             <Row>
             
                 <Link to="/"> <img className={style.Logo} src="http://www.joshuacasper.com/contents/uploads/joshua-casper-samples-free.jpg" alt="" /> </Link>
