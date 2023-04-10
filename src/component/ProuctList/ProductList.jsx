@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './ProductList.css'
 import { theme } from 'antd';
 
+
 export default function ProductList({Title , InputJson  }){
 
     const [inPos ,setInPos ] = useState(0);
@@ -33,6 +34,10 @@ export default function ProductList({Title , InputJson  }){
 
     }
 
+    const {
+        token: {  colorBigText ,colorImgText},
+      } = theme.useToken();
+    
 
     const settings = {
         dots: true,
@@ -78,10 +83,8 @@ export default function ProductList({Title , InputJson  }){
         
         <div className={Style.ItemsLayout}>
             
-        
 
-
-            <div>{Title}</div>
+            <div className={Style.title} >{Title}</div>
             <Slider {...settings}  >
             {/* <motion.div animate={{ x:- width*inPos }}> */}
                 {       
