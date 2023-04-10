@@ -9,7 +9,8 @@ const darkTheme = {
     colorTextFooter: "#ffffff",   //textcolor
     colorBgFooter: "#000000",   //backGround
     colorNavText: "#ffffff",  //navbar文字
-    colorImgText:"#ffffff",   //imgText
+    colorImgText:"#ffffff",   //imgText文字顔色要白色
+    colorCarouselBoxImgText:"#ffffff" //CarouselBoxImgText文字顔色要白色
   },
 
   components: {
