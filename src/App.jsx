@@ -10,6 +10,7 @@ import ScrollToTop from './component/ScrollTo/ScrollTo'
 import './App.css'
 import { ConfigProvider } from 'antd';
 import { lightTheme , darkTheme  } from './theme'
+import { DarkModeSwitch } from 'react-toggle-dark-mode'
 import { theme } from 'antd'
 
 function App() {
@@ -25,6 +26,17 @@ function App() {
   return (
 
     <div>
+
+
+        <DarkModeSwitch
+          className='Swicth'
+          checked={isDarkMode}
+          onChange={toggleDarkMode}
+          size={30}
+
+
+        />
+
 
 
     <Provider store={Store}>
