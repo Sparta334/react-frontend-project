@@ -76,9 +76,9 @@ export default function ProductList({Title , InputJson  }){
                 {       
 
 
-                        InputJson.data.recomms.map((product)=> (
+                        InputJson.data.recomms.map((product ,index)=> (
                             <Space size={32}>
-                            <div className="ImageBox" key={product.values.id} >
+                            <div className="ImageBox" key={index} >
 
                                 <Image.PreviewGroup>
                                 <Image 
