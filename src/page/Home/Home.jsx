@@ -11,7 +11,7 @@ import Footer from '../../component/Footer/Footer';
 import style from './home.module.css'
 import { theme } from 'antd';
 import { useEffect, useState } from 'react';
-import Prolist from "../../component/ProuctList/ProductList"
+import Prolist from "../../component/ProuctList/Prolist"
 import { createClient } from "@supabase/supabase-js";
 
 
@@ -88,7 +88,7 @@ export default function Home(){
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             {
-               localStorage.getItem('myData') ? console.log(localStorage.getItem('myData')) :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
+               localStorage.getItem('myData') ? <Prolist Title="專屬於你" InputJson={localStorage.getItem('myData')}/> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
             }
             
             <Footer/>
