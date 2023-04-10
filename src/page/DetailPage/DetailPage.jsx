@@ -48,7 +48,7 @@ export default function DetailPage() {
               if(session)  {
             
                 api.post('/BackEnd/Detail',{
-                    body: JSON.stringify({
+                    data: JSON.stringify({
                         UserData: session.user.email, 
                         UserViewData: ProductName
                     }),
@@ -124,7 +124,7 @@ export default function DetailPage() {
         if(session)  {
             
             api.post('/BackEnd/Detail',{
-                body: JSON.stringify({
+                data: JSON.stringify({
                     UserData: session.user.email, 
                     UserViewData: ProductName
                 }),
