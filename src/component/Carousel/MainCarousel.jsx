@@ -5,6 +5,8 @@ import MainCarouselData from '../../json/MainCarousel.json'
 import Style from './MainCarousel.module.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { theme } from 'antd';
+
 export default function MainCarousel(){
 
     const settings = {
@@ -18,6 +20,8 @@ export default function MainCarousel(){
         autoplaySpeed:3000,
         centerMode:true,
     }
+
+   
 
     return(
         <Slider  {...settings} >
