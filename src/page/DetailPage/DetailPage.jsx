@@ -52,8 +52,7 @@ export default function DetailPage() {
                         UserData: session.user.email, 
                         UserViewData: ProductName
                     },
-                })
-                  .then(function (response) {
+                }).then((response) => {
 
                         console.log(response)
                         handleSaveClick(response)
@@ -75,9 +74,8 @@ export default function DetailPage() {
   
 
       function handleSaveClick(response) {
+        localStorage.setItem('myData', response.data);
 
-
-        localStorage.setItem('myData', response);
       };
 
     const { ProductName } = useParams();
@@ -132,8 +130,7 @@ export default function DetailPage() {
                     UserData: session.user.email, 
                     UserViewData: ProductName
                 }
-            })
-              .then(function (response) {
+            }).then(function (response) {
                     handleSaveClick(response)
                     console.log(response)
               })
