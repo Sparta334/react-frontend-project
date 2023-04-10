@@ -74,5 +74,6 @@
 
   position: absolute;
   z-index: 999999;;
-
+  margin-left: 97%;
+  top:5px;
 }

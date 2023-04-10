@@ -9,6 +9,8 @@ import Style from './ProductList.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './ProductList.css'
+import { theme } from 'antd';
+
 export default function ProductList({Title , InputJson  }){
 
     const [inPos ,setInPos ] = useState(0);
@@ -65,9 +67,19 @@ export default function ProductList({Title , InputJson  }){
           ]
         };
 
+        const {
+            token: {colorimgText},
+          } = theme.useToken();
+        
+
     return(
         
+
+        
         <div className={Style.ItemsLayout}>
+            
+        
+
 
             <div>{Title}</div>
             <Slider {...settings}  >
