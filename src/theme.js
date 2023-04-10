@@ -15,8 +15,12 @@ const darkTheme = {
 
   components: {
     Button: {
-      colorPrimary: "#6366f2;", 
+      colorPrimary: "#6366f2;",  
       colorPrimaryHover: "#85C1E9 ",
+      colorbtnbg:"ffffff" ,  // 商店頁面button變成白色
+      colorbtnText:"000000", //商店頁面button裏面的文字變成黑色
+      colormorebtbg:"ffffff", //顯示更多button變成白色
+      colormorebtText:"000000", //顯示更多button裏面的文字變成黑色
     }
   },
 };
