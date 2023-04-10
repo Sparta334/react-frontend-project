@@ -6,13 +6,23 @@
 }
 
 
-.CarouselBox{
-    
-   margin-top: 20px;
-    padding:0 12%;
-    padding-bottom: 6%;
-
+.CarouselBoxImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+  width: 80%;
+  height: 80%;
+  text-align: center;
 }
+.CarouselBox {
+  margin-top: 20px;
+  padding: 0 14vh;
+  padding-bottom: 6%;
+  text-align: center;
+}
+
 
 button::after{
   background-color: gray;
@@ -26,16 +36,7 @@ button::after{
 
 
 
-.CarouselBoxImg{
 
-    position: relative;
-    /*padding: 0px 350px;*/
-    margin-top: 30px;
-    width: 80%;
-    height: 80%;
-    text-align: center;
-    
-}
 
 .CarouselBoxImgText{
     position: absolute;
