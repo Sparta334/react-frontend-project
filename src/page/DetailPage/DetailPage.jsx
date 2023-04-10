@@ -109,7 +109,6 @@ export default function DetailPage() {
               })
               .then(function (response) {
                     handleSaveClick(response)
-                    console.log("UUUU");
               })
               .catch(function (error) {
                 console.log(error);
