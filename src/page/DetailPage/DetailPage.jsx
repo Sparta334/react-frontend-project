@@ -102,10 +102,10 @@ export default function DetailPage() {
         if(session)  {
             
             api.post('/BackEnd/Detail',{
-                body:{
+                body: JSON.stringify({
                     UserData: session.user.email, 
                     UserViewData: ProductName
-                },
+                }),
             })
               .then(function (response) {
                     handleSaveClick(response)
