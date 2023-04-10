@@ -135,7 +135,7 @@ export default function DetailPage() {
             })
               .then(function (response) {
                     handleSaveClick(response)
-                    console.log("UUUU")
+                    console.log(response)
               })
               .catch(function (error) {
                 console.log(error);
