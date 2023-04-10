@@ -1,6 +1,5 @@
-import { Link, NavLink } from "react-router-dom"
+
 import {CloseOutlined ,GithubOutlined } from '@ant-design/icons'
-import {Row ,Col} from 'antd' 
 import { selectUserProfile } from '../../redux/UserSlice';
 import { useDispatch } from 'react-redux';
 import addUserProfile from '../../redux/UserSlice'
@@ -44,6 +43,8 @@ export default function LogIn(){
         setSession(session)
       })
     }, [])
+
+    con
   
     return (
 
@@ -52,6 +53,7 @@ export default function LogIn(){
 
 
         {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
+        
       </div>
     )
   }
@@ -62,10 +64,10 @@ export default function LogIn(){
     // api.get('/profile')
     //     .then(res => res.json())
     //     .then(data => {
-    //         console.log(data.user.displayName)
+    //         .log(data.user.displayName)
     //     // 在這裡處理資料
     //     })
-    // .catch(err => console.log(err)).finally( () =>{
+    // .catch(err => .log(err)).finally( () =>{
 
     //     window.location = "//Home"
 

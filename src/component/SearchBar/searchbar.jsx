@@ -36,11 +36,8 @@ export default function SearchBar() {
     const [DataRe , setDalue] = useState([]);
 
     useEffect(() =>{
-        console.log(DataRe)
         setData(DataRe);
-        console.log(ReveiceData)
 
-        
     })
 
     // 搜尋時展開
@@ -60,17 +57,13 @@ export default function SearchBar() {
             }
             else{
                 showDrawer();
-                console.log(res.data);
 
                 const pp = res.data.map((post , i) =>(  
                     <div className={Style.box} key={i}>
-                        {console.log(post.product.ProductName)}
                         <Link to={`/pages/${post.product.ProductName}`}><div className={Style.SearchItemText}>{post.product.ProductName}</div></Link>
                         
                     </div>
                 ) )
-
-                console.log(pp);
 
                 setDalue(  pp )
         

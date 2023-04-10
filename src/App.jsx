@@ -22,14 +22,6 @@ function App() {
   };
 
 
-useEffect(() =>{
-
-  console.log(isDarkMode)
-
-
-},[isDarkMode])
-
-
 
   return (
 
@@ -73,3 +65,8 @@ useEffect(() =>{
 }
 
 export default App
+
+
+/*
+localStorage.getItem(key)
+*/

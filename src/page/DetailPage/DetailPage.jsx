@@ -13,8 +13,10 @@ import Footer from "../../component/Footer/Footer";
 import './detail.css'
 import NavBar from "../../component/NavBar/navbar";
 import { theme } from 'antd';
+import { createClient } from "@supabase/supabase-js";
 
 
+const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
 const api = axios.create({
     headers: {
@@ -30,8 +32,22 @@ export default function DetailPage() {
         token: { colorBgBase, colorTextBase },
       } = theme.useToken();
     
-    
+      const [session, setSession] = useState(null)
 
+      useEffect(() => {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+          setSession(session)
+        })
+    
+        supabase.auth.onAuthStateChange((_event, session) => {
+          setSession(session)
+        })
+      }, [])
+  
+
+      function handleSaveClick(response) {
+        localStorage.setItem('myData', JSON.stringify(response));
+      };
 
     const { ProductName } = useParams();
 
@@ -42,12 +58,9 @@ export default function DetailPage() {
     const [Des, setDes] = useState("");
     const [imageURLsState, setImageURLsState] = useState([]);
     const [IsLoad, setLoad] = useState(false);
-    console.log(ProductName);
 
     useEffect(() => {
         api.get('/BackEnd/Products/' + ProductName).then(res => {
-
-            console.log(res)
             setData(res.data)
             setDes(res.data.Description)
             setUrl(res.data.imageUrl)
@@ -64,7 +77,6 @@ export default function DetailPage() {
 
 
         }).catch(error => {
-            console.error(error);
 
             const NoEntry = `
             
@@ -81,6 +93,17 @@ export default function DetailPage() {
             SetDsiplay(NoEntry);
         });
 
+    
+        api.post('/BackEnd/Detail', {
+            UserData: session.user.email,
+            userViewData: ProductName
+          })
+          .then(function (response) {
+                handleSaveClick(response)
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
 
 
     }, [ProductName]); // 空数组告诉 React 仅执行一次

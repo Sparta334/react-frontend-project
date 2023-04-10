@@ -12,6 +12,7 @@ import Store from '../../redux/Store'
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { createClient } from '@supabase/supabase-js';
+import { theme } from 'antd';
 
 
 const api = axios.create({
@@ -28,8 +29,6 @@ const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhb
 export default function NavBar(){
 
 
-
-    console.log(useSelector(selectUserProfile))
     const [session, setSession] = useState(null)
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
@@ -41,12 +40,25 @@ export default function NavBar(){
         })
       }, [])
 
+      const {
+        token: {colorNavText},
+      } = theme.useToken();
+    
+
 
     return (
 
         // navbar 需要display.flex
         <div className={` ${ style.navbar }  `} >
 
+            <style>{`
+                  .${style.navItem} , .${style.loginitem}{
+
+                     color: ${colorNavText}
+
+                    }
+            `} </style>
+    
             <Row>
             
                 <Link to="/"> <img className={style.Logo} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
@@ -72,14 +84,14 @@ export default function NavBar(){
                 {
                      
                      !session  ? (
-                        <div className={style.loginitem}><Link to = "/login"  > 
+                        <div ><Link className={style.loginitem} to = "/login"  > 
                             登入
                         </Link>
                         </div>
                     ) :(
 
-                        <div className={style.loginitem}>
-                            <Link to = "/login" > 
+                        <div>
+                            <Link  className={style.loginitem} to = "/login" > 
                                 {session.user.email}  登出
                             </Link>
                         </div>

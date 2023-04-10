@@ -8,7 +8,6 @@ const UserSlice = createSlice({
     initialState:{ UserProfile : 'User'},
     reducers:{
         addUserProfile: (state , action) => {
-            console.log(typeof action.payload)
             state.UserProfile = action.payload.UserProfile;
 
         },

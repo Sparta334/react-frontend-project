@@ -10,16 +10,23 @@ import MainCarousel from '../../component/Carousel/MainCarousel';
 import Footer from '../../component/Footer/Footer';
 import style from './home.module.css'
 import { theme } from 'antd';
-
+import { useEffect, useState } from 'react';
 
 
 export default function Home(){
 
     const {
-        token: { colorBgBase, colorTextBase },
+        token: { colorBgBase, colorTextBase ,colorNavText},
       } = theme.useToken();
     
-    
+      const [Data, setData] = useState(null)
+
+      useEffect(() =>{
+
+
+        setData(localStorage.getItem('myData'));
+      } ,[])
+
 
 
     return(
@@ -30,14 +37,17 @@ export default function Home(){
                     body { 
                         background-color: ${colorBgBase}; 
                         color: ${colorTextBase}
-                        }
-                      
+                        },
                 `}</style>
-    
+
             <Header/>
             <MainCarousel className={style.MainCarousel} />
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
+            {
+              ( Data ?  <ProductList Title="專屬於你" InputJson={Data} /> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />)
+            }
+            
             <Footer/>
 
             
