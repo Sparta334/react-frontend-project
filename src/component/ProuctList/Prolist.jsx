@@ -91,7 +91,7 @@ export default function ProductList({Title , InputJson  }){
                                     />
 
                                 <div style={{ display: 'none' }} >
-                                    {product.tvalues.Detail.map((detail , index)  =>  <Image height="900px" width="100%" key={index} src={detail} /> )}
+                                    {product.values.Detail.map((detail , index)  =>  <Image height="900px" width="100%" key={index} src={detail} /> )}
                                 </div>
                                 </Image.PreviewGroup>
 
