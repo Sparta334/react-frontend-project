@@ -99,7 +99,7 @@ export default function DetailPage() {
 
         if(session)  {
             
-            api.get('/BackEnd/Detail',{
+            api.post('/BackEnd/Detail',{
                 body: JSON.stringify({
                     UserData: session.user.email, 
                     UserViewData: ProductName
