@@ -66,6 +66,8 @@ export default function Prolist({Title , InputJson  }){
           ]
         };
 
+        console.log(InputJson.data.recomms)
+
     return(
         
         <div className={Style.ItemsLayout}>
@@ -75,9 +77,10 @@ export default function Prolist({Title , InputJson  }){
             {/* <motion.div animate={{ x:- width*inPos }}> */}
                 {       
 
-
+                        
                         InputJson.data.recomms.map((product ,index)=> (
                             <Space size={32}>
+                                
                             <div className="ImageBox" key={index} >
 
                                 <Image.PreviewGroup>
