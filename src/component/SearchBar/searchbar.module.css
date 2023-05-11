@@ -1,19 +1,11 @@
-/*.box{
 
 
-}
+.SearchFieldBox{
 
-
-.SearchItemBox{
-
+    border: none !important;
 
 }
 
-.SearchItemText{
-
-
-
-}*/
 
 #SearchFieldDrawer{
 
@@ -24,8 +16,10 @@
 
 #SearchFieldDrawerBox{
 
-
+    
     position: relative;
+    
 }
+
 
 

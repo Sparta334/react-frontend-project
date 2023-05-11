@@ -33,7 +33,7 @@ export default function MainCarousel(){
                         
                         
                         <img className={Style.CarouselBoxImg} src={products.imageUrl}  />
-                        <h3 className={Style.CarouselBoxImgText}>{products.ProductName}</h3>
+                      
 
 
                     </div>

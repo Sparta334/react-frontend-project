@@ -81,9 +81,8 @@ export default function SearchBar() {
     }
 
     return (
-
-        <Space direction={"vertical"} size={"small"} >
-            <SearchField className={Style.SearchFieldBox}
+            <>
+            <SearchField classNames={Style.SearchFieldBox}
 
                 placeholder="Search..."
                 onChange={onChange}
@@ -112,8 +111,9 @@ export default function SearchBar() {
 
             </div>
 
+            </>
 
-        </Space>
+
 
     );
 

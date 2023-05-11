@@ -41,7 +41,7 @@ export default function NavBar(){
       }, [])
 
       const {
-        token: {colorNavText},
+        token: {colorNavText,colorNavbg},
       } = theme.useToken();
     
 
@@ -49,21 +49,35 @@ export default function NavBar(){
     return (
 
         // navbar 需要display.flex
+        <>
+        
+        <style>{`
+                  .${style.navbar}{
+
+                    background-color:${colorNavbg};
+                     
+
+                    }
+         `} </style>
+    
+
+
         <div className={` ${ style.navbar }  `} >
 
             <style>{`
                   .${style.navItem} , .${style.loginitem}{
 
-                     color: ${colorNavText}
+                     color: ${colorNavText};
+                     
 
                     }
             `} </style>
     
             <Row>
             
-                <Link to="/"> <img className={style.Logo} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
 
                 <div className={style.navbarname}>
+                <Link to="/"> <img className={`${style.Logo} ${style.navItem } `} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
                 <Link to = "/" className={style.navItem } >
                     商店主頁
                 </Link>
@@ -100,11 +114,12 @@ export default function NavBar(){
                 }
 
 
-
+           
             </Row>
 
 
         </div>
+        </>
 
 
     );
