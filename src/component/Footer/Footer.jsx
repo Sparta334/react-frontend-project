@@ -1,6 +1,6 @@
 import {InstagramOutlined } from '@ant-design/icons'
 import {TwitterOutlined} from   '@ant-design/icons'
-import {FacebookOutlined} from '@ant-design/icons'
+import {FacebookFilled} from '@ant-design/icons'
 import {YoutubeOutlined} from '@ant-design/icons'
 import style from './Footer.module.css'
 
@@ -11,13 +11,13 @@ export default function Footer(){
         <footer>
             <div className={style.inner_width}>
             <div className={style.copyright}>
-                &copy; 2023 | Created & Designed By <a  href="#">Let's Go Team</a>
+                &copy; 2023 | Created & Designed By Storm
             </div>
             <div class="sm">
-                <a href="#" className={style.btnlogo}><InstagramOutlined /></a>
-                <a href="#" className={style.btnlogo}><TwitterOutlined /></a>
-                <a href="#" className={style.btnlogo}><FacebookOutlined /></a>
-                <a href="#" className={style.btnlogo}><YoutubeOutlined /></a>
+                <a href="#" style={{  color: '#ffffff' }} className={style.btnlogo}><InstagramOutlined /></a>
+                <a href="#" style={{  color: '#ffffff' }} className={style.btnlogo}><TwitterOutlined /></a>
+                <a href="#" style={{  color: '#ffffff' }} className={style.btnlogo}><FacebookFilled /></a>
+                <a href="#" style={{  color: '#ffffff' }} className={style.btnlogo}><YoutubeOutlined /></a>
             </div>
             </div>
 

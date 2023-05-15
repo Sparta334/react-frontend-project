@@ -73,10 +73,10 @@ export default function NavBar(){
                     }
             `} </style>
     
-            <Row>
+            <Row className={style.navbarwidth} >
             
-
-                <div className={style.navbarname}>
+                
+                <Col span={18} className={style.navbarLeft}>
                 <Link to="/"> <img className={`${style.Logo} ${style.navItem } `} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
                 <Link to = "/" className={style.navItem } >
                     商店主頁
@@ -93,28 +93,37 @@ export default function NavBar(){
                 </Link>
 
                 <SearchBar />
-                </div>
-                
-                {
+
+                </Col>
+                <Col span={6} className={style.navbarRight}>
+
+                 <div >
+
+                 {
                      
                      !session  ? (
-                        <div ><Link className={style.loginitem} to = "/login"  > 
+                        <Link className={style.navItem} to = "/login"  > 
                             登入
                         </Link>
-                        </div>
+                       
                     ) :(
 
-                        <div>
-                            <Link  className={style.loginitem} to = "/login" > 
+                            <Link  className={style.navItem} to = "/login" > 
                                 {session.user.email}  登出
                             </Link>
-                        </div>
                         
                     )
                 }
 
+                    
+                 </div>
 
-           
+
+                 </Col>
+                
+              
+
+                
             </Row>
 
 

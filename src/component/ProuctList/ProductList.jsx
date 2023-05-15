@@ -1,5 +1,5 @@
 
-import {Row , Col , Image} from 'antd';
+import {Row , Col} from 'antd';
 import { useState} from 'react';
 import { Space } from 'antd';
 import { Button } from 'antd/es/radio';
@@ -47,6 +47,7 @@ export default function ProductList({Title , InputJson  }){
         initialSlide: 0,
         draggable:true,
         swipeToSlide: true,
+        arrows: false,
         responsive: [
             {
               breakpoint: 1024,
@@ -92,33 +93,17 @@ export default function ProductList({Title , InputJson  }){
 
                         InputJson.map((product)=> (
                             <Space size={32}>
-                            <div className="ImageBox" key={product.id} >
+                            <div className={Style.ImageBox} key={product.id} >
 
-                                <Image.PreviewGroup>
-                                <Image 
-                                     preview={{ visible: false }}
+                               <Link className={Style.imageA} to={`pages/${product.ProductName}`}>
+                                <img
                                         src={product.imageUrl} 
-                                        height="90%" 
-                                        width="90%" 
                                         alt="Sample" 
 
                                     />
+                                    </Link>
 
-                                <div style={{ display: 'none' }} >
-                                    {product.Detail.map((detail , index)  =>  <Image height="900px" width="100%" key={index} src={detail} /> )}
-                                </div>
-                                </Image.PreviewGroup>
-
-                                <Row>
-
-
-                                    <div className={Style.imgText}>{product.ProductName}</div>
-                                   
-                                    <Link to={`pages/${product.ProductName}`}><Button type='primary' className={Style.shop} > 商店頁面 </Button></Link>
-                                    
-
-
-                                </Row>
+ 
                                 
                             </div>
                             </Space>
@@ -130,9 +115,7 @@ export default function ProductList({Title , InputJson  }){
 
             {/* </motion.div> */}
             </Slider>
-            <Button type="primary" block  className={Style.more}>
-                顯示更多
-            </Button>
+
         </div>
 
     );

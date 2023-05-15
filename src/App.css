@@ -3,6 +3,12 @@
   overflow-x: hidden;
 }
 
+html{
+
+
+  background-color: black;
+}
+
 
 .logo {
   height: 6em;

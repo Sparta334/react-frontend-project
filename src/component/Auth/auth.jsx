@@ -40,6 +40,7 @@ export default function Suth() {
       provider: 'github',
     })
   }
+  
 
   return (
     <div className="row flex flex-center">
@@ -49,7 +50,7 @@ export default function Suth() {
           <a href="/"><CloseOutlined/></a>
         </div> 
        
-        <h1 className="header">Let's Go</h1>
+        <h1 className="header">Login</h1>
                   
   
           <button onClick={handleLogin} >

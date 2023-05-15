@@ -34,7 +34,6 @@ html {
     height: 65px;
     padding: 20px 0 20px;
     /*For test color↓*/
-    box-shadow: 0 2px 4px #071414e1;
     max-width: 2560px;
     width: 100%;    
     top:0;
@@ -106,9 +105,9 @@ html {
 }
 
 .loginitem {
-  position: absolute;
-  right: 0;
-  padding:1% 4% 0 40px;
+
+  justify-content: end;
+
 }
 
 
@@ -175,10 +174,32 @@ html {
 }
 
 
-.navbarname{
+.navbarLeft{
 
   align-items: center;
   display: flex;
   vertical-align:middle;
+}
+
+
+.navbarRight{
+
+  align-items: center;
+  display: flex;
+  vertical-align:middle;
+  justify-content: end;
+  padding-right: 5%;
+}
+.navbarwidth{
+  display: flex;
+justify-content: space-between;
+  width: 100%;
+
+}
+
+.loginText{
+
+  display:flex;
+  justify-content: end;
 
 }

@@ -1,9 +1,10 @@
 
-/* 注意jsx中已經把padding固定css無法修改 */
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: black;
     
   }
   
