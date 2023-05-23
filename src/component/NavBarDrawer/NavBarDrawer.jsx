@@ -1,0 +1,49 @@
+import { Button, Drawer, theme } from 'antd';
+import { useState } from 'react';
+import CartSummary from '../Cart/CartSummary/CartSummary';
+import { Link } from 'react-router-dom';
+import styles from "./NavBarDrawer.module.css"
+
+export default function NavBarDrawer({Title} ){
+
+  const { token } = theme.useToken();
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+  return (
+    <div className={styles.NavBarContainer} >
+      
+      <div>
+        <Button type="primary" onClick={showDrawer}>
+          {Title}
+        </Button>
+      </div>
+
+      <Drawer
+        title="選單"
+        placement="top"
+        closable={true}
+        open={open}
+        onClose={onClose}
+        getContainer={false}
+        className={styles.Drawer}
+        height="380%"
+      >
+
+        <hr/>
+        <div className={styles.DrawerItems}>
+        <CartSummary/>
+            
+        </div>
+        <hr/>
+        <div div className={styles.DrawerItems}>
+            <Link to="/login">登出</Link>
+        </div>
+      </Drawer>
+    </div>
+  );
+};

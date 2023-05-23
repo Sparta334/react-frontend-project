@@ -140,6 +140,15 @@ html {
     margin-bottom: 10px;
   }
 
+.navItemCollapse{
+
+  font-size: 14px;
+  margin: auto;
+  color: #fff  !important;
+
+}
+
+
   /*選中主題*/
   .navItemActive {
     font-size: 24px;
@@ -201,5 +210,20 @@ justify-content: space-between;
 
   display:flex;
   justify-content: end;
+
+}
+
+.DropDown{
+
+  list-style: none;
+  color: #fff !important;
+
+}
+
+.DropDownItem{
+
+  margin-top: 8%;
+  margin-bottom: 8%;
+  align-items: center;
 
 }

@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 import UserProfileReducer from './UserSlice';
+import UserCartItems from "./CartSlice";
 
 const Store = configureStore({
 
     reducer:{
         user : UserProfileReducer,
+        cart : UserCartItems,
     },
     devTools: process.env.NODE_ENV !== 'production',
 

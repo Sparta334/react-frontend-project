@@ -1,0 +1,29 @@
+.DrawerContainer{
+
+
+    position: absolute;
+    z-index: 99;
+    height:10vh;
+    width: auto;
+    display: block;
+
+
+}
+
+.NavBarContainer{
+
+    position: relative;
+
+}
+
+.DrawerItems{
+
+    padding-top: 10%;
+
+}
+
+.Drawer{
+
+    display: block;
+
+}

@@ -138,3 +138,30 @@ a{
   align-items: center;
 
 }
+
+.ant-collapse-header {
+
+  color: #fff !important;
+
+}
+
+
+.ant-drawer .ant-drawer-header-title{
+
+
+  display: block;
+
+
+}
+
+.ant-drawer .ant-drawer-header {
+
+  padding-top: 5%;
+}
+
+.ant-drawer-close{
+
+  margin-top: 5%;
+
+
+}

@@ -13,6 +13,7 @@ const darkTheme = {
     /* 需要修改↓ */
     colorImgText:"#ffffff",   //imgText文字顔色要白色 Style.imgText   需要修改
     colorBigText:"#ffffff", //熱門，最新和專屬於你 的顔色轉白色 ProductList Title
+    colorNavTextCollapse:"#ffffff",
   },
 
   components: {
@@ -35,6 +36,7 @@ const lightTheme = {
     /* 需要修改↓ */
     colorImgText:"#ffffff",   //imgText文字顔色要黑色 Style.imgText 應該預設就是黑色
     colorBigText:"#ffffff", //熱門，最新和專屬於你 的顔色轉黑色 ProductList Title 應該預設就是黑色
+    colorNavTextCollapse:"#ffffff",
   },
   components: {
     Button: {

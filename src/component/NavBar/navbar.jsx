@@ -4,15 +4,17 @@ import SearchBar from '../SearchBar/searchbar'
 import style from './navbar.module.css';
 import { selectUserProfile } from '../../redux/UserSlice';
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { addUserProfile } from '../../redux/UserSlice'
 import { Provider } from 'react-redux'
 import Store from '../../redux/Store'
-import { useDispatch } from 'react-redux';
+import NavBarDrawer from '../NavBarDrawer/NavBarDrawer';
 import axios from 'axios';
 import { createClient } from '@supabase/supabase-js';
-import { theme } from 'antd';
+import { theme , Drawer} from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+
+
 
 
 const api = axios.create({
@@ -28,7 +30,12 @@ const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhb
 
 export default function NavBar(){
 
+    const { GlobalToken } = theme.useToken();
+    const panelStyle = {
 
+        color:"#ffffff",
+        border: 'none',
+      };
     const [session, setSession] = useState(null)
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
@@ -44,7 +51,6 @@ export default function NavBar(){
         token: {colorNavText,colorNavbg},
       } = theme.useToken();
     
-
 
     return (
 
@@ -65,12 +71,13 @@ export default function NavBar(){
         <div className={` ${ style.navbar }  `} >
 
             <style>{`
-                  .${style.navItem} , .${style.loginitem}{
+                  .${style.navItem} , .${style.loginitem} , .${style.navItemCollapse}{
 
                      color: ${colorNavText};
                      
 
                     }
+    
             `} </style>
     
             <Row className={style.navbarwidth} >
@@ -97,7 +104,7 @@ export default function NavBar(){
                 </Col>
                 <Col span={6} className={style.navbarRight}>
 
-                 <div >
+                 <div  >
 
                  {
                      
@@ -107,10 +114,10 @@ export default function NavBar(){
                         </Link>
                        
                     ) :(
-
-                            <Link  className={style.navItem} to = "/login" > 
-                                {session.user.email}  登出
-                            </Link>
+                        <div>
+                              <NavBarDrawer Title={session.user.email}/>
+                                                               
+                        </div>
                         
                     )
                 }

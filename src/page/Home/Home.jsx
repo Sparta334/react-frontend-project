@@ -86,10 +86,10 @@ export default function Home(){
         <div className={style.container}>
 
                 <style>{`
-                    body { 
+                    .${style.container} { 
                         background-color: ${colorBgBase}; 
                         color: ${colorTextBase}
-                        },
+                        }
                 `}</style>
 
             <Header/>
