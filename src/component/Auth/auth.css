@@ -51,6 +51,7 @@
     font-weight: 100;
     display: flex;
     justify-content: center;
+    padding-bottom: 3%;
   }
   /* 顔色動畫 */ 
   @keyframes gradient{
@@ -119,4 +120,10 @@
 
 
   
+  .TextForOption{
+    
+    margin-top: 5%;
+    text-align: center;
   
+  
+  }

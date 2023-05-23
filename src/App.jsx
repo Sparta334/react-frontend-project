@@ -12,6 +12,7 @@ import { ConfigProvider } from 'antd';
 import { lightTheme , darkTheme  } from './theme'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 import { theme } from 'antd'
+import SignUp from "./component/SignUp/SignUp"
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
               <Route path=":ProductName" element={ <DetailPage/>}  />
         </Route>
         <Route path="login" element={<LogIn/>} />
+        <Route path="SignUp" element={ <SignUp/> } />
       </Routes>
       <ScrollToTop/>
       </BrowserRouter>
