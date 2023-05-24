@@ -78,10 +78,11 @@ html{
 
 .Swicth{
 
-  position: absolute;
+  position: fixed;
   z-index: 999999;;
   margin-left: 97%;
   top:5px;
+
 }
 
 a{

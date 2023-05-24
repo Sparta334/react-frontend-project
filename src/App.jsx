@@ -34,7 +34,8 @@ function App() {
           checked={isDarkMode}
           onChange={toggleDarkMode}
           size={30}
-
+          sunColor='white'
+          
 
         />
 

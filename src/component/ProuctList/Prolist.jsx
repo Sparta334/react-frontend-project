@@ -78,50 +78,31 @@ export default function Prolist({Title , InputJson  }){
                 {       
 
                         
-                        InputJson.recomms.map((product ,index)=> (
-                            <Space size={32}>
-                                
-                            <div className="ImageBox" key={index} >
 
-                                <Image.PreviewGroup>
-                                <Image 
-                                     preview={{ visible: false }}
-                                        src={product.values.imageUrl} 
-                                        height="90%" 
-                                        width="90%" 
-                                        alt="Sample" 
+                    InputJson.recomms.map((product,index) => (
+                        <Space size={32}>
+                        <div className={Style.ImageBox} key={index} >
 
-                                    />
+                           <Link className={Style.imageA} to={`pages/${product.values.ProductName}`}>
+                            <img
+                                    src={product.values.imageUrl} 
+                                    alt="Sample" 
 
-                                <div style={{ display: 'none' }} >
-                                    {product.values.Detail.map((detail , index)  =>  <Image height="900px" width="100%" key={index} src={detail} /> )}
-                                </div>
-                                </Image.PreviewGroup>
-
-                                <Row>
+                                />
+                                </Link>
 
 
-                                    <div className={Style.imgText}>{product.values.ProductName}</div>
-                                   
-                                    <Link to={`pages/${product.values.ProductName}`}><Button type='primary' className={Style.shop} > 商店頁面 </Button></Link>
-                                    
-
-
-                                </Row>
-                                
-                            </div>
-                            </Space>
-                           
-                        )     
-                    )
+                            
+                        </div>
+                        </Space>
+                       
+                    )     
+                )
 
                 }
 
             {/* </motion.div> */}
             </Slider>
-            <Button type="primary" block  className={Style.more}>
-                顯示更多
-            </Button>
         </div>
 
     );

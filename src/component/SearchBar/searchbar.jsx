@@ -58,11 +58,15 @@ export default function SearchBar() {
             else{
                 showDrawer();
 
-                const pp = res.data.map((post , i) =>(  
+                const pp = res.data.map((post , i) =>( 
+                    <>
+                    
                     <div className={Style.box} key={i}>
                         <Link to={`/pages/${post.product.ProductName}`}><div className={Style.SearchItemText}>{post.product.ProductName}</div></Link>
                         
                     </div>
+                    <hr /> 
+                    </>
                 ) )
 
                 setDalue(  pp )
@@ -80,8 +84,10 @@ export default function SearchBar() {
 
     }
 
+    console.log(ReveiceData);
+
     return (
-            <>
+            <Space direction={"vertical"} size={"small"} >
             <SearchField classNames={Style.SearchFieldBox}
 
                 placeholder="Search..."
@@ -101,17 +107,18 @@ export default function SearchBar() {
                     open={open}
                     getContainer={false}
                     id={Style.SearchFieldDrawer}
-                    height={`${ReveiceData.length * 5.5}vh`}
+                    height={`${ReveiceData.length * 9}vh`}
                 >
 
                     <div className={Style.SearchItemBox}>
+
                         {ReveiceData}
                     </div>
                 </Drawer>
 
             </div>
 
-            </>
+            </Space>
 
 
 
