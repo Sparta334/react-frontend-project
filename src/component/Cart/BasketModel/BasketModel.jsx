@@ -1,5 +1,5 @@
 import { useDispatch, useSelector} from "react-redux";
-import { addCartItems, selectCartItems } from "../../../redux/CartSlice";
+import { addCartItems, selectCartItems ,removeCartItems } from "../../../redux/CartSlice";
 import { Modal , Button, Select } from "antd";
 import { Link } from "react-router-dom";
 import { CartIcon } from "../CartSummary/Icons";
@@ -22,6 +22,9 @@ export default function BasketModel( {isOpen , toggleModal} ){
     
     }
 
+
+    console.log(cartItems);
+
     return (
         
         
@@ -39,9 +42,9 @@ export default function BasketModel( {isOpen , toggleModal} ){
                 cartItems.map((item , index) => (
 
                     <li key={index}>
-                        <Link to={`/pages/${item.ProductName}`}>
+                        <Link to={`/pages/${item.name}`}>
                             <div onClick={handleCancel}>
-                                <img src={item.imageUrl} alt={item.ProductName} />
+                                <img src={item.image} alt={item.name} />
                             </div>
                         </Link>
 
@@ -55,9 +58,9 @@ export default function BasketModel( {isOpen , toggleModal} ){
                                 defaultValue={item.qty}
                                 onChange={(qty) => dispatch(addCartItems({
                                     
-                                    imageUrl: item.imageUrl,
-                                    name : item.ProductName,
-                                    price : item.Price,
+                                    imageUrl: item.image,
+                                    name : item.name,
+                                    price : item.price,
                                     countInStock: item.countInStock,
                                     qty,
 
@@ -80,7 +83,7 @@ export default function BasketModel( {isOpen , toggleModal} ){
                      <div className={styles.price}>
                         ${item.price * item.qty}
                      </div>
-                     <div className={styles.delete} onClick={() => dispatch(removeCartItems(item.id))}>
+                     <div className={styles.delete} onClick={() => dispatch(removeCartItems(item.name))}>
                         x
                      </div>
                   </div>

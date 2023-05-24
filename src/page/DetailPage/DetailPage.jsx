@@ -15,7 +15,7 @@ import NavBar from "../../component/NavBar/navbar";
 import { theme } from 'antd';
 import { createClient } from "@supabase/supabase-js";
 import { useLocation } from "react-router-dom";
-
+import AddToCart from "../../component/Cart/AddToCart/AddToCart";
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
@@ -239,6 +239,7 @@ export default function DetailPage() {
                         {Des}
 
                     </div>
+                    <AddToCart product={ReveiceData} qty={1} />
                 </div>
             )}
             
