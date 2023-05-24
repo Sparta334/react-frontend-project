@@ -84,7 +84,7 @@ export default function BasketModel( {isOpen , toggleModal} ){
                         ${item.price * item.qty}
                      </div>
                      <div className={styles.delete} onClick={() => dispatch(removeCartItems(item.name))}>
-                        x
+                       刪除
                      </div>
                   </div>
 
