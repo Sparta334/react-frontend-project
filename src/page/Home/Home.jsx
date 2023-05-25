@@ -44,9 +44,8 @@ export default function Home(){
     useEffect(()=>{
     
     
-        localStorage.setItem('myData',  JSON.stringify(response.data));
     
-    }, localStorage.getItem('myData') )
+    }, [localStorage.getItem('myData')])
 
       
 
