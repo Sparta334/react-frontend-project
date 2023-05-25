@@ -37,17 +37,19 @@ export default function Home(){
       const [Data, setData] = useState(null)
       const [session, setSession] = useState(null)
       const [Reload , setReload] = useState(false);
+    
 
-
- 
+      useEffect(() => {
+        
+          supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session)
+          })
       
-    useEffect(()=>{
-    
-    
-    
-    }, [localStorage.getItem('myData')])
+          supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session)
+          })
 
-      
+       } ,[ session ===null])
 
 
     return(
@@ -66,7 +68,7 @@ export default function Home(){
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             {
-               session !==null ?  localStorage.getItem('myData') ? <Prolist Title="專屬於你" InputJson={ JSON.parse(localStorage.getItem('myData'))}/> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} /> :<ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
+               session ?  localStorage.getItem('myData') ? <Prolist Title="專屬於你" InputJson={ JSON.parse(localStorage.getItem('myData'))}/> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} /> :<ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
             }
             
             <Footer/>
