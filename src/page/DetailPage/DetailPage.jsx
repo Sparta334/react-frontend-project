@@ -47,43 +47,6 @@ export default function DetailPage() {
       }
     
 
-      useEffect(() => {
-        
-
-            supabase.auth.getSession().then(({ data: { session } }) => {
-                setSession(session)
-              })
-          
-              supabase.auth.onAuthStateChange((_event, session) => {
-                setSession(session)
-              })
-
-              if(session)  {
-            
-                api.post('/BackEnd/Detail',{
-                    data:{
-                        UserData: session.user.email, 
-                        UserViewData: ProductID
-                    },
-                }).then((response) => {
-
-                        console.log(response)
-                        handleSaveClick(response)
-                        console.log("UUUU")
-                  })
-                  .catch(function (error) {
-                    console.log(error);
-                  });
-        
-        
-            }
-           
-    
-    
-
-       
-
-      }, [])
   
 
     const { ProductName } = useParams();
@@ -96,7 +59,62 @@ export default function DetailPage() {
     const [imageURLsState, setImageURLsState] = useState([]);
     const [IsLoad, setLoad] = useState (false);
     const [ProductID , setID] =  useState("001")
-    useEffect(() => {
+
+
+    const GetApi = () =>{
+    
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session)
+          })
+      
+           supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session)
+          })
+    
+    }
+    const PostApi =() =>{
+        if(session)  {
+            
+            api.post('/BackEnd/Detail',{
+                data:{
+                    UserData: session.user.email, 
+                    UserViewData: ProductID
+                },
+            }).then((response) => {
+
+                    console.log(response)
+                    handleSaveClick(response)
+                    console.log("UUUU")
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+    
+    
+        }
+       
+
+
+
+   
+
+
+ 
+    if(session == null){
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session)
+        })
+    }
+      
+
+        
+        console.log(session.user.email)
+
+    
+    }
+
+    const GetDataApi= () =>{
+        
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             setData(res.data)
             setDes(res.data.Description)
@@ -132,58 +150,32 @@ export default function DetailPage() {
             SetDsiplay(NoEntry);
         });
 
-          
-        if(session)  {
+    
+    
+    }
+
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+
             
-            api.post('/BackEnd/Detail',{
-                data: {
-                    UserData: session.user.email, 
-                    UserViewData: ProductID
-                }
-            }).then((response) => {
-                    handleSaveClick(response)
-                    console.log(response)
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-    
-    
-        }
+             await Promise.all([
+                GetApi(),
+                GetDataApi(),
+                PostApi(),
+            ]) ;
+            
 
-        console.log(session)
-
-    }, ProductName); // 空数组告诉 React 仅执行一次
-
-
-    useEffect( ()=>{
-
-
+             
+ 
         
-        if(session)  {
-            
-            api.post('/BackEnd/Detail',{
-                data: {
-                    UserData: session.user.email, 
-                    UserViewData: ProductID
-                }
-            }).then((response) => {
-                    handleSaveClick(response)
-                    console.log(response)
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-    
-    
         }
-       
 
+        fetchData()
 
-
-
-
-    } , pathname )
+    }, [ProductName , session==null]); // 空数组告诉 React 仅执行一次
 
 
     const settings = {
