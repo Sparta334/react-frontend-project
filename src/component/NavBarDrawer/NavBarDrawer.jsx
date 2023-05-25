@@ -4,6 +4,7 @@ import CartSummary from '../Cart/CartSummary/CartSummary';
 import { Link } from 'react-router-dom';
 import styles from "./NavBarDrawer.module.css"
 
+
 export default function NavBarDrawer({Title} ){
 
   const { token } = theme.useToken();
@@ -16,7 +17,19 @@ export default function NavBarDrawer({Title} ){
   };
   return (
     <div className={styles.NavBarContainer} >
+
+
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+      </style>
+
+      {/*
+       *   
+       *         引入樣式
+       */}
       
+
+
       <div>
         <Button type="primary" onClick={showDrawer}>
           {Title}
@@ -40,6 +53,7 @@ export default function NavBarDrawer({Title} ){
             
         </div>
         <hr/>
+
         <div div className={styles.DrawerItems}>
             <Link to="/login">登出</Link>
         </div>

@@ -26,7 +26,7 @@ function App() {
 
   return (
 
-    <div>
+    <div >
 
 
         <DarkModeSwitch
@@ -35,7 +35,7 @@ function App() {
           onChange={toggleDarkMode}
           size={30}
           sunColor='white'
-          
+          style={{ }}
 
         />
 

@@ -84,7 +84,6 @@ export default function SearchBar() {
 
     }
 
-    console.log(ReveiceData);
 
     return (
             <Space direction={"vertical"} size={"small"} >

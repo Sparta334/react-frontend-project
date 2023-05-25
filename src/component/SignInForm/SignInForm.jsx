@@ -57,6 +57,7 @@ export default function SignForm(){
             initialValues={{ remember: true }}
             >
             <Form.Item
+                className="labelText"
                 label="Email"
                 name="Email"
                 rules={[
@@ -71,6 +72,7 @@ export default function SignForm(){
             </Form.Item>
 
             <Form.Item
+                className="labelText"
                 label="Password"
                 name="Password"
                 rules={[

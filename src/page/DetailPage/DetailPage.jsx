@@ -103,7 +103,7 @@ export default function DetailPage() {
             setUrl(res.data.imageUrl)
             setID(res.data.itemId)
 
-            console.log(res.data);
+            console.log(res.data.itemId);
             const detailArray = res.data.Detail;
             const Temo = []
             Temo.push(res.data.imageUrl);

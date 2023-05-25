@@ -19,11 +19,13 @@
 .DrawerItems{
 
     padding-top: 10%;
+    font-family: 'Zen Maru Gothic', sans-serif;
 
 }
 
 .Drawer{
 
     display: block;
+    font-family: 'Zen Maru Gothic', sans-serif;
 
 }

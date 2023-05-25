@@ -82,6 +82,10 @@ html{
   z-index: 999999;;
   margin-left: 97%;
   top:5px;
+  right: 5px;
+  border:10px solid rgba(0, 0, 0, 1);
+  background-color:rgba(0, 0, 0, 1) ;
+  border-radius: 50%;
 
 }
 
@@ -95,7 +99,7 @@ a{
   
 }
 
-
+/* SignForm */
 
 .OOPP svg{
 
@@ -140,6 +144,15 @@ a{
 
 }
 
+.ant-form-item .ant-form-item-label >label{
+  
+  color: black !important;
+
+}
+
+
+/* 主畫面帳號選單 */
+
 .ant-collapse-header {
 
   color: #fff !important;
@@ -172,3 +185,4 @@ a{
   text-align: center;
 
 }
+
