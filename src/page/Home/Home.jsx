@@ -1,6 +1,6 @@
 
 import {Row , Col} from 'antd';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import Header from '../../component/Header/Header';
 import Popalur from '../../json/PopularGame.json';
 import ExculsiveToYou from '../../json/ExculsiveToYou.json';
@@ -27,12 +27,16 @@ const api = axios.create({
 
 export default function Home(){
 
+    const Los = useLocation();
+
     const {
         token: { colorBgBase, colorTextBase ,colorNavText},
       } = theme.useToken();
+
     
       const [Data, setData] = useState(null)
       const [session, setSession] = useState(null)
+      const [Reload , setReload] = useState(false);
 
 
       const handleSaveClick = (response) => {
@@ -40,13 +44,16 @@ export default function Home(){
         
         localStorage.setItem('myData',  JSON.stringify(response.data));
       };
-    
+      
     
 
       useEffect(() => {
         
 
-        supabase.auth.getSession().then(({ data: { session } }) => {
+
+        if(Reload === false){
+
+          supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
           })
       
@@ -62,6 +69,7 @@ export default function Home(){
                 },
             })
               .then(function (response) {
+                    setReload (response) ;
                     handleSaveClick(response)
                     console.log("UUUU")
               })
@@ -70,14 +78,16 @@ export default function Home(){
               });
     
     
-        }
+          }
+
+          setReload(true);
        
 
+        }
 
+       
 
-   
-
-  } ,[] )
+  } , [ Reload === false ])
 
 
 
