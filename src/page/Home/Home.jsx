@@ -39,13 +39,14 @@ export default function Home(){
       const [Reload , setReload] = useState(false);
 
 
-      const handleSaveClick = (response) => {
-
-        
-        localStorage.setItem('myData',  JSON.stringify(response.data));
-      };
+ 
       
+    useEffect(()=>{
     
+    
+        localStorage.setItem('myData',  JSON.stringify(response.data));
+    
+    }, localStorage.getItem('myData') )
 
       
 
