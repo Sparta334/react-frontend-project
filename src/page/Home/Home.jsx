@@ -47,42 +47,7 @@ export default function Home(){
       
     
 
-      useEffect(() => {
-        
-
-          supabase.auth.getSession().then(({ data: { session } }) => {
-            setSession(session)
-          })
       
-          supabase.auth.onAuthStateChange((_event, session) => {
-            setSession(session)
-          })
-
-          if(session)  {
-        
-            api.post('/BackEnd/DetailHome',{
-                data:{
-                    UserData: session.user.email, 
-                },
-            })
-              .then(function (response) {
-                    setReload (response) ;
-                    handleSaveClick(response)
-                    console.log("UUUU")
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-    
-    
-          }
-
-
-
-       
-
-  } , [])
-
 
 
     return(

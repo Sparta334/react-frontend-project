@@ -177,29 +177,6 @@ export default function DetailPage() {
 
     }, [ProductName , session==null]); // 空数组告诉 React 仅执行一次
 
-    useEffect(() => {
-
-        const fetchData = async () => {
-
-
-            
-             await Promise.all([
-                GetApi(),
-                GetDataApi(),
-                PostApi(),
-            ]) ;
-            
-
-             
- 
-        
-        }
-
-        fetchData()
-
-    }, []); // 空数组告诉 React 仅执行一次
-
-
 
     const settings = {
         customPaging: function(i) {
