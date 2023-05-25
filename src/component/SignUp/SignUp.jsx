@@ -26,20 +26,20 @@ export default function SignUp(){
             password: Password,
         })
         
-
-        if(error){
-
-            alert("Please Retype");
-            form.resetFields();
-
-        }
-        
         if(data){
             
             navigate("/");
             alert("Register Succes!")
             
         }
+        else if(error){
+
+            alert("Please Retype");
+            form.resetFields();
+
+        }
+        
+     
 
     }
            
