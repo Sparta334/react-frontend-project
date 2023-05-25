@@ -33,7 +33,8 @@ export default function SignUp(){
             form.resetFields();
 
         }
-        else if(data){
+        
+        if(data){
             
             navigate("/");
             alert("Register Succes!")

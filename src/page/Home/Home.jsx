@@ -50,9 +50,6 @@ export default function Home(){
       useEffect(() => {
         
 
-
-        if(Reload === false){
-
           supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
           })
@@ -80,14 +77,11 @@ export default function Home(){
     
           }
 
-          setReload(true);
-       
 
-        }
 
        
 
-  } , [ Reload === false ])
+  } , [])
 
 
 
@@ -107,7 +101,7 @@ export default function Home(){
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             {
-               session ?  localStorage.getItem('myData') ? <Prolist Title="專屬於你" InputJson={ JSON.parse(localStorage.getItem('myData'))}/> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} /> :<ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
+               session !==null ?  localStorage.getItem('myData') ? <Prolist Title="專屬於你" InputJson={ JSON.parse(localStorage.getItem('myData'))}/> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} /> :<ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
             }
             
             <Footer/>
