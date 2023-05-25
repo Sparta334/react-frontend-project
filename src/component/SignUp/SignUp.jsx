@@ -21,25 +21,12 @@ export default function SignUp(){
         const { Email , Password } = form.getFieldsValue();
 
        
-        const { data, error } = await supabase.auth.signUp({
+        await supabase.auth.signUp({
             email: Email,
             password: Password,
-        })
-        
-        if(data){
-            
-            navigate("/");
-            alert("Register Succes!")
-            
-        }
-        else if(error){
-
-            alert("Please Retype");
-            form.resetFields();
-
-        }
-        
-     
+        }).then((response) => {
+            response.error ? alert("Please Retype") : navigate("/")
+          });
 
     }
            
