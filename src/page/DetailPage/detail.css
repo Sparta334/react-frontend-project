@@ -41,9 +41,6 @@ position: relative;
     border-radius: 10%;
 }
     /* 奇怪的class */
-    .slick-dots li {
-        left:-25%;
-    }
 
 
 
@@ -63,7 +60,6 @@ position: relative;
     }
 
     .slick-dots{
-        display:flex !important;
         position: relative;
         height: 50%;
     }

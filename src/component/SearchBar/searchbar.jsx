@@ -86,7 +86,7 @@ export default function SearchBar() {
 
 
     return (
-            <Space direction={"vertical"} size={"small"} >
+            <Space direction={"vertical"} size={"small"}  >
             <SearchField classNames={Style.SearchFieldBox}
 
                 placeholder="Search..."

@@ -19,6 +19,8 @@ export default function MainCarousel(){
         initialSlide: 0,
         autoplay:true,
         autoplaySpeed:3000,
+        arrows:false,
+        
 
     }
 
@@ -32,7 +34,7 @@ export default function MainCarousel(){
                 MainCarouselData.map((products , index) => (
                     <div className={Style.CarouselBox}  key={index}>
 
-                        <img height="688vh" width="100%" src={products.imageUrl}  />
+                        <img height="100%" width="100%" src={products.imageUrl}  />
                     </div>
                       
 

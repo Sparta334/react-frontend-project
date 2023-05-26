@@ -38,6 +38,8 @@ export default function ProductList({Title , InputJson  }){
         token: {  colorBigText ,colorImgText},
       } = theme.useToken();
     
+    const MoblieSetting ={
+    }
 
     const settings = {
         dots: true,
@@ -67,7 +69,7 @@ export default function ProductList({Title , InputJson  }){
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
               }
             }
           ]
@@ -92,13 +94,15 @@ export default function ProductList({Title , InputJson  }){
 
 
                         InputJson.map((product)=> (
-                            <Space size={32}>
+                            
                             <div className={Style.ImageBox} key={product.id} >
 
                                <Link className={Style.imageA} to={`pages/${product.ProductName}`}>
                                 <img
+                                      height="1600px" width="900px"
                                         src={product.imageUrl} 
                                         alt="Sample" 
+                                        style={{objectFit:"contain"}}
 
                                     />
                                     </Link>
@@ -106,7 +110,7 @@ export default function ProductList({Title , InputJson  }){
  
                                 
                             </div>
-                            </Space>
+                           
                            
                         )     
                     )

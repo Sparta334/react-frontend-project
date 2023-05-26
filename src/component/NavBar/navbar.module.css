@@ -29,16 +29,16 @@ html {
 /* Navbar 樣式 */
 .navbar {
     
-    display: flex;
-    align-items:center; 
+ 
     height: 65px;
     padding: 20px 0 20px;
     /*For test color↓*/
-    max-width: 2560px;
     width: 100%;    
     top:0;
     transition: .3s linear;
     position:relative;
+    justify-content: space-around;
+    
     /*background-color: transparent;*/
   }
 
@@ -118,7 +118,8 @@ html {
 @media only screen and (max-width: 768px) {
   /* Navbar 樣式 */
   .navbar {
-    padding: 9px 10px 0 5px;
+  
+    padding-bottom: 5px;
     justify-content:space-between ;
     flex-wrap: wrap;
     
@@ -135,7 +136,6 @@ html {
   /* 導航列樣式 */
   .navItem {
     font-size: 18px;
-    margin: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
   }
@@ -226,4 +226,28 @@ justify-content: space-between;
   margin-bottom: 8%;
   align-items: center;
 
+}
+
+
+.MobileLogo{
+
+
+  text-align: end;
+
+}
+
+.navItemText{
+
+  font-size: 22px
+}
+
+
+.navbarRight2{
+
+  align-items: center;
+  display: flex;
+  vertical-align:middle;
+  justify-content: end;
+  text-decoration: none;
+  
 }

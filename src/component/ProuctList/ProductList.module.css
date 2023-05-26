@@ -36,8 +36,7 @@
     
     margin: 0 auto;
     box-sizing: border-box;
-    padding-left: 80px;
-    padding-right: 80px;
+
     padding-top: 10px;
     padding-bottom: 40px;
     z-index: -3;
@@ -121,13 +120,14 @@
  /* 小於 768px 的平板的排版 */
  @media screen and (max-width: 768px) {
     .ItemsLayout {
-      padding: 30px 80px 30px 80px;
+      padding-top: 10px;
+      padding-bottom: 40px;
     }
   
     
     .ImageBox {
       width: 45%;
-      padding-bottom: 100%;
+      padding-bottom: 30%;
       position: relative;
       display: inline-block;
       vertical-align: top;
@@ -182,7 +182,6 @@
   .imageA{
     
     width: auto;
-  
     
   }
 

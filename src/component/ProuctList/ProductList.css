@@ -1,7 +1,4 @@
-.slick-dots{
-    left: 75%;
-    transform: translateX(-50%);
-}
+
 
 @media screen and (max-width: 768px){
     
@@ -18,7 +15,7 @@
     .slick-dots{
        
 
-        width: 500px; /* reduce the width to 300px */
+        width: 100%; /* reduce the width to 300px */
         height: 20px; /* reduce the height to 10px */
       
         
