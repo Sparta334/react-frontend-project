@@ -128,8 +128,7 @@ html {
   /* Logo 樣式 */
   .Logo {
     height: 40px;
-    width: 40px;
-    margin-left: 40px;
+    width: 40px
     
   }
 
@@ -231,8 +230,9 @@ justify-content: space-between;
 
 .MobileLogo{
 
-
-  text-align: end;
+  display: flex;
+  justify-content: end;
+  width: 100%;
 
 }
 
@@ -250,4 +250,21 @@ justify-content: space-between;
   justify-content: end;
   text-decoration: none;
   
+}
+
+.DrawerItems{
+
+  padding-top: 10%;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: medium;
+
+}
+
+.DrawerItems2{
+
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: medium;
+
 }

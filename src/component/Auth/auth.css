@@ -51,6 +51,7 @@
     font-weight: 100;
     display: flex;
     justify-content: center;
+    text-align: center;
     padding-bottom: 3%;
   }
   /* 顔色動畫 */ 
@@ -111,13 +112,32 @@
     /* X號修改非常重要 出問題了 已經提供預設 */
   .Cross{
     padding-left: 100% !important;
-    margin-top: -30px;
+    margin-top: -60px;
   }
 
   .Cross a {
     color: rgb(98, 84, 84); /* 根据您想要的颜色进行调整 */
+    padding-top: 30%;
   }
 
+  .Cross2{
+    
+    padding-left: 30% !important;
+    margin-top: -3%;
+
+    
+  }
+
+  .Cross2 a {
+    color: rgb(98, 84, 84); /* 根据您想要的颜色进行调整 */
+    padding-top: 30%;
+  }
+
+  .CrossFlex{
+  
+  
+    display: flex;
+  }
 
   
   .TextForOption{

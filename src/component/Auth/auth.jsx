@@ -48,6 +48,7 @@ export default function Suth() {
     <div className="row flex flex-center">
       
       <div className="col-9 form-widget">
+      
       <div class="Cross"> 
           <a href="/"><CloseOutlined/></a>
         </div> 

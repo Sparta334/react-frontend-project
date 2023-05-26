@@ -11,7 +11,7 @@ import { createClient } from '@supabase/supabase-js';
 import { theme , Drawer} from 'antd';
 import { Default, Desktop , Laptop , Mobile } from '../MediaQuery/MediaQurey';
 import { fallDown as Menu } from 'react-burger-menu'
-
+import CartSummary from "../Cart/CartSummary/CartSummary"
 
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
@@ -105,7 +105,7 @@ export default function NavBar(){
                        
                     ) :(
                         <div>
-                              <NavBarDrawer Title={session.user.email}/>
+                              <NavBarDrawer Title={session.user.user_metadata.username}/>
                                                                
                         </div>
                         
@@ -129,38 +129,12 @@ export default function NavBar(){
                 <div className={style.navbarwidth} >
 
                    
-                        <div >
-                       
+                        <div  >
+                           {  session  ? <div className={style.navItem} >{session.user.user_metadata.username}</div> : null   }
+                           <hr/>
                         <Link to = "/" className={style.navItem } >
                             商店主頁
                         </Link>
-                        <Link to = "/newset" className={style.navItem } >
-                            最新
-                        </Link>
-                        <Link to= "/popular" className= {style.navItem }>
-                            熱門
-                        </Link>
-
-                        <Link to = "/discount" className={style.navItem }>
-                            優惠
-                        </Link>
-
-                        <SearchBar />
-                        </div>
-
-            
-                        </div>
-                </Menu>
-                    <Row wrap={true}>
-                        <Col span={15}>
-                            <Link className={style.MobileLogo}  to="/"> <img className={`${style.Logo} ${style.navItem } `} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
-                        </Col>
-                        <Col span={4} className={style.navbarRight2}>
-                        
-                        <div className={style.navItemText}  >
-
-                            
-
                         {
                             
                             !session  ? (
@@ -170,14 +144,42 @@ export default function NavBar(){
                             
                             ) :(
                                 <div>
-                                    <NavBarDrawer Title={session.user.email}/>
-                                                                    
+                                   
+                                    <hr/>
+                                        <div className={style.DrawerItems}>
+                                        <CartSummary/>
+                                            
+                                        </div>
+                                        <hr/>
+
+                                        <div div className={style.DrawerItems2}>
+                                            <Link style={{color:"#fff" }} to="/login">登出</Link>
+                                        </div>                               
                                 </div>
                                 
                             )
                         }
 
+                            <hr style={{marginBottom:"5%"}} />
+                        <SearchBar />
+                        </div>
+
+            
+                        </div>
+                </Menu>
+                    <Row wrap={true}>
+                        <Col span={16}>
+                            <div className={style.MobileLogo} >
+                            <Link to="/"> <img className={`${style.Logo} ${style.navItem } `} src="https://static.vecteezy.com/system/resources/previews/000/626/507/original/lightning-logo-template-vector.jpg" alt="" /> </Link>
+                            </div>
+                        </Col>
+                        <Col span={4} className={style.navbarRight2}>
                         
+                        <div className={style.navItemText}  >
+
+                            
+
+                      
                     </div>
 
 

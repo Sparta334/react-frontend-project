@@ -42,6 +42,7 @@ export default function Prolist({Title , InputJson  }){
         initialSlide: 0,
         draggable:true,
         swipeToSlide: true,
+        arrows:false,
         responsive: [
             {
               breakpoint: 1024,
@@ -54,14 +55,14 @@ export default function Prolist({Title , InputJson  }){
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 initialSlide: 1
               }
             },
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
               }
             }
           ]
@@ -80,13 +81,15 @@ export default function Prolist({Title , InputJson  }){
                         
 
                     InputJson.recomms.map((product,index) => (
-                        <Space size={32}>
                         <div className={Style.ImageBox} key={index} >
 
                            <Link className={Style.imageA} to={`pages/${product.values.ProductName}`}>
                             <img
                                     src={product.values.imageUrl} 
                                     alt="Sample" 
+                                    height="1600px" width="900px"
+
+                                        style={{objectFit:"contain"}}
 
                                 />
                                 </Link>
@@ -94,7 +97,7 @@ export default function Prolist({Title , InputJson  }){
 
                             
                         </div>
-                        </Space>
+
                        
                     )     
                 )

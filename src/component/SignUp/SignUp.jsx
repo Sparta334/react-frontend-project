@@ -18,12 +18,17 @@ export default function SignUp(){
 
     const  handleFinish =  async ( )  => {
 
-        const { Email , Password } = form.getFieldsValue();
+        const { Name ,Email , Password } = form.getFieldsValue();
 
        
         await supabase.auth.signUp({
             email: Email,
             password: Password,
+            options: {
+                data: {
+                  username:Name
+                }
+              }
         }).then((response) => {
             response.error ? alert("Please Retype") : navigate("/")
           });
@@ -41,12 +46,14 @@ export default function SignUp(){
             <div className="row flex flex-center">
               
               <div className="col-9 form-widget">
-              <div class="Cross"> 
+              <div className="CrossFlex">
+    
+                <h1 style={{paddingLeft:"30%"}} className="header">Register</h1>
+                <div class="Cross2"> 
                   <a href="/"><CloseOutlined/></a>
                 </div> 
                
-                <h1 className="header">Login</h1>
-        
+             </div>
                     <div>
                         <Form
                         form={form}
@@ -58,13 +65,27 @@ export default function SignUp(){
                         initialValues={{ remember: true }}
                         >
                         <Form.Item
+                            label="UserName"
+                            name="Name"
+                            rules={[
+                            {
+                                type: 'string',
+                                required: true,
+                                max:16,
+                                min:4,
+                            },
+                            ]}
+                        >
+                            <Input />
+                        </Form.Item>
+                        <Form.Item
                             label="Email"
                             name="Email"
                             rules={[
                             {
                                 type: 'email',
                                 required: true,
-                                message: '請輸入mail',
+                                message: '請使用真的email',
                             },
                             ]}
                         >

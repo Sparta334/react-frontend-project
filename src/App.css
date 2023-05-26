@@ -54,6 +54,7 @@ html{
 }
 
 .ant-drawer-wrapper-body{
+  display: block !important;
   color: #fff;
   height: calc(100vh - 55px);
 }
@@ -64,6 +65,7 @@ html{
   padding-bottom: 1%;
   position: absolute  !important;
   z-index: 9999;
+  width: 100%;
 
 }
 
@@ -96,6 +98,25 @@ html{
   border-radius: 50%;
 
 }
+
+@media screen and (max-width: 767px) {
+  
+  .Swicth{
+
+    position: fixed;
+    z-index: 999999;;
+    margin-left: 97%;
+    top:5px;
+    right: 20px;
+    border:10px solid rgba(0, 0, 0, 1);
+    background-color:rgba(0, 0, 0, 1) ;
+    border-radius: 50%;
+
+  }
+
+}
+
+
 
 a{
 
@@ -238,6 +259,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  text-align: center;
 }
 
 /* General sidebar styles */
@@ -246,7 +268,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #373a47;
   height: auto;
   font-size: 1.15em;
-  height: auto !important; 
+  height: 45% !important; 
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -258,7 +280,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   display: flex;
   color: #b8b7ad;
-  padding: 0.8em;
+  padding-top: 0.8em;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  height: auto !important;
 }
 
 /* Individual item */
@@ -269,4 +294,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.ant-modal{
+
+  position: absolute;
+  z-index: 999;
+
+}
+
+.ant-modal-root .ant-modal-wrap{
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  justify-content: center;
 }
