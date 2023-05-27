@@ -26,14 +26,11 @@ export default function NavBar(){
         border: 'none',
       };
     const [session, setSession] = useState(null)
-    useEffect(() => {
+     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
           setSession(session)
         })
-    
-        supabase.auth.onAuthStateChange((_event, session) => {
-          setSession(session)
-        })
+
       }, [])
 
       const {
@@ -153,7 +150,7 @@ export default function NavBar(){
                                         <hr/>
 
                                         <div div className={style.DrawerItems2}>
-                                            <Link style={{color:"#fff" }} to="/login">登出</Link>
+                                            <Link style={{color:"#fff" }} to="/Profile">登出</Link>
                                         </div>                               
                                 </div>
                                 

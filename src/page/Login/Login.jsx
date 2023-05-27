@@ -1,10 +1,6 @@
 
-import {CloseOutlined ,GithubOutlined } from '@ant-design/icons'
-import { selectUserProfile } from '../../redux/UserSlice';
-import { useDispatch } from 'react-redux';
 import addUserProfile from '../../redux/UserSlice'
 import axios from "axios";
-import { Provider } from 'react-redux'
 import Store from '../../redux/Store'
 import { useNavigate } from "react-router-dom";
 import { createClient } from "@supabase/supabase-js";
@@ -19,7 +15,7 @@ const api = axios.create({
     headers: {
         'Access-Control-Allow-Origin': '*'
      },
-      baseURL: 'https://energetic-fox-pajamas.cyclic.app/'
+      baseURL: 'https://rose-wide-eyed-termite.cyclic.app/'
        
     }
     
@@ -31,8 +27,8 @@ const api = axios.create({
 export default function LogIn(){
 
    
-    const dispatch = useDispatch();
     const [session, setSession] = useState(null)
+    const navigator =useNavigate();
 
     useEffect(() => {
       supabase.auth.getSession().then(({ data: { session } }) => {
@@ -42,7 +38,10 @@ export default function LogIn(){
       supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session)
       })
+
+
     }, [])
+
 
   
     return (
@@ -51,7 +50,7 @@ export default function LogIn(){
       <div className="container" style={{ padding: '50px 50px 50px 50px' }}>
 
 
-        {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
+        {!session ? <Auth /> : navigator("/Profile")}
 
       </div>
     )

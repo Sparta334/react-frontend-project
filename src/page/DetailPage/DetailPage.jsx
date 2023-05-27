@@ -16,6 +16,7 @@ import { theme } from 'antd';
 import { createClient } from "@supabase/supabase-js";
 import { useLocation } from "react-router-dom";
 import AddToCart from "../../component/Cart/AddToCart/AddToCart";
+import { useCallback } from "react";
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
@@ -23,7 +24,7 @@ const api = axios.create({
     headers: {
         'Access-Control-Allow-Origin': '*'
     },
-    baseURL: 'https://energetic-fox-pajamas.cyclic.app',
+    baseURL: 'https://rose-wide-eyed-termite.cyclic.app',
 });
 
 export default function DetailPage() {
@@ -61,18 +62,17 @@ export default function DetailPage() {
     const [ProductID , setID] =  useState("001")
 
 
-    const GetApi = () =>{
+    const GetApi = useCallback(() => {
     
         supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
+            GetDataApi(session)
+           
           })
-      
-           supabase.auth.onAuthStateChange((_event, session) => {
-            setSession(session)
-          })
-    
-    }
-    const PostApi =() =>{
+
+    },[])
+
+    const PostApi= useCallback((session) => {
         if(session)  {
             
             api.post('/BackEnd/Detail',{
@@ -92,28 +92,14 @@ export default function DetailPage() {
     
     
         }
-       
-
-
-
-   
-
-
- 
-    if(session == null){
-        supabase.auth.getSession().then(({ data: { session } }) => {
-            setSession(session)
-        })
-    }
-      
 
         
         console.log(session.user.email)
 
     
-    }
+    },[])
 
-    const GetDataApi= () =>{
+    const GetDataApi = useCallback((session) => {
         
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             setData(res.data)
@@ -131,7 +117,7 @@ export default function DetailPage() {
             }
             setImageURLsState(Temo);
             setLoad(true);
-
+            PostApi(session)
 
         }).catch(error => {
 
@@ -152,30 +138,20 @@ export default function DetailPage() {
 
     
     
-    }
+    },[])
 
 
-    useEffect(() => {
+    useEffect(()=>{
 
-        const fetchData = async () => {
-
-
-            
-             await Promise.all([
-                GetApi(),
-                GetDataApi(),
-                PostApi(),
-            ]) ;
-            
-
-             
- 
-        
+        const fetchingData = async () => {
+            await Promise.all([GetApi()]);
         }
-
-        fetchData()
-
-    }, [ProductName , session==null]); // 空数组告诉 React 仅执行一次
+       
+          fetchingData()
+  
+     }, [ProductName]);
+  
+     // 空数组告诉 React 仅执行一次
 
 
     const settings = {

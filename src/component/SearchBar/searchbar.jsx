@@ -12,7 +12,7 @@ const api = axios.create({
     headers: {
         'Access-Control-Allow-Origin': '*'
      },
-    baseURL: 'https://energetic-fox-pajamas.cyclic.app'
+    baseURL: 'https://rose-wide-eyed-termite.cyclic.app'
 });
 
 
@@ -34,11 +34,6 @@ export default function SearchBar() {
 
 
     const [DataRe , setDalue] = useState([]);
-
-    useEffect(() =>{
-        setData(DataRe);
-
-    })
 
     // 搜尋時展開
     //https://react-frontend-project-two.vercel.app/pages/Products/Control%20Ultimate%20Edition
@@ -69,7 +64,7 @@ export default function SearchBar() {
                     </>
                 ) )
 
-                setDalue(  pp )
+                setData(pp)
         
             
             }

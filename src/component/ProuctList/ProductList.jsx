@@ -88,7 +88,7 @@ export default function ProductList({Title , InputJson  }){
             
 
             <div className={Style.title} >{Title}</div>
-            <Slider {...settings}  >
+            <Slider {...settings} >
             {/* <motion.div animate={{ x:- width*inPos }}> */}
                 {       
 

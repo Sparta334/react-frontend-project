@@ -1,63 +1,171 @@
 import axios from 'axios'
-import { selectUserProfile } from '../../redux/UserSlice';
-import { useDispatch } from 'react-redux';
-import addUserProfile from '../../redux/UserSlice'
-import { useState } from 'react';
-import { Auth } from '@supabase/auth-ui-react';
+import { useCallback, useState } from 'react';
 import { createClient } from "@supabase/supabase-js";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { theme } from 'antd';
-import {GithubOutlined, CloseOutlined} from '@ant-design/icons'
+import { Space } from 'antd';
+import Slider from "react-slick";
+import NavBar from '../NavBar/navbar';
+import {Spin } from "antd"
+import Style from './Profile.module.css'
+import { Link } from 'react-router-dom';
+import history from '../RouterHistory';
+import Footer from '../Footer/Footer';
+import './Profile.css'
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
+const api = axios.create({
+  headers: {
+      'Access-Control-Allow-Origin': '*'
+  },
+  baseURL: 'https://rose-wide-eyed-termite.cyclic.app',
+});
 
-export default function Account({ session }) {
-    const [loading, setLoading] = useState(true)
-    const [username, setUsername] = useState(null)
-    const [website, setWebsite] = useState(null)
-    const [avatar_url, setAvatarUrl] = useState(null)
-    const disspiatch =useDispatch()
-    useEffect(() => {
-      async function getProfile() {
-        setLoading(true)
-        const { user } = session
+
+
+
+
+
+export default function Account() {
+
+  const[session ,setSession] = useState();
+  const[Receviedata , Setdata] = useState(null);
+
+  const GetData = useCallback(() => {
   
-        let { data, error } = await supabase
-          .from('profiles')
-          .select(`username, website, avatar_url`)
-          .eq('id', user.id)
-          .single()
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+      GetUserData(session)
+    })
+
+
+  },[])
+
+    const GetUserData  = useCallback((session) => {
+      if(session){
+        api.post('/BackEnd/Profile',{
+          data:{
+              UserData: session.user.email,
+          },
+        }).then((response) => {
   
-        if (error) {
-          console.warn(error)
-        } else if (data) {
-          setUsername(data.email)
-          
-        }
+              console.log(response)
+              Setdata(response)
+        })
   
-        setLoading(false)
       }
-
-     
   
-      getProfile()
+  
+    },[])
+  
+    useEffect(() => {
       
-    }, [] )
+      const fetchingData = async () => {
+        await Promise.all([GetData()]);
+      };
+    
+      fetchingData();
+    }, []);
+
   
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow:1,
+    initialSlide: 0,
+    draggable:true,
+    swipeToSlide: true,
+    arrows: false,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    };
+
   
     return (
+      <div className="container" style={{ padding: '50px 50px 50px 50px' }}>
 
-        /*  */  
-        <div>
-          <div class="Cross"> 
-            <a href="/"><CloseOutlined/></a>
-          </div> 
-            {session.user.email}
-          <button className="button block" type="button" onClick={() => supabase.auth.signOut()}>
-            Sign Out
-          </button>
+      <div style={{backgroundColor:"#fff" , margin:"-50px " ,padding:"0"}}>
+        <div className="UserProfileBack">
+        <NavBar/>
         </div>
 
-    )
-  }
+        <div className="row flex flex-center">
+        
+        <div className="col-9 form-widget">
+          <h1 style={{paddingBottom:"6%"}}> { session ? session.user.user_metadata.username : null }</h1>
+          <h3> { session ? session.user.email : null }</h3>
+        </div>
+
+        
+      </div>
+      <div className="TitleProfile">
+          <h1 style={{color:"black" , textAlign:"center" , fontSize:"30px"}}>最近瀏覽</h1>
+          <div className={Style.ItemsLayout}>
+          
+            {
+
+              
+              
+                Receviedata ? 
+            <Slider  {...settings} >{
+                Receviedata.data.map((product)=> (
+                                
+                  <div className={Style.ImageBox} key={product.id} >
+
+                     <Link className={Style.imageA} to={`/pages/${product.ProductName}`}>
+                      <img
+                            height="1600px" width="900px"
+                              src={product.imageUrl} 
+                              alt="Sample" 
+                              style={{objectFit:"cover"}}
+
+                          />
+                      </Link>
+
+
+                      
+                  </div>
+                  ))
+                }
+                 
+                 </Slider> 
+               : <div className={Style.problemfixed}> <Spin size="large" /></div>
+
+            }
+
+            </div>
+        </div>
+        <button className="button block" type="button" onClick={() => supabase.auth.signOut()}>
+            登出
+          </button>
+
+          
+        <Footer/>
+    </div>
+   
+    </div>
+  )
+}

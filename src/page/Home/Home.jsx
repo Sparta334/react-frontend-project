@@ -22,7 +22,7 @@ const api = axios.create({
   headers: {
       'Access-Control-Allow-Origin': '*'
   },
-  baseURL: 'https://energetic-fox-pajamas.cyclic.app',
+  baseURL: 'https://rose-wide-eyed-termite.cyclic.app',
 });
 
 export default function Home(){
@@ -44,12 +44,8 @@ export default function Home(){
           supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
           })
-      
-          supabase.auth.onAuthStateChange((_event, session) => {
-            setSession(session)
-          })
 
-       } ,[ session ===null])
+       } ,[ ])
 
 
     return(

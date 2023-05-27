@@ -3,10 +3,7 @@ import { selectUserProfile } from '../../redux/UserSlice';
 import { useDispatch } from 'react-redux';
 import addUserProfile from '../../redux/UserSlice'
 import { useState } from 'react';
-import { Auth } from '@supabase/auth-ui-react';
 import { createClient } from "@supabase/supabase-js";
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { theme } from 'antd';
 import { Spin , Row , Col } from 'antd';
 import {GithubOutlined, CloseOutlined} from '@ant-design/icons'

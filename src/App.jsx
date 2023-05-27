@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
-
+import { useState } from 'react'
+import CustomRouter from './component/CustomRouter'
+import history from './component/RouterHistory'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Store from './redux/Store'
@@ -11,6 +12,7 @@ import './App.css'
 import { ConfigProvider } from 'antd';
 import { lightTheme , darkTheme  } from './theme'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
+import Account from './component/profile/Profile'
 import { theme } from 'antd'
 import SignUp from "./component/SignUp/SignUp"
 
@@ -46,17 +48,18 @@ function App() {
     <ConfigProvider  theme={ isDarkMode ?  darkTheme : lightTheme   }>
       
 
-      <BrowserRouter>
+      <CustomRouter history={history}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="pages" >
               <Route path=":ProductName" element={ <DetailPage/>}  />
         </Route>
         <Route path="login" element={<LogIn/>} />
+        <Route path="Profile" element={ <Account/> } />
         <Route path="SignUp" element={ <SignUp/> } />
       </Routes>
       <ScrollToTop/>
-      </BrowserRouter>
+      </CustomRouter>
 
       </ConfigProvider>
     </Provider>

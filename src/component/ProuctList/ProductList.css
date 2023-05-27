@@ -1,5 +1,13 @@
 
 
+
+.slick-dots{
+       
+
+    margin-left: -0.5%;
+  
+    
+}
 @media screen and (max-width: 768px){
     
 
@@ -17,6 +25,7 @@
 
         width: 100%; /* reduce the width to 300px */
         height: 20px; /* reduce the height to 10px */
+        margin-left: -1%;
       
         
     }

@@ -55,7 +55,7 @@ export default function NavBarDrawer({Title} ){
         <hr/>
 
         <div div className={styles.DrawerItems}>
-            <Link to="/login">登出</Link>
+            <Link to="/Profile">登出</Link>
         </div>
       </Drawer>
     </div>
