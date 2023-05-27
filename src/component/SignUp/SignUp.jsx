@@ -5,10 +5,18 @@ import { theme } from 'antd';
 import { CloseOutlined} from '@ant-design/icons'
 import {  Row , Col } from 'antd';
 import style from "./SignUp.module.css"
+import axios from "axios";
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
+const api = axios.create({
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+    },
+    baseURL: 'https://rose-wide-eyed-termite.cyclic.app',
+  });
 
+  
 export default function SignUp(){
 
     const navigate = useNavigate();
@@ -31,10 +39,17 @@ export default function SignUp(){
               }
         }).then((response) => {
             response.error ? alert("Please Retype") : navigate("/")
-          });
+        });
 
-    }
-           
+
+            await api.post('/BackEnd/Add', {
+              data: {
+                UserData: Email,
+              }
+            });
+
+        }
+  
         
 
 

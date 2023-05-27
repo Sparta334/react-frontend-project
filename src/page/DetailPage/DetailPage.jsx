@@ -63,6 +63,7 @@ export default function DetailPage() {
         supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
             GetDataApi(session)
+            
             console.log(ProductName)
            
           })
@@ -94,7 +95,7 @@ export default function DetailPage() {
     
     }
 
-    const GetDataApi = (session) => {
+    const GetDataApi = (session ) => {
         
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             setData(res.data)
@@ -102,6 +103,7 @@ export default function DetailPage() {
             console.log(res.data.itemId);
             const detailArray = res.data.Detail;
             const Temo = []
+            PostApi(session ,res.data.itemId)
             Temo.push(res.data.imageUrl);
 
             for (let i = 0; i < detailArray.length; i += 1) {
@@ -109,7 +111,7 @@ export default function DetailPage() {
             }
             setImageURLsState(Temo);
             setLoad(true);
-            PostApi(session ,res.data.itemId)
+            
 
         }).catch(error => {
 
