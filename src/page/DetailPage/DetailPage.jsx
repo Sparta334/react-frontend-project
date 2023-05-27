@@ -98,19 +98,21 @@ export default function DetailPage() {
     const GetDataApi = (session ) => {
         
         api.get('/BackEnd/Products/' + ProductName).then(res => {
-            setData(res.data)
-            setID(res.data.itemId)
-            console.log(res.data.itemId);
-            const detailArray = res.data.Detail;
+            
+            setData(res.data.recomms[0])
+            setID(res.data.recomms[0].id)
+            console.log(res.data);
+            const detailArray = res.data.recomms[0].values.Detail;
             const Temo = []
-            PostApi(session ,res.data.itemId)
-            Temo.push(res.data.imageUrl);
+            
+            Temo.push(res.data.recomms[0].values.imageUrl);
 
             for (let i = 0; i < detailArray.length; i += 1) {
                 Temo.push(detailArray[i])
             }
             setImageURLsState(Temo);
             setLoad(true);
+            PostApi(session ,res.data.recomms.id)
             
 
         }).catch(error => {
@@ -173,7 +175,7 @@ export default function DetailPage() {
                 <div className={style.problemfixed}> <Spin size="large" /></div>
             ) : (
                 <div>
-                    <div className={style.title} >《 {ReveiceData.ProductName} 》</div>
+                    <div className={style.title} >《 {ReveiceData.values.ProductName} 》</div>
                     <Slider {...settings}>
 
                         {
@@ -191,10 +193,10 @@ export default function DetailPage() {
 
                     <div className={style.Description}>
 
-                        {ReveiceData.Description}
+                        {ReveiceData.values.Description}
 
                     </div>
-                    <AddToCart product={ReveiceData} qty={1} />
+                    <AddToCart product={ReveiceData.values} qty={1} />
                 </div>
             )}
             

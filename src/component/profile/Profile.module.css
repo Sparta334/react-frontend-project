@@ -65,7 +65,7 @@
         padding-top: 10px;
         padding-bottom: 40px;
         z-index: -3;
-        width:20%;
+        width:40%;
     
       }
       
@@ -74,8 +74,11 @@
  /* 小於 768px 的平板的排版 */
  @media screen and (max-width: 768px) {
     .ItemsLayout {
+      margin: 0 auto;
       padding-top: 10px;
-      padding-bottom: 40px;
+      padding-bottom: 0;
+      box-sizing: border-box;
+      width:80%;
     }
   
     
@@ -153,9 +156,7 @@
     
   }
  
-  
-  /* 登錄界面大小顔色預設 */
-  .form-widget {
+  .form_widget {
     width: 40%;
     padding: 30px;
     background-color: whitesmoke;
@@ -167,6 +168,31 @@
     text-align: center;
     box-shadow: 10px 5px 5px #908b8b;
   }
+
+
+
+  @media screen and (max-width: 768px) {
+  
+
+    .form_widget {
+      width: auto;
+      padding: 30px;
+      background-color: whitesmoke;
+      border-radius: 5px;
+      /* box-shadow: 0 8px 16px rgba(141, 28, 28, 0.832); */
+      /* animation: shadow 15s infinite; */
+      position: absolute;
+      z-index: 2;
+      text-align: center;
+      box-shadow: 10px 5px 5px #908b8b;
+    }
+  
+  
+  
+  }
+
+  
+  /* 登錄界面大小顔色預設 */
 
 /* box的shadow動畫 */
 @keyframes shadow {

@@ -132,16 +132,16 @@ export default function Account() {
               
                 Receviedata ? 
             <Slider  {...settings} >{
-                Receviedata.data.map((product)=> (
+                Receviedata.data.recomms.map((product)=> (
                                 
                   <div className={Style.ImageBox} key={product.id} >
 
-                     <Link className={Style.imageA} to={`/pages/${product.ProductName}`}>
+                     <Link className={Style.imageA} to={`/pages/${product.values.ProductName}`}>
                       <img
                             height="1600px" width="900px"
-                              src={product.imageUrl} 
+                              src={product.values.imageUrl} 
                               alt="Sample" 
-                              style={{objectFit:"cover"}}
+                              style={{objectFit:"contain"}}
 
                           />
                       </Link>

@@ -53,11 +53,11 @@ export default function SearchBar() {
             else{
                 showDrawer();
 
-                const pp = res.data.map((post , i) =>( 
+                const pp = res.data.recomms.map((post , i) =>( 
                     <>
                     
                     <div className={Style.box} key={i}>
-                        <Link to={`/pages/${post.product.ProductName}`}><div className={Style.SearchItemText}>{post.product.ProductName}</div></Link>
+                        <Link to={`/pages/${post.values.ProductName}`}><div className={Style.SearchItemText}>{post.values.ProductName}</div></Link>
                         
                     </div>
                     <hr /> 
