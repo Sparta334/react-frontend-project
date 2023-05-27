@@ -7,7 +7,7 @@
  
   
   /* 登錄界面大小顔色預設 */
-  .form-widget {
+  .form_widget {
     width: 40vh;
     padding: 60px;
     background-color: whitesmoke;
@@ -147,3 +147,34 @@
   
   
   }
+
+
+ 
+.SignBtnBox{
+
+  width: 100%;
+  vertical-align:center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  vertical-align:center;
+  align-items: center;
+
+
+}
+
+.SignBtn{
+  display: flex;
+  width: 40%;
+  vertical-align:center;
+  align-items: center;
+  margin: 0;
+}
+
+.SignUp{
+  display: flex;
+  vertical-align:baseline;
+  align-items: center;
+
+}

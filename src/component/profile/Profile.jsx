@@ -12,7 +12,7 @@ import Style from './Profile.module.css'
 import { Link } from 'react-router-dom';
 import history from '../RouterHistory';
 import Footer from '../Footer/Footer';
-import './Profile.css'
+import style from './Profile.module.css'
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 const api = axios.create({
@@ -29,6 +29,7 @@ const api = axios.create({
 
 export default function Account() {
 
+  const navigator = useNavigate();
   const[session ,setSession] = useState();
   const[Receviedata , Setdata] = useState(null);
 
@@ -108,20 +109,20 @@ export default function Account() {
       <div className="container" style={{ padding: '50px 50px 50px 50px' }}>
 
       <div style={{backgroundColor:"#fff" , margin:"-50px " ,padding:"0"}}>
-        <div className="UserProfileBack">
+        <div className={style.UserProfileBack}>
         <NavBar/>
         </div>
 
-        <div className="row flex flex-center">
+        <div className={style.row}>
         
-        <div className="col-9 form-widget">
+        <div className={style.form_widget}>
           <h1 style={{paddingBottom:"6%"}}> { session ? session.user.user_metadata.username : null }</h1>
           <h3> { session ? session.user.email : null }</h3>
         </div>
 
         
       </div>
-      <div className="TitleProfile">
+      <div className={style.TitleProfile}>
           <h1 style={{color:"black" , textAlign:"center" , fontSize:"30px"}}>最近瀏覽</h1>
           <div className={Style.ItemsLayout}>
           
@@ -158,7 +159,11 @@ export default function Account() {
 
             </div>
         </div>
-        <button className="button block" type="button" onClick={() => supabase.auth.signOut()}>
+        <button className="button block" type="button" onClick={() => supabase.auth.signOut().then(()=>{
+
+         navigator("/")
+        
+        })}>
             登出
           </button>
 

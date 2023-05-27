@@ -29,8 +29,8 @@ const api = axios.create({
 
 export default function DetailPage() {
 
-
-    const { pathname } = useLocation();
+    const location = useLocation();
+    const { pathname } = location;
 
     const {
         token: { colorBgBase, colorTextBase },
@@ -50,35 +50,31 @@ export default function DetailPage() {
 
   
 
-    const { ProductName } = useParams();
-
+      const { ProductName } = useParams();
+    
     const [ReveiceData, setData] = useState("");
-    const [Name, setName] = useState("");
-    const [display, SetDsiplay] = useState("");
-    const [ImageUrl, setUrl] = useState("");
-    const [Des, setDes] = useState("");
     const [imageURLsState, setImageURLsState] = useState([]);
     const [IsLoad, setLoad] = useState (false);
     const [ProductID , setID] =  useState("001")
 
 
-    const GetApi = useCallback(() => {
+    const GetApi = () => {
     
         supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
             GetDataApi(session)
+            console.log(ProductName)
            
           })
 
-    },[])
-
-    const PostApi= useCallback((session) => {
+    }
+    const PostApi = (session ,itemId) => {
         if(session)  {
-            
+            console.log(session.user.email)
             api.post('/BackEnd/Detail',{
                 data:{
                     UserData: session.user.email, 
-                    UserViewData: ProductID
+                    UserViewData: itemId
                 },
             }).then((response) => {
 
@@ -87,26 +83,22 @@ export default function DetailPage() {
                     console.log("UUUU")
               })
               .catch(function (error) {
-                console.log(error);
+                
               });
     
     
         }
 
-        
-        console.log(session.user.email)
+    
 
     
-    },[])
+    }
 
-    const GetDataApi = useCallback((session) => {
+    const GetDataApi = (session) => {
         
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             setData(res.data)
-            setDes(res.data.Description)
-            setUrl(res.data.imageUrl)
             setID(res.data.itemId)
-
             console.log(res.data.itemId);
             const detailArray = res.data.Detail;
             const Temo = []
@@ -117,39 +109,31 @@ export default function DetailPage() {
             }
             setImageURLsState(Temo);
             setLoad(true);
-            PostApi(session)
+            PostApi(session ,res.data.itemId)
 
         }).catch(error => {
 
-            const NoEntry = `
-            
-                <div>       
-    
-                    禁止進入
-                
-                </div>
-            `
+          
 
 
-
-
-            SetDsiplay(NoEntry);
         });
-
-    
-    
-    },[])
+    }
 
 
     useEffect(()=>{
 
         const fetchingData = async () => {
+            
             await Promise.all([GetApi()]);
+            
         }
        
-          fetchingData()
+        fetchingData()
+        
+
+     }, [pathname]);
+
   
-     }, [ProductName]);
   
      // 空数组告诉 React 仅执行一次
 
@@ -205,7 +189,7 @@ export default function DetailPage() {
 
                     <div className={style.Description}>
 
-                        {Des}
+                        {ReveiceData.Description}
 
                     </div>
                     <AddToCart product={ReveiceData} qty={1} />

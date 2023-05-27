@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Auth from '../../component/Auth/auth'
 import Account from '../../component/profile/Profile'
+import style from "./Login.module.css"
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
@@ -47,7 +48,7 @@ export default function LogIn(){
     return (
 
       
-      <div className="container" style={{ padding: '50px 50px 50px 50px' }}>
+      <div className={style.container} >
 
 
         {!session ? <Auth /> : navigator("/Profile")}

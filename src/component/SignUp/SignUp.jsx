@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { theme } from 'antd';
 import { CloseOutlined} from '@ant-design/icons'
 import {  Row , Col } from 'antd';
-import "../Auth/auth.css"
+import style from "./SignUp.module.css"
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
@@ -43,13 +43,13 @@ export default function SignUp(){
 
 
         return (
-            <div className="row flex flex-center">
+            <div className={style.row}>
               
-              <div className="col-9 form-widget">
-              <div className="CrossFlex">
+              <div className={style.form_widget}>
+              <div className={style.CrossFlex}>
     
-                <h1 style={{paddingLeft:"30%"}} className="header">Register</h1>
-                <div class="Cross2"> 
+                <h1 style={{paddingLeft:"30%" ,paddingBottom:"3%"}} className="header">Register</h1>
+                <div class={style.Cross2}> 
                   <a href="/"><CloseOutlined/></a>
                 </div> 
                
@@ -130,7 +130,7 @@ export default function SignUp(){
                     <Input.Password  className="OOPP" />
                 </Form.Item>
                         <Form.Item wrapperCol={{span: 6}}>
-                            <Button type="primary" htmlType="submit">
+                            <Button className={style.SignBtn} type="primary" htmlType="submit">
                             送出
                             </Button>
                         </Form.Item>

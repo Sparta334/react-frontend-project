@@ -7,8 +7,9 @@ import { createClient } from "@supabase/supabase-js";
 import { theme } from 'antd';
 import { Spin , Row , Col } from 'antd';
 import {GithubOutlined, CloseOutlined} from '@ant-design/icons'
+
 import SignForm from "../SignInForm/SignInForm"
-import './auth.css'
+import style from './auth.module.css'
 
 
 
@@ -42,21 +43,21 @@ export default function Suth() {
   
 
   return (
-    <div className="row flex flex-center">
+    <div className={style.row}>
       
-      <div className="col-9 form-widget">
+      <div className={style.form_widget}>
       
-      <div class="Cross"> 
+      <div class={style.Cross}> 
           <a href="/"><CloseOutlined/></a>
         </div> 
        
-        <h1 className="header">Login</h1>
+        <h1 className={style.header}>Login</h1>
 
           <SignForm/>
                
     
           <hr/>
-          <h4 className='TextForOption'>使用快速登入</h4>
+          <h4 className={style.TextForOption}>使用快速登入</h4>
 
           <button onClick={handleLogin} >
             {

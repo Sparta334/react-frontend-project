@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { Button , Checkbox, Form, Input } from "antd";
 import { Link, useNavigate } from "react-router-dom";
+import style from "./SignIn.module.css"
 
 
 
@@ -87,15 +88,16 @@ export default function SignForm(){
             </Form.Item>
            
             <Form.Item wrapperCol={{span:24}} >
-                <div className="Formelement">
-                <div className="SignBtnBox">
-                    <Button  className="SignBtn" type="primary" htmlType="submit">
+                <div className={style.Formelement}>
+                <div className={style.SignBtnBox}>
+                    <Button  className={style.SignBtn} type="primary" htmlType="submit">
                     送出
                     </Button>
-                    </div>
-                    <div className="SignUp" >
+                   
+                    <div className={style.SignUp} >
                     <Link    to={"/SignUp"}  >Sign Up</Link>
                     </div>
+                 </div>
                  </div>
             </Form.Item>
             </Form>

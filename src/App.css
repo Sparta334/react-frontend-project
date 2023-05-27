@@ -130,48 +130,7 @@ a{
 
 /* SignForm */
 
-.OOPP svg{
 
-  height: 50%;
-  width: 50%;
-  margin-left: 50%;
-  padding: 0;
-
-}
-
-.Formelement{
-
-  display: flex;
-  justify-content: space-between;
-
-
-}
-
-.SignBtnBox{
-
-  width: 30%;
-  vertical-align:center;
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-
-}
-.SignBtn{
-
-
-  margin: 0;
-  padding: 0;
-
-
-}
-
-.SignUp{
-  display: flex;
-  vertical-align:baseline;
-  align-items: center;
-
-}
 
 .ant-form-item .ant-form-item-label >label{
   

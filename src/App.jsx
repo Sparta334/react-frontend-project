@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import CustomRouter from './component/CustomRouter'
 import history from './component/RouterHistory'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -48,7 +47,7 @@ function App() {
     <ConfigProvider  theme={ isDarkMode ?  darkTheme : lightTheme   }>
       
 
-      <CustomRouter history={history}>
+      <BrowserRouter history={history}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="pages" >
@@ -59,7 +58,7 @@ function App() {
         <Route path="SignUp" element={ <SignUp/> } />
       </Routes>
       <ScrollToTop/>
-      </CustomRouter>
+      </BrowserRouter>
 
       </ConfigProvider>
     </Provider>
