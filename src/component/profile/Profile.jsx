@@ -117,7 +117,7 @@ export default function Account() {
               <div className={Style.problemfixed}>啥都沒看</div>
                : 
                <Slider  {...settings} >{
-                localStorage.getItem("Veiw").map((product)=> (
+                JSON.parse(localStorage.getItem("Veiw")).map((product)=> (
                                   
                     <div className={Style.ImageBox} key={product.id} >
   
