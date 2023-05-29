@@ -75,16 +75,16 @@ export default function NavBar(){
                 <Link to = "/" className={style.navItem } >
                     商店主頁
                 </Link>
-                <Link to = "/newset" className={style.navItem } >
-                    最新
-                </Link>
-                <Link to= "/popular" className= {style.navItem }>
-                    熱門
-                </Link>
+                <div  className={style.navItem } >
+                   　　
+                </div>
+                <div  className= {style.navItem }>
+                    　　
+                </div>
 
-                <Link to = "/discount" className={style.navItem }>
-                    優惠
-                </Link>
+                <div  className={style.navItem }>
+                    　　
+                </div>
 
                 <SearchBar />
 
@@ -132,10 +132,11 @@ export default function NavBar(){
                         <Link to = "/" className={style.navItem } >
                             商店主頁
                         </Link>
+                        <hr/>
                         {
                             
                             !session  ? (
-                                <Link to = "/login"  > 
+                                <Link className={style.navItem }  to = "/login"  > 
                                     登入
                                 </Link>
                             

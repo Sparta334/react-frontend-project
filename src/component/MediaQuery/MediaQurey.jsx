@@ -26,7 +26,7 @@ export const Mobile = ( { children } ) => {
 
 export const Default = ( { children } ) => {
 
-    const isDefault = useMediaQuery({minWidth: 768})
+    const isDefault = useMediaQuery({minWidth: 767})
     return isDefault ? children :null;
 
 }
