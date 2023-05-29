@@ -102,7 +102,7 @@ export default function NavBar(){
                        
                     ) :(
                         <div>
-                              <NavBarDrawer Title={session.user.user_metadata.username}/>
+                              <NavBarDrawer Title={ session.user.user_metadata.username ? session.user.user_metadata.username : session.user.email}/>
                                                                
                         </div>
                         
@@ -127,7 +127,7 @@ export default function NavBar(){
 
                    
                         <div  >
-                           {  session  ? <div className={style.navItem} >{session.user.user_metadata.username}</div> : null   }
+                           {  session  ? <div className={style.navItem} >{ session.user.user_metadata.username ? session.user.user_metadata.username : session.user.email}}</div> : null   }
                            <hr/>
                         <Link to = "/" className={style.navItem } >
                             商店主頁
