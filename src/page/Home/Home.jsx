@@ -62,7 +62,7 @@ export default function Home(){
             <ProductList Title="熱門遊戲" InputJson={Popalur}/>
             <ProductList Title="最新遊戲" InputJson={NewSet} />
             {
-               session ? (localStorage.getItem('myData') !== "" ) &&( localStorage.getItem('myData') !== null) ? <Prolist Title="專屬於你" InputJson={ JSON.parse(localStorage.getItem('myData'))}/> :  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} /> :<ProductList Title="專屬於你" InputJson={ExculsiveToYou} />
+              (localStorage.getItem('myData') === "" ) || ( localStorage.getItem('myData') === null) ?  <ProductList Title="專屬於你" InputJson={ExculsiveToYou} />  : <Prolist Title="專屬於你" InputJson={ JSON.parse(localStorage.getItem('myData'))}/>
             }
             
             <Footer/>
