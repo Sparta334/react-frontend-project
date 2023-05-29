@@ -112,7 +112,7 @@ export default function DetailPage() {
             }
             setImageURLsState(Temo);
             setLoad(true);
-            PostApi(session ,res.data.recomms.id)
+            PostApi(session ,res.data.recomms[0].id)
             
 
         }).catch(error => {
