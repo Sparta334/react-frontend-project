@@ -114,29 +114,30 @@ export default function Account() {
               
               
               (localStorage.getItem("Veiw") === null ) ||(localStorage.getItem("Veiw") === "" )  ? 
-            <Slider  {...settings} >{
-              localStorage.getItem("Veiw").map((product)=> (
-                                
-                  <div className={Style.ImageBox} key={product.id} >
-
-                     <Link className={Style.imageA} to={`/pages/${product.values.ProductName}`}>
-                      <img
-                            height="1600px" width="900px"
-                              src={product.values.imageUrl} 
-                              alt="Sample" 
-                              style={{objectFit:"contain"}}
-
-                          />
-                      </Link>
-
-
-                      
-                  </div>
-                  ))
-                }
-                 
-                 </Slider> 
-               : <div className={Style.problemfixed}>啥都沒看</div>
+              <div className={Style.problemfixed}>啥都沒看</div>
+               : 
+               <Slider  {...settings} >{
+                localStorage.getItem("Veiw").map((product)=> (
+                                  
+                    <div className={Style.ImageBox} key={product.id} >
+  
+                       <Link className={Style.imageA} to={`/pages/${product.values.ProductName}`}>
+                        <img
+                              height="1600px" width="900px"
+                                src={product.values.imageUrl} 
+                                alt="Sample" 
+                                style={{objectFit:"contain"}}
+  
+                            />
+                        </Link>
+  
+  
+                        
+                    </div>
+                    ))
+                  }
+                   
+                   </Slider> 
 
             }
 
