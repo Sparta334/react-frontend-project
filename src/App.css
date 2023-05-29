@@ -219,6 +219,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: fixed;
   height: 100%;
   text-align: center;
+  
 }
 
 /* General sidebar styles */
@@ -228,6 +229,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: auto;
   font-size: 1.15em;
   height: 45% !important; 
+  overflow: visible !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
