@@ -33,7 +33,7 @@ export default function SignUp(){
 
         SetLoad(<LoadingOutlined/>);
         
-        await api.post('/BackEnd/Add', {
+        await api.post('/BackEnd/AddUser', {
             data: {
               UserData: Email,
             }
