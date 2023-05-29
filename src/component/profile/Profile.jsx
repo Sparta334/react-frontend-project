@@ -37,29 +37,12 @@ export default function Account() {
   
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
-      GetUserData(session)
     })
 
 
   },[])
 
-    const GetUserData  = useCallback((session) => {
-      if(session){
-        api.post('/BackEnd/Profile',{
-          data:{
-              UserData: session.user.email,
-          },
-        }).then((response) => {
-  
-              console.log(response)
-              Setdata(response)
-        })
-  
-      }
-  
-  
-    },[])
-  
+
     useEffect(() => {
       
       const fetchingData = async () => {
@@ -130,9 +113,9 @@ export default function Account() {
 
               
               
-                Receviedata ? 
+              (localStorage.getItem("Veiw") === null ) ||(localStorage.getItem("Veiw") === "" )  ? 
             <Slider  {...settings} >{
-                Receviedata.data.recomms.map((product)=> (
+              localStorage.getItem("Veiw").map((product)=> (
                                 
                   <div className={Style.ImageBox} key={product.id} >
 
@@ -153,7 +136,7 @@ export default function Account() {
                 }
                  
                  </Slider> 
-               : <div className={Style.problemfixed}> <Spin size="large" /></div>
+               : <div className={Style.problemfixed}>啥都沒看</div>
 
             }
 

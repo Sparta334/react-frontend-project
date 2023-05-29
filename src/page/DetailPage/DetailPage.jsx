@@ -99,6 +99,7 @@ export default function DetailPage() {
         
         api.get('/BackEnd/Products/' + ProductName).then(res => {
             
+            localStorage.setItem("Veiw" , res.data.recomms )
             setData(res.data.recomms[0])
             setID(res.data.recomms[0].id)
             console.log(res.data);
