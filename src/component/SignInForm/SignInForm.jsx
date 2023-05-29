@@ -2,6 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import { Button , Checkbox, Form, Input } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./SignIn.module.css"
+import { useState } from "react";
+import {LoadingOutlined} from "@ant-design/icons"
 
 
 
@@ -10,15 +12,15 @@ const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhb
 
 export default function SignForm(){
 
-    const navigate = useNavigate();
-
+    const navigate = useNavigate()
     const [form] = Form.useForm();
+    const [Loading , SetLoad] = useState(<div>登入</div>);
 
 
     const  handleFinish =  async ( )  => {
 
         const { Email , Password } = form.getFieldsValue();
-
+        SetLoad(<LoadingOutlined />);
        
         const { data, error } = await supabase.auth.signInWithPassword({
             email: Email,
@@ -30,6 +32,7 @@ export default function SignForm(){
 
             alert("Please SignUp or Retype");
             form.resetFields();
+            SetLoad(<div>登入</div>)
 
         }
         else if(data){
@@ -91,11 +94,11 @@ export default function SignForm(){
                 <div className={style.Formelement}>
                 <div className={style.SignBtnBox}>
                     <Button  className={style.SignBtn} type="primary" htmlType="submit">
-                    送出
+                     { Loading }
                     </Button>
                    
                     <div className={style.SignUp} >
-                    <Link    to={"/SignUp"}  >Sign Up</Link>
+                    <Link    to={"/SignUp"}  >SignUp</Link>
                     </div>
                  </div>
                  </div>

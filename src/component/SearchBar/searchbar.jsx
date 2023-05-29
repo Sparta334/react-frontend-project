@@ -7,6 +7,7 @@ import axios from "axios";
 import { NavLink,useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom";
 import { theme } from 'antd';
+import { Spin } from "antd";
 
 const api = axios.create({
     headers: {
@@ -43,7 +44,15 @@ export default function SearchBar() {
 
         if(value === ''){
             value+='222222222222222222222'
+            setData('')
+           
         }
+
+        if(value !== ''){
+            setData('222222222222222222222')
+
+        }
+
         api.get('/BackEnd/SearchContent/' +  value ).then( res => {
 
 
@@ -89,7 +98,10 @@ export default function SearchBar() {
 
 
             />
-
+            {
+            
+            ReveiceData === '222222222222222222222' ?
+            <Spin/> :
             <div id={Style.SearchFieldDrawerBox}>
 
 
@@ -111,6 +123,7 @@ export default function SearchBar() {
                 </Drawer>
 
             </div>
+            }
 
             </Space>
 

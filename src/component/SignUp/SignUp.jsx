@@ -6,6 +6,8 @@ import { CloseOutlined} from '@ant-design/icons'
 import {  Row , Col } from 'antd';
 import style from "./SignUp.module.css"
 import axios from "axios";
+import { useState } from "react";
+import {LoadingOutlined} from "@ant-design/icons"
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
 
@@ -22,13 +24,26 @@ export default function SignUp(){
     const navigate = useNavigate();
 
     const [form] = Form.useForm();
+    const [Loading , SetLoad] = useState(<div>送出</div>);
 
 
     const  handleFinish =  async ( )  => {
 
         const { Name ,Email , Password } = form.getFieldsValue();
 
+        SetLoad(<LoadingOutlined/>);
+        
+        await api.post('/BackEnd/Add', {
+            data: {
+              UserData: Email,
+            }
+        }, (error , response) =>{
+
+           console.log(error)
+        
+        } );
        
+
         await supabase.auth.signUp({
             email: Email,
             password: Password,
@@ -38,15 +53,13 @@ export default function SignUp(){
                 }
               }
         }).then((response) => {
+
+            SetLoad(<div>送出</div>)
             response.error ? alert("Please Retype") : navigate("/")
         });
 
 
-            await api.post('/BackEnd/Add', {
-              data: {
-                UserData: Email,
-              }
-            });
+
 
         }
   
@@ -146,7 +159,7 @@ export default function SignUp(){
                 </Form.Item>
                         <Form.Item wrapperCol={{span: 6}}>
                             <Button className={style.SignBtn} type="primary" htmlType="submit">
-                            送出
+                               {Loading}
                             </Button>
                         </Form.Item>
                         </Form>

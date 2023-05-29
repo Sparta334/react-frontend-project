@@ -151,7 +151,7 @@ export default function NavBar(){
                                         <hr/>
 
                                         <div div className={style.DrawerItems2}>
-                                            <Link style={{color:"#fff" }} to="/Profile">登出</Link>
+                                            <Link style={{color:"#fff" }} to="/Profile">帳號</Link>
                                         </div>                               
                                 </div>
                                 
