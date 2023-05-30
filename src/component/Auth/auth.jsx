@@ -14,20 +14,44 @@ import style from './auth.module.css'
 
 
 const supabase = createClient('https://yjfcopvmnoefmqlerdxc.supabase.co' ,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZmNvcHZtbm9lZm1xbGVyZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMTk3MDUsImV4cCI6MTk5NjU5NTcwNX0.UAlO3qY6sU4fqOqUEpzuOEyStPMf1eQNR1JepD34QS8' );
-
+const api = axios.create({
+  headers: {
+      'Access-Control-Allow-Origin': '*'
+  },
+  baseURL: 'https://rose-wide-eyed-termite.cyclic.app',
+});
 
 
 export default function Suth() {
+
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
+  const[session ,setSession] = useState();
 
+  
   const handleLogin = async (event) => {
     event.preventDefault()
+
+    await supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+    })
+
 
     setLoading(true)
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
     })
+
+    await api.post('/BackEnd/AddUser', {
+      data: {
+        UserData: Email,
+      }
+    }, (error , response) =>{
+
+     console.log(error)
+  
+    } );
+ 
 
     setLoading(false)
   }
