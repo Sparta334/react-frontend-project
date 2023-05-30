@@ -128,7 +128,7 @@ export default function SignUp(){
                                 type: 'string',
                                 required: true,
                                 max:16,
-                                min:4,
+                                min:6,
                                 message: '密碼介於4-16個字元',
                             },
                             ]}
