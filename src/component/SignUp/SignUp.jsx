@@ -100,7 +100,7 @@ export default function SignUp(){
                                 type: 'string',
                                 required: true,
                                 max:16,
-                                min:4,
+                                min:6,
                             },
                             ]}
                         >
