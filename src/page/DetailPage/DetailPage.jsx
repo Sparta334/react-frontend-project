@@ -36,7 +36,7 @@ export default function DetailPage() {
         token: { colorBgBase, colorTextBase },
       } = theme.useToken();
     
-      const [session, setSession] = useState(null)
+      const [session, setSession] = useState()
 
       
       const handleSaveClick = (response) => {
@@ -197,7 +197,10 @@ export default function DetailPage() {
                         {ReveiceData.values.Description}
 
                     </div>
-                    <AddToCart product={ReveiceData.values} qty={1} />
+                    {
+                       session ?  <AddToCart product={ReveiceData.values} qty={1} /> : null
+                    }
+                   
                 </div>
             )}
             
